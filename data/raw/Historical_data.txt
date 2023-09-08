@@ -1,0 +1,1661 @@
+Exposure	Tissue	Dose	Position	Ref	Alt	A:T to G:C	G:C to A:T	G:C to T:A	G:C to C:G	A:T to T:A	A:T to C:G	Insertion	Deletion	Study	Codon	Consequence	Ref Codon	Alt Codon	Ref A.A.	Alt A.A.
+BaP	Colon	125	228	G	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Colon	125	282	A	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Colon	125	342	G	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Colon	125	875	C	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Colon	125	2811	C	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Colon	125	461	C	G	0	0	0	1	0	0	0	0	Hakura 2000	148	missense	TCG	TGG	S	W
+BaP	Colon	125	1191	T	A	0	0	0	0	1	0	0	0	Hakura 2000	391	missense	CAT	CAA	H	Q
+BaP	Colon	125	1638	C	A	0	0	1	0	0	0	0	0	Hakura 2000	540	missense	CAC	CAA	H	Q
+BaP	Colon	125	2657	C	A	0	0	1	0	0	0	0	0	Hakura 2000	880	missense	GCG	GAG	A	E
+BaP	Colon	125	2659	C	T	0	1	0	0	0	0	0	0	Hakura 2000	881	missense	CGG	TGG	R	W
+BaP	Colon	125	2840	C	G	0	0	0	1	0	0	0	0	Hakura 2000	941	missense	ACG	AGG	T	R
+BaP	Colon	125	2999	G	C	0	0	0	1	0	0	0	0	Hakura 2000	994	missense	GGT	GCT	G	A
+BaP	Colon	125	126	G	A	0	1	0	0	0	0	0	0	Hakura 2000	36	nonsense	TGG	TGA	W	*
+BaP	Colon	125	1342	C	T	0	1	0	0	0	0	0	0	Hakura 2000	442	nonsense	CGA	TGA	R	*
+BaP	Colon	125	1775	C	A	0	0	1	0	0	0	0	0	Hakura 2000	586	nonsense	TCG	TAG	S	*
+BaP	Colon	125	2466	C	G	0	0	0	1	0	0	0	0	Hakura 2000	816	nonsense	TAC	TAG	Y	*
+BaP	Colon	125	2661	G	A	0	1	0	0	0	0	0	0	Hakura 2000	881	silent	CGG	CGA	R	R
+BaP	Forestomach	125	109	C	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Forestomach	125	476	G	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Forestomach	125	636	C	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Forestomach	125	1125	INS	C	0	0	0	0	0	0	1	0	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Forestomach	125	2449	A	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Forestomach	125	1083	C	A	0	0	1	0	0	0	0	0	Hakura 2000	355	missense	AAC	AAA	N	K
+BaP	Forestomach	125	1127	A	G	1	0	0	0	0	0	0	0	Hakura 2000	370	missense	CAG	CGG	Q	R
+BaP	Forestomach	125	1189	C	G	0	0	0	1	0	0	0	0	Hakura 2000	391	missense	CAT	GAT	H	D
+BaP	Forestomach	125	1472	A	C	0	0	0	0	0	1	0	0	Hakura 2000	485	missense	CAG	CCG	Q	P
+BaP	Forestomach	125	1638	C	A	0	0	1	0	0	0	0	0	Hakura 2000	540	missense	CAC	CAA	H	Q
+BaP	Forestomach	125	2374	C	A	0	0	1	0	0	0	0	0	Hakura 2000	786	missense	CGT	AGT	R	S
+BaP	Forestomach	125	2742	C	A	0	0	1	0	0	0	0	0	Hakura 2000	908	missense	GAC	GAA	D	E
+BaP	Forestomach	125	2743	C	A	0	0	1	0	0	0	0	0	Hakura 2000	909	missense	CGC	AGC	R	S
+BaP	Forestomach	125	2744	G	T	0	0	1	0	0	0	0	0	Hakura 2000	909	missense	CGC	CTC	R	L
+BaP	Forestomach	125	2840	C	A	0	0	1	0	0	0	0	0	Hakura 2000	941	missense	ACG	AAG	T	K
+BaP	Forestomach	125	136	G	T	0	0	1	0	0	0	0	0	Hakura 2000	40	nonsense	GAA	TAA	E	*
+BaP	Forestomach	125	2266	G	T	0	0	1	0	0	0	0	0	Hakura 2000	750	nonsense	GAG	TAG	E	*
+BaP	Forestomach	125	2315	C	A	0	0	1	0	0	0	0	0	Hakura 2000	766	nonsense	TCA	TAA	S	*
+BaP	Forestomach	125	2586	C	G	0	0	0	1	0	0	0	0	Hakura 2000	856	nonsense	TAC	TAG	Y	*
+BaP	Forestomach	125	3060	C	A	0	0	1	0	0	0	0	0	Hakura 2000	1014	nonsense	TAC	TAA	Y	*
+BaP	Glandular Stomach	125	227	C	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Glandular Stomach	125	2836	INS	A	0	0	0	0	0	0	1	0	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Glandular Stomach	125	621	T	A	0	0	0	0	1	0	0	0	Hakura 2000	201	missense	GAT	GAA	D	E
+BaP	Glandular Stomach	125	629	G	C	0	0	0	1	0	0	0	0	Hakura 2000	204	missense	CGG	CCG	R	P
+BaP	Glandular Stomach	125	743	C	A	0	0	1	0	0	0	0	0	Hakura 2000	242	missense	GCT	GAT	A	D
+BaP	Glandular Stomach	125	1187	C	T	0	1	0	0	0	0	0	0	Hakura 2000	390	missense	TCG	TTG	S	L
+BaP	Glandular Stomach	125	1334	G	T	0	0	1	0	0	0	0	0	Hakura 2000	439	missense	CGC	CTC	R	L
+BaP	Glandular Stomach	125	2110	G	A	0	1	0	0	0	0	0	0	Hakura 2000	698	missense	GTA	ATA	V	I
+BaP	Glandular Stomach	125	2375	G	T	0	0	1	0	0	0	0	0	Hakura 2000	786	missense	CGT	CTT	R	L
+BaP	Glandular Stomach	125	2392	G	A	0	1	0	0	0	0	0	0	Hakura 2000	792	missense	GAC	AAC	D	N
+BaP	Glandular Stomach	125	2740	G	A	0	1	0	0	0	0	0	0	Hakura 2000	908	missense	GAC	AAC	D	N
+BaP	Glandular Stomach	125	2744	G	T	0	0	1	0	0	0	0	0	Hakura 2000	909	missense	CGC	CTC	R	L
+BaP	Glandular Stomach	125	2825	G	T	0	0	1	0	0	0	0	0	Hakura 2000	936	missense	GGT	GTT	G	V
+BaP	Glandular Stomach	125	20	C	G	0	0	0	1	0	0	0	0	Hakura 2000	7	nonsense	TCA	TGA	S	*
+BaP	Glandular Stomach	125	303	C	A	0	0	1	0	0	0	0	0	Hakura 2000	95	nonsense	TAC	TAA	Y	*
+BaP	Glandular Stomach	125	2083	G	T	0	0	1	0	0	0	0	0	Hakura 2000	689	nonsense	GAG	TAG	E	*
+BaP	Glandular Stomach	125	228	G	T	0	0	1	0	0	0	0	0	Hakura 2000	70	silent	CCG	CCT	P	P
+BaP	Spleen	125	156	C	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Spleen	125	572	C	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Spleen	125	1253	A	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Spleen	125	1527	CG	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Spleen	125	2133	INS	A	0	0	0	0	0	0	1	0	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Spleen	125	2724	G	DEL	0	0	0	0	0	0	0	1	Hakura 2000	-	frameshift	-	-	-	-
+BaP	Spleen	125	280	T	C	1	0	0	0	0	0	0	0	Hakura 2000	88	missense	TCA	CCA	S	P
+BaP	Spleen	125	452	G	T	0	0	1	0	0	0	0	0	Hakura 2000	145	missense	GGC	GTC	G	V
+BaP	Spleen	125	608	T	G	0	0	0	0	0	1	0	0	Hakura 2000	197	missense	CTG	CGG	L	R
+BaP	Spleen	125	625	T	C	1	0	0	0	0	0	0	0	Hakura 2000	203	missense	TGG	CGG	W	R
+BaP	Spleen	125	1181	G	C	0	0	0	1	0	0	0	0	Hakura 2000	388	missense	CGC	CCC	R	P
+BaP	Spleen	125	1636	C	A	0	0	1	0	0	0	0	0	Hakura 2000	540	missense	CAC	AAC	H	N
+BaP	Spleen	125	1652	G	T	0	0	1	0	0	0	0	0	Hakura 2000	545	missense	AGT	ATT	S	I
+BaP	Spleen	125	2260	T	A	0	0	0	0	1	0	0	0	Hakura 2000	748	missense	TGC	AGC	C	S
+BaP	Spleen	125	2374	C	A	0	0	1	0	0	0	0	0	Hakura 2000	786	missense	CGT	AGT	R	S
+BaP	Spleen	125	2817	C	A	0	0	1	0	0	0	0	0	Hakura 2000	933	missense	AGC	AGA	S	R
+BaP	Spleen	125	2840	C	A	0	0	1	0	0	0	0	0	Hakura 2000	941	missense	ACG	AAG	T	K
+BaP	Spleen	125	281	C	A	0	0	1	0	0	0	0	0	Hakura 2000	88	nonsense	TCA	TAA	S	*
+BaP	Spleen	125	1674	C	A	0	0	1	0	0	0	0	0	Hakura 2000	552	nonsense	TAC	TAA	Y	*
+BaP	Spleen	125	2266	G	T	0	0	1	0	0	0	0	0	Hakura 2000	750	nonsense	GAG	TAG	E	*
+BaP	Spleen	125	2676	C	A	0	0	1	0	0	0	0	0	Hakura 2000	886	nonsense	TGC	TGA	C	*
+BaP	Spleen	125	2805	C	A	0	0	1	0	0	0	0	0	Hakura 2000	929	nonsense	TAC	TAA	Y	*
+BaP	Spleen	125	573	G	T	0	0	1	0	0	0	0	0	Hakura 2000	185	silent	GCG	GCT	A	A
+BaP	Spleen	125	2181	T	C	1	0	0	0	0	0	0	0	Hakura 2000	721	silent	CGT	CGC	R	R
+CEDU	Bone Marrow	2000	317	A	G	1	0	0	0	0	0	0	0	Staedtler 2004	100	missense	TAC	TGC	Y	C
+CEDU	Bone Marrow	2000	625	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	203	missense	TGG	CGG	W	R
+CEDU	Bone Marrow	2000	662	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	215	missense	CTG	CCG	L	P
+CEDU	Bone Marrow	2000	919	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	301	missense	TGG	CGG	W	R
+CEDU	Bone Marrow	2000	919	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	301	missense	TGG	CGG	W	R
+CEDU	Bone Marrow	2000	1043	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	342	missense	CTG	CCG	L	P
+CEDU	Bone Marrow	2000	1090	G	A	0	1	0	0	0	0	0	0	Staedtler 2004	358	missense	GAG	AAG	E	K
+CEDU	Bone Marrow	2000	1183	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	389	missense	TGT	CGT	C	R
+CEDU	Bone Marrow	2000	1222	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	402	missense	TGC	CGC	C	R
+CEDU	Bone Marrow	2000	1387	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	457	missense	TCG	CCG	S	P
+CEDU	Bone Marrow	2000	1616	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	533	missense	CTG	CCG	L	P
+CEDU	Bone Marrow	2000	1637	A	G	1	0	0	0	0	0	0	0	Staedtler 2004	540	missense	CAC	CGC	H	R
+CEDU	Bone Marrow	2000	2345	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	776	missense	CTG	CCG	L	P
+CEDU	Bone Marrow	2000	2918	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	967	missense	CTG	CCG	L	P
+Control	Bone Marrow	0	353	C	T	0	1	0	0	0	0	0	0	Douglas 1994	112	missense	CCG	CTG	P	L
+Control	Bone Marrow	0	353	C	T	0	1	0	0	0	0	0	0	Douglas 1994	112	missense	CCG	CTG	P	L
+Control	Bone Marrow	0	461	C	T	0	1	0	0	0	0	0	0	Douglas 1994	148	missense	TCG	TTG	S	L
+Control	Bone Marrow	0	514	C	T	0	1	0	0	0	0	0	0	Douglas 1994	166	missense	CGT	TGT	R	C
+Control	Bone Marrow	0	514	C	T	0	1	0	0	0	0	0	0	Douglas 1994	166	missense	CGT	TGT	R	C
+Control	Bone Marrow	0	514	C	T	0	1	0	0	0	0	0	0	Douglas 1994	166	missense	CGT	TGT	R	C
+Control	Bone Marrow	0	637	G	A	0	1	0	0	0	0	0	0	Douglas 1994	207	missense	GGC	AGC	G	S
+Control	Bone Marrow	0	637	G	A	0	1	0	0	0	0	0	0	Douglas 1994	207	missense	GGC	AGC	G	S
+Control	Bone Marrow	0	1273	G	A	0	1	0	0	0	0	0	0	Douglas 1994	419	missense	GGC	AGC	G	S
+Control	Bone Marrow	0	1333	C	T	0	1	0	0	0	0	0	0	Douglas 1994	439	missense	CGC	TGC	R	C
+Control	Bone Marrow	0	1523	T	C	1	0	0	0	0	0	0	0	Douglas 1994	502	missense	ATG	ACG	M	T
+Control	Bone Marrow	0	1528	G	A	0	1	0	0	0	0	0	0	Douglas 1994	504	missense	GCG	ACG	A	T
+Control	Bone Marrow	0	1532	G	A	0	1	0	0	0	0	0	0	Douglas 1994	505	missense	CGC	CAC	R	H
+Control	Bone Marrow	0	1700	G	A	0	1	0	0	0	0	0	0	Douglas 1994	561	missense	CGT	CAT	R	H
+Control	Bone Marrow	0	1850	G	A	0	1	0	0	0	0	0	0	Douglas 1994	611	missense	CGC	CAC	R	H
+Control	Bone Marrow	0	2374	C	T	0	1	0	0	0	0	0	0	Douglas 1994	786	missense	CGT	TGT	R	C
+Control	Bone Marrow	0	246	C	A	0	0	1	0	0	0	0	0	Douglas 1994	76	nonsense	TGC	TGA	C	*
+Control	Bone Marrow	0	246	C	A	0	0	1	0	0	0	0	0	Douglas 1994	76	nonsense	TGC	TGA	C	*
+Control	Bone Marrow	0	281	C	A	0	0	1	0	0	0	0	0	Douglas 1994	88	nonsense	TCA	TAA	S	*
+Control	Bone Marrow	0	1705	C	T	0	1	0	0	0	0	0	0	Douglas 1994	563	nonsense	CAG	TAG	Q	*
+Control	Bone Marrow	0	1453	GATCCTT	DEL	0	0	0	0	0	0	0	1	Staedtler 2004	-	frameshift	-	-	-	-
+Control	Bone Marrow	0	1509	TAT	DEL	0	0	0	0	0	0	0	1	Staedtler 2004	-	frameshift	-	-	-	-
+Control	Bone Marrow	0	235	T	A	0	0	0	0	1	0	0	0	Staedtler 2004	73	missense	TGG	AGG	W	R
+Control	Bone Marrow	0	625	T	C	1	0	0	0	0	0	0	0	Staedtler 2004	203	missense	TGG	CGG	W	R
+Control	Bone Marrow	0	1627	G	A	0	1	0	0	0	0	0	0	Staedtler 2004	537	missense	GAA	AAA	E	K
+Control	Bone Marrow	0	1636	C	G	0	0	0	1	0	0	0	0	Staedtler 2004	540	missense	CAC	GAC	H	D
+Control	Bone Marrow	0	1709	G	A	0	1	0	0	0	0	0	0	Staedtler 2004	564	missense	GGC	GAC	G	D
+Control	Bone Marrow	0	1723	G	T	0	0	1	0	0	0	0	0	Staedtler 2004	569	missense	GAC	TAC	D	Y
+Control	Bone Marrow	0	2743	C	T	0	1	0	0	0	0	0	0	Staedtler 2004	909	missense	CGC	TGC	R	C
+Control	Bone Marrow	0	2998	G	A	0	1	0	0	0	0	0	0	Staedtler 2004	994	missense	GGT	AGT	G	S
+Control	Bone Marrow	0	436	C	T	0	1	0	0	0	0	0	0	Staedtler 2004	140	nonsense	CGA	TGA	R	*
+Control	Bone Marrow	0	610	G	T	0	0	1	0	0	0	0	0	Staedtler 2004	198	nonsense	GAA	TAA	E	*
+Control	Brain	0	427	G	DEL	0	0	0	0	0	0	0	1	Dolle 1999	-	frameshift	-	-	-	-
+Control	Brain	0	1583	A	DEL	0	0	0	0	0	0	0	1	Dolle 1999	-	frameshift	-	-	-	-
+Control	Brain	0	1473	G	C	0	0	0	1	0	0	0	0	Dolle 1999	485	missense	CAG	CAC	Q	H
+Control	Brain	0	2659	C	T	0	1	0	0	0	0	0	0	Dolle 1999	881	missense	CGG	TGG	R	W
+Control	Brain	0	65	G	A	0	1	0	0	0	0	0	0	Dolle 1999	16	nonsense	TGG	TAG	W	*
+Control	Brain	0	85	C	T	0	1	0	0	0	0	0	0	Dolle 1999	23	nonsense	CAA	TAA	Q	*
+Control	Brain	0	476	G	A	0	1	0	0	0	0	0	0	Dolle 1999	153	nonsense	TGG	TAG	W	*
+Control	Brain	0	759	C	A	0	0	1	0	0	0	0	0	Dolle 1999	247	nonsense	TGC	TGA	C	*
+Control	Brain	0	1546	C	T	0	1	0	0	0	0	0	0	Dolle 1999	510	nonsense	CAG	TAG	Q	*
+Control	Brain	0	1816	C	T	0	1	0	0	0	0	0	0	Dolle 1999	600	nonsense	CAG	TAG	Q	*
+Control	Brain	0	2771	G	A	0	1	0	0	0	0	0	0	Dolle 1999	918	nonsense	TGG	TAG	W	*
+Control	Brain	0	561	A	G	1	0	0	0	0	0	0	0	Dolle 1999	181	silent	GAA	GAG	E	E
+Control	Brain	0	1014	C	T	0	1	0	0	0	0	0	0	Dolle 1999	332	silent	CTG	CTT	F	F
+Control	Brain	0	2820	A	G	1	0	0	0	0	0	0	0	Dolle 1999	934	silent	GAA	GAG	E	E
+Control	Brain	0	74	C	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	219	A	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	343	G	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	494	T	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	781	C	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	784	G	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	1173	C	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	1395	G	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	1584	A	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	1659	C	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	2705	A	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	2739	C	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Brain	0	637	G	A	0	1	0	0	0	0	0	0	Dolle 2002	207	missense	GGC	AGC	G	S
+Control	Brain	0	1083	C	A	0	0	1	0	0	0	0	0	Dolle 2002	355	missense	AAC	AAA	N	K
+Control	Brain	0	1090	G	A	0	1	0	0	0	0	0	0	Dolle 2002	358	missense	GAG	AAG	E	K
+Control	Brain	0	1090	G	A	0	1	0	0	0	0	0	0	Dolle 2002	358	missense	GAG	AAG	E	K
+Control	Brain	0	1090	G	A	0	1	0	0	0	0	0	0	Dolle 2002	358	missense	GAG	AAG	E	K
+Control	Brain	0	1196	C	T	0	1	0	0	0	0	0	0	Dolle 2002	393	missense	CCG	CTG	P	L
+Control	Brain	0	1265	A	C	0	0	0	0	0	1	0	0	Dolle 2002	416	missense	GAA	GCA	E	A
+Control	Brain	0	1473	G	C	0	0	0	1	0	0	0	0	Dolle 2002	485	missense	CAG	CAC	Q	H
+Control	Brain	0	1627	G	C	0	0	0	1	0	0	0	0	Dolle 2002	537	missense	GAA	CAA	E	Q
+Control	Brain	0	2362	G	A	0	1	0	0	0	0	0	0	Dolle 2002	782	missense	GAT	AAT	D	N
+Control	Brain	0	2374	C	T	0	1	0	0	0	0	0	0	Dolle 2002	786	missense	CGT	TGT	R	C
+Control	Brain	0	287	G	A	0	1	0	0	0	0	0	0	Dolle 2002	90	nonsense	TGG	TAG	W	*
+Control	Brain	0	679	C	T	0	1	0	0	0	0	0	0	Dolle 2002	221	nonsense	CAA	TAA	Q	*
+Control	Brain	0	1072	C	T	0	1	0	0	0	0	0	0	Dolle 2002	352	nonsense	CGA	TGA	R	*
+Control	Brain	0	1072	C	T	0	1	0	0	0	0	0	0	Dolle 2002	352	nonsense	CGA	TGA	R	*
+Control	Brain	0	1211	G	A	0	1	0	0	0	0	0	0	Dolle 2002	398	nonsense	TGG	TAG	W	*
+Control	Brain	0	1385	G	A	0	1	0	0	0	0	0	0	Dolle 2002	456	nonsense	TGG	TAG	W	*
+Control	Brain	0	1527	C	A	0	0	1	0	0	0	0	0	Dolle 2002	503	nonsense	TAC	TAA	Y	*
+Control	Brain	0	1546	C	T	0	1	0	0	0	0	0	0	Dolle 2002	510	nonsense	CAG	TAG	Q	*
+Control	Brain	0	1546	C	T	0	1	0	0	0	0	0	0	Dolle 2002	510	nonsense	CAG	TAG	Q	*
+Control	Brain	0	1979	G	A	0	1	0	0	0	0	0	0	Dolle 2002	654	nonsense	TGG	TAG	W	*
+Control	Brain	0	2141	G	A	0	1	0	0	0	0	0	0	Dolle 2002	708	nonsense	TGG	TAG	W	*
+Control	Brain	0	2677	C	T	0	1	0	0	0	0	0	0	Dolle 2002	887	nonsense	CAG	TAG	Q	*
+Control	Brain	0	637	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	207	missense	GGC	AGC	G	S
+Control	Brain	0	638	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	207	missense	GGC	GAC	G	D
+Control	Brain	0	646	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	210	missense	CGT	TGT	R	C
+Control	Brain	0	1075	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	353	missense	GGC	AGC	G	S
+Control	Brain	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Brain	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Brain	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Brain	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Brain	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Brain	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Brain	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Brain	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Brain	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Brain	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Brain	0	1196	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	393	missense	CCG	CTG	P	L
+Control	Brain	0	1196	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	393	missense	CCG	CTG	P	L
+Control	Brain	0	1234	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	406	missense	GGC	AGC	G	S
+Control	Brain	0	1507	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	497	missense	GAT	TAT	D	Y
+Control	Brain	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Brain	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Brain	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Brain	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Brain	0	1736	A	C	0	0	0	0	0	1	0	0	Ikehata 2000	573	missense	CAG	CCG	Q	P
+Control	Brain	0	1831	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	605	missense	GGT	AGT	G	S
+Control	Brain	0	1831	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	605	missense	GGT	AGT	G	S
+Control	Brain	0	1831	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	605	missense	GGT	AGT	G	S
+Control	Brain	0	1832	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	605	missense	GGT	GTT	G	V
+Control	Brain	0	2306	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	763	missense	GGC	GAC	G	D
+Control	Brain	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Brain	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Brain	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Brain	0	2605	C	A	0	0	1	0	0	0	0	0	Ikehata 2000	863	missense	CAA	AAA	Q	K
+Control	Brain	0	2659	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	881	missense	CGG	TGG	R	W
+Control	Brain	0	2743	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	909	missense	CGC	TGC	R	C
+Control	Brain	0	2743	C	A	0	0	1	0	0	0	0	0	Ikehata 2000	909	missense	CGC	AGC	R	S
+Control	Brain	0	2823	C	A	0	0	1	0	0	0	0	0	Ikehata 2000	935	missense	AAC	AAA	N	K
+Control	Brain	0	65	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	16	nonsense	TGG	TAG	W	*
+Control	Brain	0	191	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	58	nonsense	TGG	TAG	W	*
+Control	Brain	0	416	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	133	nonsense	TGG	TAG	W	*
+Control	Brain	0	491	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	158	nonsense	TGG	TAG	W	*
+Control	Brain	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Brain	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Brain	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Brain	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Brain	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Brain	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Brain	0	1342	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	442	nonsense	CGA	TGA	R	*
+Control	Brain	0	1727	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	570	nonsense	TGG	TAG	W	*
+Control	Brain	0	1900	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	628	nonsense	CAG	TAG	Q	*
+Control	Brain	0	2544	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	842	nonsense	TGG	TGA	W	*
+Control	Brain	0	1045	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+Control	Brain	0	1998	INS	-	0	0	0	0	0	0	1	0	Ono 1999	-	frameshift	-	-	-	-
+Control	Brain	0	2560	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+Control	Brain	0	625	T	C	1	0	0	0	0	0	0	0	Ono 1999	203	missense	TGG	CGG	W	R
+Control	Brain	0	637	G	C	0	0	0	1	0	0	0	0	Ono 1999	207	missense	GGC	CGC	G	R
+Control	Brain	0	1187	C	T	0	1	0	0	0	0	0	0	Ono 1999	390	missense	TCG	TTG	S	L
+Control	Brain	0	1187	C	T	0	1	0	0	0	0	0	0	Ono 1999	390	missense	TCG	TTG	S	L
+Control	Brain	0	1627	G	A	0	1	0	0	0	0	0	0	Ono 1999	537	missense	GAA	AAA	E	K
+Control	Brain	0	1831	G	A	0	1	0	0	0	0	0	0	Ono 1999	605	missense	GGT	AGT	G	S
+Control	Brain	0	2374	C	T	0	1	0	0	0	0	0	0	Ono 1999	786	missense	CGT	TGT	R	C
+Control	Brain	0	2374	C	T	0	1	0	0	0	0	0	0	Ono 1999	786	missense	CGT	TGT	R	C
+Control	Brain	0	2375	G	T	0	0	1	0	0	0	0	0	Ono 1999	786	missense	CGT	CTT	R	L
+Control	Brain	0	2740	G	A	0	1	0	0	0	0	0	0	Ono 1999	908	missense	GAC	AAC	D	N
+Control	Brain	0	2743	C	T	0	1	0	0	0	0	0	0	Ono 1999	909	missense	CGC	TGC	R	C
+Control	Brain	0	2744	G	A	0	1	0	0	0	0	0	0	Ono 1999	909	missense	CGC	CAC	R	H
+Control	Brain	0	2744	G	T	0	0	1	0	0	0	0	0	Ono 1999	909	missense	CGC	CTC	R	L
+Control	Brain	0	763	G	T	0	0	1	0	0	0	0	0	Ono 1999	249	nonsense	GAG	TAG	E	*
+Control	Brain	0	1072	C	T	0	1	0	0	0	0	0	0	Ono 1999	352	nonsense	CGA	TGA	R	*
+Control	Brain	0	1072	C	T	0	1	0	0	0	0	0	0	Ono 1999	352	nonsense	CGA	TGA	R	*
+Control	Germ Cells	0	332	A	C	0	0	0	0	0	1	0	0	Douglas 1994	105	missense	TAT	TCT	Y	S
+Control	Germ Cells	0	587	G	C	0	0	0	1	0	0	0	0	Douglas 1994	190	missense	CGC	CCC	R	P
+Control	Germ Cells	0	1097	A	T	0	0	0	0	1	0	0	0	Douglas 1994	360	missense	CAT	CTT	H	L
+Control	Germ Cells	0	1187	C	T	0	1	0	0	0	0	0	0	Douglas 1994	390	missense	TCG	TTG	S	L
+Control	Germ Cells	0	1483	G	A	0	1	0	0	0	0	0	0	Douglas 1994	489	missense	GGC	AGC	G	S
+Control	Germ Cells	0	1640	C	G	0	0	0	1	0	0	0	0	Douglas 1994	541	missense	GCG	GGG	A	G
+Control	Germ Cells	0	1652	G	C	0	0	0	1	0	0	0	0	Douglas 1994	545	missense	AGT	ACT	S	T
+Control	Germ Cells	0	2743	C	T	0	1	0	0	0	0	0	0	Douglas 1994	909	missense	CGC	TGC	R	C
+Control	Germ Cells	0	389	C	A	0	0	1	0	0	0	0	0	Douglas 1994	124	nonsense	TCG	TAG	S	*
+Control	Germ Cells	0	501	C	A	0	0	1	0	0	0	0	0	Douglas 1994	161	nonsense	TAC	TAA	Y	*
+Control	Germ Cells	0	505	C	T	0	1	0	0	0	0	0	0	Douglas 1994	163	nonsense	CAG	TAG	Q	*
+Control	Germ Cells	0	759	C	A	0	0	1	0	0	0	0	0	Douglas 1994	247	nonsense	TGC	TGA	C	*
+Control	Germ Cells	0	763	G	T	0	0	1	0	0	0	0	0	Douglas 1994	249	nonsense	GAG	TAG	E	*
+Control	Germ Cells	0	1342	C	T	0	1	0	0	0	0	0	0	Douglas 1994	442	nonsense	CGA	TGA	R	*
+Control	Germ Cells	0	1471	C	T	0	1	0	0	0	0	0	0	Douglas 1994	485	nonsense	CAG	TAG	Q	*
+Control	Germ Cells	0	2543	G	A	0	1	0	0	0	0	0	0	Douglas 1994	842	nonsense	TGG	TAG	W	*
+Control	Germ Cells	0	2835	C	A	0	0	1	0	0	0	0	0	Douglas 1994	939	nonsense	TGC	TGA	C	*
+Control	Germ Cells	0	32	T	C	1	0	0	0	0	0	0	0	Douglas 1994	8	silent	CCG	CCG	P	P
+Control	Germ Cells	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2000	203	missense	TGG	CGG	W	R
+Control	Germ Cells	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2000	203	missense	TGG	CGG	W	R
+Control	Germ Cells	0	637	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	207	missense	GGC	AGC	G	S
+Control	Germ Cells	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Germ Cells	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Germ Cells	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Germ Cells	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Germ Cells	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Germ Cells	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Germ Cells	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Germ Cells	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Germ Cells	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Germ Cells	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Germ Cells	0	1334	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	439	missense	CGC	CAC	R	H
+Control	Germ Cells	0	1388	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	457	missense	TCG	TTG	S	L
+Control	Germ Cells	0	1388	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	457	missense	TCG	TTG	S	L
+Control	Germ Cells	0	1520	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	501	missense	CCG	CTG	P	L
+Control	Germ Cells	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Germ Cells	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Germ Cells	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Germ Cells	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Germ Cells	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Germ Cells	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Germ Cells	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Germ Cells	0	2375	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	CAT	R	H
+Control	Germ Cells	0	2392	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	792	missense	GAC	AAC	D	N
+Control	Germ Cells	0	2713	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	899	missense	GGA	AGA	G	R
+Control	Germ Cells	0	2740	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	908	missense	GAC	AAC	D	N
+Control	Germ Cells	0	2743	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	909	missense	CGC	TGC	R	C
+Control	Germ Cells	0	616	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	200	nonsense	CAG	TAG	Q	*
+Control	Germ Cells	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Germ Cells	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Germ Cells	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Germ Cells	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Germ Cells	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Germ Cells	0	1342	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	442	nonsense	CGA	TGA	R	*
+Control	Germ Cells	0	1342	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	442	nonsense	CGA	TGA	R	*
+Control	Germ Cells	0	1626	C	A	0	0	1	0	0	0	0	0	Ikehata 2000	536	nonsense	TGC	TGA	C	*
+Control	Germ Cells	0	1735	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	573	nonsense	CAG	TAG	Q	*
+Control	Heart	0	461	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	148	missense	TCG	TTG	S	L
+Control	Heart	0	524	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	169	missense	TCT	TTT	S	F
+Control	Heart	0	637	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	207	missense	GGC	AGC	G	S
+Control	Heart	0	637	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	207	missense	GGC	AGC	G	S
+Control	Heart	0	928	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	304	missense	GAA	AAA	E	K
+Control	Heart	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Heart	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Heart	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Heart	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Heart	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Heart	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Heart	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Heart	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Heart	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Heart	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Heart	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Heart	0	1196	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	393	missense	CCG	CTG	P	L
+Control	Heart	0	1196	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	393	missense	CCG	CTG	P	L
+Control	Heart	0	1234	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	406	missense	GGC	AGC	G	S
+Control	Heart	0	1326	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	436	missense	ATG	ATA	M	I
+Control	Heart	0	1334	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	439	missense	CGC	CTC	R	L
+Control	Heart	0	1520	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	501	missense	CCG	CTG	P	L
+Control	Heart	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Heart	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Heart	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Heart	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Heart	0	1722	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	568	missense	TGG	TGT	W	C
+Control	Heart	0	1831	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	605	missense	GGT	AGT	G	S
+Control	Heart	0	1831	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	605	missense	GGT	AGT	G	S
+Control	Heart	0	2356	C	A	0	0	1	0	0	0	0	0	Ikehata 2000	780	missense	CTG	ATG	L	M
+Control	Heart	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Heart	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Heart	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Heart	0	2393	A	G	1	0	0	0	0	0	0	0	Ikehata 2000	792	missense	GAC	GGC	D	G
+Control	Heart	0	2659	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	881	missense	CGG	TGG	R	W
+Control	Heart	0	2713	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	899	missense	GGA	AGA	G	R
+Control	Heart	0	2743	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	909	missense	CGC	TGC	R	C
+Control	Heart	0	2743	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	909	missense	CGC	TGC	R	C
+Control	Heart	0	2744	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	909	missense	CGC	CAC	R	H
+Control	Heart	0	2813	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	932	missense	CCG	CTG	P	L
+Control	Heart	0	2817	C	G	0	0	0	1	0	0	0	0	Ikehata 2000	933	missense	AGC	AGG	S	R
+Control	Heart	0	2818	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	934	missense	GAA	AAA	E	K
+Control	Heart	0	424	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	136	nonsense	GAA	TAA	E	*
+Control	Heart	0	436	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	140	nonsense	CGA	TGA	R	*
+Control	Heart	0	505	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	163	nonsense	CAG	TAG	Q	*
+Control	Heart	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Heart	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Heart	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Heart	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Heart	0	1215	C	A	0	0	1	0	0	0	0	0	Ikehata 2000	399	nonsense	TAC	TAA	Y	*
+Control	Heart	0	1885	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	623	nonsense	CAG	TAG	Q	*
+Control	Heart	0	1944	C	G	0	0	0	1	0	0	0	0	Ikehata 2000	642	nonsense	TAC	TAG	Y	*
+Control	Heart	0	2488	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	824	nonsense	CAG	TAG	Q	*
+Control	Heart	0	3078	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	1020	nonsense	TGG	TGA	W	*
+Control	Heart	0	861	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	281	silent	GAG	GAA	E	E
+Control	Heart	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2000	203	missense	TGG	CGG	W	R
+Control	Kidney	0	52	C	T	0	1	0	0	0	0	0	0	Dolle 2006	12	nonsense	CAA	TAA	Q	*
+Control	Kidney	0	113	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Kidney	0	136	G	T	0	0	1	0	0	0	0	0	Dolle 2006	40	nonsense	GAA	TAA	E	*
+Control	Kidney	0	204	G	A	0	1	0	0	0	0	0	0	Dolle 2006	62	nonsense	TGG	TGA	W	*
+Control	Kidney	0	287	G	A	0	1	0	0	0	0	0	0	Dolle 2006	90	nonsense	TGG	TAG	W	*
+Control	Kidney	0	367	G	T	0	0	1	0	0	0	0	0	Dolle 2006	117	nonsense	GAG	TAG	E	*
+Control	Kidney	0	416	G	A	0	1	0	0	0	0	0	0	Dolle 2006	133	nonsense	TGG	TAG	W	*
+Control	Kidney	0	416	G	A	0	1	0	0	0	0	0	0	Dolle 2006	133	nonsense	TGG	TAG	W	*
+Control	Kidney	0	808	G	T	0	0	1	0	0	0	0	0	Dolle 2006	264	nonsense	GAA	TAA	E	*
+Control	Kidney	0	840	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Kidney	0	840	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Kidney	0	920	G	A	0	1	0	0	0	0	0	0	Dolle 2006	301	nonsense	TGG	TAG	W	*
+Control	Kidney	0	928	G	A	0	1	0	0	0	0	0	0	Dolle 2006	304	missense	GAA	AAA	E	K
+Control	Kidney	0	945	T	G	0	0	0	0	0	1	0	0	Dolle 2006	309	nonsense	TAT	TAG	Y	*
+Control	Kidney	0	1064	INS	T	0	0	0	0	0	0	1	0	Dolle 2006	-	frameshift	-	-	-	-
+Control	Kidney	0	1072	C	T	0	1	0	0	0	0	0	0	Dolle 2006	352	nonsense	CGA	TGA	R	*
+Control	Kidney	0	1111	C	T	0	1	0	0	0	0	0	0	Dolle 2006	365	nonsense	CAG	TAG	Q	*
+Control	Kidney	0	1187	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Kidney	0	1187	C	T	0	1	0	0	0	0	0	0	Dolle 2006	390	missense	TCG	TTG	S	L
+Control	Kidney	0	1393	G	A	0	1	0	0	0	0	0	0	Dolle 2006	459	missense	GGG	AGG	G	R
+Control	Kidney	0	1471	C	T	0	1	0	0	0	0	0	0	Dolle 2006	485	nonsense	CAG	TAG	Q	*
+Control	Kidney	0	1533	CG	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Kidney	0	1627	G	A	0	1	0	0	0	0	0	0	Dolle 2006	537	missense	GAA	AAA	E	K
+Control	Kidney	0	1627	G	A	0	1	0	0	0	0	0	0	Dolle 2006	537	missense	GAA	AAA	E	K
+Control	Kidney	0	1629	A	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Kidney	0	1705	C	T	0	1	0	0	0	0	0	0	Dolle 2006	563	nonsense	CAG	TAG	Q	*
+Control	Kidney	0	1918	C	T	0	1	0	0	0	0	0	0	Dolle 2006	634	nonsense	CAA	TAA	Q	*
+Control	Kidney	0	1980	G	A	0	1	0	0	0	0	0	0	Dolle 2006	654	nonsense	TGG	TGA	W	*
+Control	Kidney	0	2144	C	A	0	0	1	0	0	0	0	0	Dolle 2006	709	nonsense	TCA	TAA	S	*
+Control	Kidney	0	2287	C	T	0	1	0	0	0	0	0	0	Dolle 2006	757	nonsense	CAA	TAA	Q	*
+Control	Kidney	0	2287	C	T	0	1	0	0	0	0	0	0	Dolle 2006	757	nonsense	CAA	TAA	Q	*
+Control	Kidney	0	2299	C	T	0	1	0	0	0	0	0	0	Dolle 2006	761	nonsense	CAG	TAG	Q	*
+Control	Kidney	0	2375	G	T	0	0	1	0	0	0	0	0	Dolle 2006	786	missense	CGT	CTT	R	L
+Control	Kidney	0	2416	C	A	0	0	1	0	0	0	0	0	Dolle 2006	800	missense	CGC	AGC	R	S
+Control	Kidney	0	2451	G	A	0	1	0	0	0	0	0	0	Dolle 2006	811	silent	AAG	AAA	K	K
+Control	Kidney	0	2468	INS	T	0	0	0	0	0	0	1	0	Dolle 2006	-	frameshift	-	-	-	-
+Control	Kidney	0	2489	A	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Kidney	0	2500	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Kidney	0	2720	G	A	0	1	0	0	0	0	0	0	Dolle 2006	901	missense	GGG	GAG	G	E
+Control	Kidney	0	2995	A	T	0	0	0	0	1	0	0	0	Dolle 2006	993	missense	ATT	TTT	I	F
+Control	Liver	0	337	A	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	437	G	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	447	T	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	548	T	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	827	G	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	960	A	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	1487	G	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	1584	A	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	2340	A	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	2362	G	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	2592	INS	T	0	0	0	0	0	0	1	0	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	2767	C	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	2917	ctga	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Liver	0	1187	C	T	0	1	0	0	0	0	0	0	Dolle 2002	390	missense	TCG	TTG	S	L
+Control	Liver	0	1187	C	T	0	1	0	0	0	0	0	0	Dolle 2002	390	missense	TCG	TTG	S	L
+Control	Liver	0	1196	C	T	0	1	0	0	0	0	0	0	Dolle 2002	393	missense	CCG	CTG	P	L
+Control	Liver	0	1473	G	C	0	0	0	1	0	0	0	0	Dolle 2002	485	missense	CAG	CAC	Q	H
+Control	Liver	0	1473	G	C	0	0	0	1	0	0	0	0	Dolle 2002	485	missense	CAG	CAC	Q	H
+Control	Liver	0	2659	C	T	0	1	0	0	0	0	0	0	Dolle 2002	881	missense	CGG	TGG	R	W
+Control	Liver	0	2713	G	A	0	1	0	0	0	0	0	0	Dolle 2002	899	missense	GGA	AGA	G	R
+Control	Liver	0	2742	CC	AT	0	0	0	0	0	0	0	0	Dolle 2002	908	missense	GACCGC	GAATGC	DR	EC
+Control	Liver	0	192	G	A	0	1	0	0	0	0	0	0	Dolle 2002	58	nonsense	TGG	TGA	W	*
+Control	Liver	0	203	G	A	0	1	0	0	0	0	0	0	Dolle 2002	62	nonsense	TGG	TAG	W	*
+Control	Liver	0	203	G	A	0	1	0	0	0	0	0	0	Dolle 2002	62	nonsense	TGG	TAG	W	*
+Control	Liver	0	287	G	A	0	1	0	0	0	0	0	0	Dolle 2002	90	nonsense	TGG	TAG	W	*
+Control	Liver	0	679	C	T	0	1	0	0	0	0	0	0	Dolle 2002	221	nonsense	CAA	TAA	Q	*
+Control	Liver	0	814	C	T	0	1	0	0	0	0	0	0	Dolle 2002	266	nonsense	CAG	TAG	Q	*
+Control	Liver	0	1072	C	T	0	1	0	0	0	0	0	0	Dolle 2002	352	nonsense	CGA	TGA	R	*
+Control	Liver	0	1072	C	T	0	1	0	0	0	0	0	0	Dolle 2002	352	nonsense	CGA	TGA	R	*
+Control	Liver	0	1342	C	T	0	1	0	0	0	0	0	0	Dolle 2002	442	nonsense	CGA	TGA	R	*
+Control	Liver	0	1386	G	A	0	1	0	0	0	0	0	0	Dolle 2002	456	nonsense	TGG	TGA	W	*
+Control	Liver	0	1571	G	A	0	1	0	0	0	0	0	0	Dolle 2002	518	nonsense	TGG	TAG	W	*
+Control	Liver	0	1592	C	A	0	0	1	0	0	0	0	0	Dolle 2002	525	nonsense	TCG	TAG	S	*
+Control	Liver	0	1676	G	A	0	1	0	0	0	0	0	0	Dolle 2002	553	nonsense	TGG	TAG	W	*
+Control	Liver	0	1747	A	T	0	0	0	0	1	0	0	0	Dolle 2002	577	nonsense	AAA	TAA	K	*
+Control	Liver	0	1782	C	A	0	0	1	0	0	0	0	0	Dolle 2002	588	nonsense	TAC	TAA	Y	*
+Control	Liver	0	1900	C	T	0	1	0	0	0	0	0	0	Dolle 2002	628	nonsense	CAG	TAG	Q	*
+Control	Liver	0	2083	G	T	0	0	1	0	0	0	0	0	Dolle 2002	689	nonsense	GAG	TAG	E	*
+Control	Liver	0	2287	C	T	0	1	0	0	0	0	0	0	Dolle 2002	757	nonsense	CAA	TAA	Q	*
+Control	Liver	0	2440	G	T	0	0	1	0	0	0	0	0	Dolle 2002	808	nonsense	GAA	TAA	E	*
+Control	Liver	0	2467	C	T	0	1	0	0	0	0	0	0	Dolle 2002	817	nonsense	CAG	TAG	Q	*
+Control	Liver	0	2543	G	A	0	1	0	0	0	0	0	0	Dolle 2002	842	nonsense	TGG	TAG	W	*
+Control	Liver	0	74	C	A	0	0	1	0	0	0	0	0	Dolle 2006	19	missense	CCT	CAT	P	H
+Control	Liver	0	240	GG	TT	0	0	0	0	0	0	0	0	Dolle 2006	74	nonsense	CTGGAG	CTTTAG	E	*
+Control	Liver	0	288	G	A	0	1	0	0	0	0	0	0	Dolle 2006	90	nonsense	TGG	TGA	W	*
+Control	Liver	0	430	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	451	GG	TT	0	0	0	0	0	0	0	0	Dolle 2006	145	missense	GGC	TTC	G	F
+Control	Liver	0	461	C	T	0	1	0	0	0	0	0	0	Dolle 2006	148	missense	TCG	TTG	S	L
+Control	Liver	0	491	G	A	0	1	0	0	0	0	0	0	Dolle 2006	158	nonsense	TGG	TAG	W	*
+Control	Liver	0	492	G	A	0	1	0	0	0	0	0	0	Dolle 2006	158	nonsense	TGG	TGA	W	*
+Control	Liver	0	526	G	T	0	0	1	0	0	0	0	0	Dolle 2006	170	nonsense	GAA	TAA	E	*
+Control	Liver	0	637	G	A	0	1	0	0	0	0	0	0	Dolle 2006	207	missense	GGC	AGC	G	S
+Control	Liver	0	638	G	T	0	0	1	0	0	0	0	0	Dolle 2006	207	missense	GGC	GTC	G	V
+Control	Liver	0	651	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	701	CC	A	0	0	0	0	0	0	0	0	Dolle 2006	228	frameshift	-	-	-	-
+Control	Liver	0	767	T	A	0	0	0	0	1	0	0	0	Dolle 2006	250	nonsense	TTG	TAG	L	*
+Control	Liver	0	777	C	A	0	0	1	0	0	0	0	0	Dolle 2006	253	nonsense	TAC	TAA	Y	*
+Control	Liver	0	820	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	988	G	T	0	0	1	0	0	0	0	0	Dolle 2006	324	nonsense	GAA	TAA	E	*
+Control	Liver	0	994	G	T	0	0	1	0	0	0	0	0	Dolle 2006	326	nonsense	GAA	TAA	E	*
+Control	Liver	0	1018	G	T	0	0	1	0	0	0	0	0	Dolle 2006	334	nonsense	GAG	TAG	E	*
+Control	Liver	0	1072	C	T	0	1	0	0	0	0	0	0	Dolle 2006	352	nonsense	CGA	TGA	R	*
+Control	Liver	0	1075	G	T	0	0	1	0	0	0	0	0	Dolle 2006	353	missense	GGC	TGC	G	C
+Control	Liver	0	1090	G	A	0	1	0	0	0	0	0	0	Dolle 2006	358	missense	GAG	AAG	E	K
+Control	Liver	0	1090	G	A	0	1	0	0	0	0	0	0	Dolle 2006	358	missense	GAG	AAG	E	K
+Control	Liver	0	1138	C	T	0	1	0	0	0	0	0	0	Dolle 2006	374	nonsense	CAG	TAG	Q	*
+Control	Liver	0	1141	G	A	0	1	0	0	0	0	0	0	Dolle 2006	375	missense	GAT	AAT	D	N
+Control	Liver	0	1170	T	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	1187	C	T	0	1	0	0	0	0	0	0	Dolle 2006	390	missense	TCG	TTG	S	L
+Control	Liver	0	1187	C	T	0	1	0	0	0	0	0	0	Dolle 2006	390	missense	TCG	TTG	S	L
+Control	Liver	0	1190	A	G	1	0	0	0	0	0	0	0	Dolle 2006	391	missense	CAT	CGT	H	R
+Control	Liver	0	1196	C	T	0	1	0	0	0	0	0	0	Dolle 2006	393	missense	CCG	CTG	P	L
+Control	Liver	0	1196	C	T	0	1	0	0	0	0	0	0	Dolle 2006	393	missense	CCG	CTG	P	L
+Control	Liver	0	1211	G	A	0	1	0	0	0	0	0	0	Dolle 2006	398	nonsense	TGG	TAG	W	*
+Control	Liver	0	1233	C	A	0	0	1	0	0	0	0	0	Dolle 2006	405	nonsense	TAC	TAA	Y	*
+Control	Liver	0	1260	T	G	0	0	0	0	0	1	0	0	Dolle 2006	414	missense	AAT	AAG	N	K
+Control	Liver	0	1264	G	T	0	0	1	0	0	0	0	0	Dolle 2006	416	nonsense	GAA	TAA	E	*
+Control	Liver	0	1280	T	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	1355	G	A	0	1	0	0	0	0	0	0	Dolle 2006	446	missense	CGC	CAC	R	H
+Control	Liver	0	1388	C	A	0	0	1	0	0	0	0	0	Dolle 2006	457	nonsense	TCG	TAG	S	*
+Control	Liver	0	1399	G	T	0	0	1	0	0	0	0	0	Dolle 2006	461	nonsense	GAA	TAA	E	*
+Control	Liver	0	1405	GG	AT	0	0	0	0	0	0	0	0	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	1439	G	A	0	1	0	0	0	0	0	0	Dolle 2006	474	nonsense	TGG	TAG	W	*
+Control	Liver	0	1477	G	A	0	1	0	0	0	0	0	0	Dolle 2006	487	missense	GAA	AAA	E	K
+Control	Liver	0	1518	C	A	0	0	1	0	0	0	0	0	Dolle 2006	500	nonsense	TGC	TGA	C	*
+Control	Liver	0	1572	G	A	0	1	0	0	0	0	0	0	Dolle 2006	518	nonsense	TGG	TGA	W	*
+Control	Liver	0	1592	CG	AA	0	0	0	0	0	0	0	0	Dolle 2006	525	nonsense	TCG	TAA	S	*
+Control	Liver	0	1627	G	A	0	1	0	0	0	0	0	0	Dolle 2006	537	missense	GAA	AAA	E	K
+Control	Liver	0	1627	G	A	0	1	0	0	0	0	0	0	Dolle 2006	537	missense	GAA	AAA	E	K
+Control	Liver	0	1627	G	A	0	1	0	0	0	0	0	0	Dolle 2006	537	missense	GAA	AAA	E	K
+Control	Liver	0	1636	C	T	0	1	0	0	0	0	0	0	Dolle 2006	540	missense	CAC	TAC	H	Y
+Control	Liver	0	1650	ca	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	1674	C	A	0	0	1	0	0	0	0	0	Dolle 2006	552	nonsense	TAC	TAA	Y	*
+Control	Liver	0	1702	-	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	1739	C	A	0	0	1	0	0	0	0	0	Dolle 2006	574	nonsense	TCG	TAG	S	*
+Control	Liver	0	1772	G	A	0	1	0	0	0	0	0	0	Dolle 2006	585	nonsense	TGG	TAG	W	*
+Control	Liver	0	1773	G	A	0	1	0	0	0	0	0	0	Dolle 2006	585	nonsense	TGG	TGA	W	*
+Control	Liver	0	1782	C	G	0	0	0	1	0	0	0	0	Dolle 2006	588	nonsense	TAC	TAG	Y	*
+Control	Liver	0	1782	C	G	0	0	0	1	0	0	0	0	Dolle 2006	588	nonsense	TAC	TAG	Y	*
+Control	Liver	0	1794	T	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	1849	C	T	0	1	0	0	0	0	0	0	Dolle 2006	611	missense	CGC	TGC	R	C
+Control	Liver	0	1854	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	1885	C	T	0	1	0	0	0	0	0	0	Dolle 2006	623	nonsense	CAG	TAG	Q	*
+Control	Liver	0	2044	GG	T	0	0	0	0	0	0	0	0	Dolle 2006	676	frameshift	-	-	-	-
+Control	Liver	0	2407	G	T	0	0	1	0	0	0	0	0	Dolle 2006	797	nonsense	GAA	TAA	E	*
+Control	Liver	0	2412	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	2464	T	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	2543	G	A	0	1	0	0	0	0	0	0	Dolle 2006	842	nonsense	TGG	TAG	W	*
+Control	Liver	0	2545	C	T	0	1	0	0	0	0	0	0	Dolle 2006	843	nonsense	CAG	TAG	Q	*
+Control	Liver	0	2586	CC	AA	0	0	0	0	0	0	0	0	Dolle 2006	856	nonsense	TACCGG	TAAAGG	Y	*
+Control	Liver	0	2721	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	2760	T	A	0	0	0	0	1	0	0	0	Dolle 2006	914	nonsense	TGT	TGA	C	*
+Control	Liver	0	2802	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Control	Liver	0	2824	GG	C	0	0	0	0	0	0	0	0	Dolle 2006	936	frameshift	-	-	-	-
+Control	Liver	0	2870	G	A	0	1	0	0	0	0	0	0	Dolle 2006	951	nonsense	TGG	TAG	W	*
+Control	Liver	0	3066	CC	AA	0	0	0	0	0	0	0	0	Dolle 2006	1016	nonsense	TACCAG	TAAAAG	Y	*
+Control	Liver	0	461	C	T	0	1	0	0	0	0	0	0	Douglas 1994	148	missense	TCG	TTG	S	L
+Control	Liver	0	617	A	T	0	0	0	0	1	0	0	0	Douglas 1994	200	missense	CAG	CTG	Q	L
+Control	Liver	0	634	A	G	1	0	0	0	0	0	0	0	Douglas 1994	206	missense	AGC	GGC	S	G
+Control	Liver	0	779	T	C	1	0	0	0	0	0	0	0	Douglas 1994	254	missense	CTA	CCA	L	P
+Control	Liver	0	820	G	A	0	1	0	0	0	0	0	0	Douglas 1994	268	missense	GCC	ACC	A	T
+Control	Liver	0	901	G	A	0	1	0	0	0	0	0	0	Douglas 1994	295	missense	GTC	ATC	V	I
+Control	Liver	0	1094	A	C	0	0	0	0	0	1	0	0	Douglas 1994	359	missense	CAT	CCT	H	P
+Control	Liver	0	1103	T	C	1	0	0	0	0	0	0	0	Douglas 1994	362	missense	CTG	CCG	L	P
+Control	Liver	0	1196	C	T	0	1	0	0	0	0	0	0	Douglas 1994	393	missense	CCG	CTG	P	L
+Control	Liver	0	1376	T	C	1	0	0	0	0	0	0	0	Douglas 1994	453	missense	GTG	GCG	V	A
+Control	Liver	0	1529	C	T	0	1	0	0	0	0	0	0	Douglas 1994	504	missense	GCG	GTG	A	V
+Control	Liver	0	1531	C	T	0	1	0	0	0	0	0	0	Douglas 1994	505	missense	CGC	TGC	R	C
+Control	Liver	0	1531	C	T	0	1	0	0	0	0	0	0	Douglas 1994	505	missense	CGC	TGC	R	C
+Control	Liver	0	1531	C	T	0	1	0	0	0	0	0	0	Douglas 1994	505	missense	CGC	TGC	R	C
+Control	Liver	0	1883	A	T	0	0	0	0	1	0	0	0	Douglas 1994	622	missense	CAC	CTC	H	L
+Control	Liver	0	2633	T	C	1	0	0	0	0	0	0	0	Douglas 1994	872	missense	GTG	GCG	V	A
+Control	Liver	0	2743	C	T	0	1	0	0	0	0	0	0	Douglas 1994	909	missense	CGC	TGC	R	C
+Control	Liver	0	2743	C	T	0	1	0	0	0	0	0	0	Douglas 1994	909	missense	CGC	TGC	R	C
+Control	Liver	0	2813	C	T	0	1	0	0	0	0	0	0	Douglas 1994	932	missense	CCG	CTG	P	L
+Control	Liver	0	1873	G	T	0	0	1	0	0	0	0	0	Douglas 1994	619	nonsense	GAA	TAA	E	*
+Control	Liver	0	2142	G	A	0	1	0	0	0	0	0	0	Douglas 1994	708	nonsense	TGG	TGA	W	*
+Control	Liver	0	507	G	A	0	1	0	0	0	0	0	0	Douglas 1994	163	silent	CAG	CAA	Q	Q
+Control	Liver	0	1602	A	G	1	0	0	0	0	0	0	0	Douglas 1994	528	silent	GGA	GGG	G	G
+Control	Liver	0	1962	T	C	1	0	0	0	0	0	0	0	Douglas 1994	648	silent	GAT	GAC	D	D
+Control	Liver	0	461	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	148	missense	TCG	TTG	S	L
+Control	Liver	0	753	G	C	0	0	0	1	0	0	0	0	Ikehata 2000	245	missense	CAG	CAC	Q	H
+Control	Liver	0	956	T	A	0	0	0	0	1	0	0	0	Ikehata 2000	313	missense	GTT	GAT	V	D
+Control	Liver	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Liver	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Liver	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Liver	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Liver	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Liver	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Liver	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Liver	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Liver	0	1196	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	393	missense	CCG	CTG	P	L
+Control	Liver	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Liver	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Liver	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Liver	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Liver	0	1831	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	605	missense	GGT	AGT	G	S
+Control	Liver	0	1889	A	G	1	0	0	0	0	0	0	0	Ikehata 2000	624	missense	CAG	CGG	Q	R
+Control	Liver	0	2335	A	G	1	0	0	0	0	0	0	0	Ikehata 2000	773	missense	AAA	GAA	K	E
+Control	Liver	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Liver	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Liver	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Liver	0	2404	A	T	0	0	0	0	1	0	0	0	Ikehata 2000	796	missense	AGT	TGT	S	C
+Control	Liver	0	2666	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	883	missense	GGC	GTC	G	V
+Control	Liver	0	2713	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	899	missense	GGA	AGA	G	R
+Control	Liver	0	2713	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	899	missense	GGA	AGA	G	R
+Control	Liver	0	2840	C	A	0	0	1	0	0	0	0	0	Ikehata 2000	941	missense	ACG	AAG	T	K
+Control	Liver	0	3007	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	997	missense	GAC	AAC	D	N
+Control	Liver	0	125	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	36	nonsense	TGG	TAG	W	*
+Control	Liver	0	191	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	58	nonsense	TGG	TAG	W	*
+Control	Liver	0	217	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	67	nonsense	GAA	TAA	E	*
+Control	Liver	0	241	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	75	nonsense	GAG	TAG	E	*
+Control	Liver	0	287	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	90	nonsense	TGG	TAG	W	*
+Control	Liver	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Liver	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Liver	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Liver	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Liver	0	1313	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	432	nonsense	TGG	TAG	W	*
+Control	Liver	0	1439	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	474	nonsense	TGG	TAG	W	*
+Control	Liver	0	1471	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	485	nonsense	CAG	TAG	Q	*
+Control	Liver	0	1626	C	A	0	0	1	0	0	0	0	0	Ikehata 2000	536	nonsense	TGC	TGA	C	*
+Control	Liver	0	1782	C	G	0	0	0	1	0	0	0	0	Ikehata 2000	588	nonsense	TAC	TAG	Y	*
+Control	Liver	0	1900	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	628	nonsense	CAG	TAG	Q	*
+Control	Liver	0	2188	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	724	nonsense	GAA	TAA	E	*
+Control	Liver	0	2299	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	761	nonsense	CAG	TAG	Q	*
+Control	Liver	0	2303	C	A	0	0	1	0	0	0	0	0	Ikehata 2000	762	nonsense	TCA	TAA	S	*
+Control	Liver	0	2324	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	769	nonsense	TGG	TAG	W	*
+Control	Liver	0	2708	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	897	nonsense	TGG	TAG	W	*
+Control	Liver	0	861	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	281	silent	GAG	GAA	E	E
+Control	Liver	0	638	G	A	0	1	0	0	0	0	0	0	Ono 1999	207	missense	GGC	GAC	G	D
+Control	Liver	0	1090	G	A	0	1	0	0	0	0	0	0	Ono 1999	358	missense	GAG	AAG	E	K
+Control	Liver	0	1090	G	A	0	1	0	0	0	0	0	0	Ono 1999	358	missense	GAG	AAG	E	K
+Control	Liver	0	1187	C	T	0	1	0	0	0	0	0	0	Ono 1999	390	missense	TCG	TTG	S	L
+Control	Liver	0	1187	C	T	0	1	0	0	0	0	0	0	Ono 1999	390	missense	TCG	TTG	S	L
+Control	Liver	0	1228	C	A	0	0	1	0	0	0	0	0	Ono 1999	404	missense	CGC	AGC	R	S
+Control	Liver	0	1361	G	A	0	1	0	0	0	0	0	0	Ono 1999	448	missense	CGT	CAT	R	H
+Control	Liver	0	1627	G	A	0	1	0	0	0	0	0	0	Ono 1999	537	missense	GAA	AAA	E	K
+Control	Liver	0	1627	G	A	0	1	0	0	0	0	0	0	Ono 1999	537	missense	GAA	AAA	E	K
+Control	Liver	0	1712	G	T	0	0	1	0	0	0	0	0	Ono 1999	565	missense	GGC	GTC	G	V
+Control	Liver	0	1831	G	T	0	0	1	0	0	0	0	0	Ono 1999	605	missense	GGT	TGT	G	C
+Control	Liver	0	2713	G	A	0	1	0	0	0	0	0	0	Ono 1999	899	missense	GGA	AGA	G	R
+Control	Liver	0	2743	C	T	0	1	0	0	0	0	0	0	Ono 1999	909	missense	CGC	TGC	R	C
+Control	Liver	0	2743	C	T	0	1	0	0	0	0	0	0	Ono 1999	909	missense	CGC	TGC	R	C
+Control	Liver	0	430	C	T	0	1	0	0	0	0	0	0	Ono 1999	138	nonsense	CAG	TAG	Q	*
+Control	Liver	0	751	C	T	0	1	0	0	0	0	0	0	Ono 1999	245	nonsense	CAG	TAG	Q	*
+Control	Liver	0	1072	C	T	0	1	0	0	0	0	0	0	Ono 1999	352	nonsense	CGA	TGA	R	*
+Control	Liver	0	1072	C	T	0	1	0	0	0	0	0	0	Ono 1999	352	nonsense	CGA	TGA	R	*
+Control	Liver	0	1342	C	T	0	1	0	0	0	0	0	0	Ono 1999	442	nonsense	CGA	TGA	R	*
+Control	Liver	0	3034	G	T	0	0	1	0	0	0	0	0	Ono 1999	1006	nonsense	GAA	TAA	E	*
+Control	Liver	0	109	C	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	479	G	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	756	G	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	759	C	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	883	G	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	1044	-	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	1144	A	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	1179	G	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	1502	-	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	1512	INS	ATA	0	0	0	0	0	0	1	0	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	1656	T	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	1734	INS	C	0	0	0	0	0	0	1	0	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	1849	INS	T	0	0	0	0	0	0	1	0	Souliotis 1998	-	frameshift	-	-	-	-
+Control	Liver	0	463	G	C	0	0	0	1	0	0	0	0	Souliotis 1998	149	missense	GCG	CCG	A	P
+Control	Liver	0	595	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	193	missense	GAC	AAC	D	N
+Control	Liver	0	625	T	C	1	0	0	0	0	0	0	0	Souliotis 1998	203	missense	TGG	CGG	W	R
+Control	Liver	0	899	A	T	0	0	0	0	1	0	0	0	Souliotis 1998	294	missense	AAC	ATC	N	I
+Control	Liver	0	905	A	C	0	0	0	0	0	1	0	0	Souliotis 1998	296	missense	GAA	GCA	E	A
+Control	Liver	0	913	A	G	1	0	0	0	0	0	0	0	Souliotis 1998	299	missense	AAA	GAA	K	E
+Control	Liver	0	1073	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	352	missense	CGA	CAA	R	Q
+Control	Liver	0	1114	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	366	missense	GTC	ATC	V	I
+Control	Liver	0	1202	A	G	1	0	0	0	0	0	0	0	Souliotis 1998	395	missense	CAT	CGT	H	R
+Control	Liver	0	1232	A	G	1	0	0	0	0	0	0	0	Souliotis 1998	405	missense	TAC	TGC	Y	C
+Control	Liver	0	1373	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	452	missense	AGT	AAT	S	N
+Control	Liver	0	1438	T	A	0	0	0	0	1	0	0	0	Souliotis 1998	474	missense	TGG	AGG	W	R
+Control	Liver	0	1492	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	492	missense	GAC	AAC	D	N
+Control	Liver	0	1510	A	G	1	0	0	0	0	0	0	0	Souliotis 1998	498	missense	ATT	GTT	I	V
+Control	Liver	0	1543	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	509	missense	GAC	AAC	D	N
+Control	Liver	0	1561	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	515	missense	GTG	ATG	V	M
+Control	Liver	0	1627	G	C	0	0	0	1	0	0	0	0	Souliotis 1998	537	missense	GAA	CAA	E	Q
+Control	Liver	0	1688	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	557	missense	CGT	CAT	R	H
+Control	Liver	0	1708	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	564	missense	GGC	AGC	G	S
+Control	Liver	0	1722	G	T	0	0	1	0	0	0	0	0	Souliotis 1998	568	missense	TGG	TGT	W	C
+Control	Liver	0	1823	G	T	0	0	1	0	0	0	0	0	Souliotis 1998	602	missense	TGT	TTT	C	F
+Control	Liver	0	2153	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	712	missense	GGG	GAG	G	E
+Control	Liver	0	2215	G	C	0	0	0	1	0	0	0	0	Souliotis 1998	733	missense	GCG	CCG	A	P
+Control	Liver	0	2408	A	G	1	0	0	0	0	0	0	0	Souliotis 1998	797	missense	GAA	GGA	E	G
+Control	Liver	0	2659	C	T	0	1	0	0	0	0	0	0	Souliotis 1998	881	missense	CGG	TGG	R	W
+Control	Liver	0	187	G	T	0	0	1	0	0	0	0	0	Souliotis 1998	57	nonsense	GAA	TAA	E	*
+Control	Liver	0	436	C	T	0	1	0	0	0	0	0	0	Souliotis 1998	140	nonsense	CGA	TGA	R	*
+Control	Liver	0	548	T	A	0	0	0	0	1	0	0	0	Souliotis 1998	177	nonsense	TTA	TAA	L	*
+Control	Liver	0	994	G	T	0	0	1	0	0	0	0	0	Souliotis 1998	326	nonsense	GAA	TAA	E	*
+Control	Liver	0	1676	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	553	nonsense	TGG	TAG	W	*
+Control	Liver	0	1739	C	A	0	0	1	0	0	0	0	0	Souliotis 1998	574	nonsense	TCG	TAG	S	*
+Control	Liver	0	2493	C	A	0	0	1	0	0	0	0	0	Souliotis 1998	825	nonsense	TGC	TGA	C	*
+Control	Liver	0	2166	C	A	0	0	1	0	0	0	0	0	Souliotis 1998	716	silent	GCC	GCA	A	A
+Control	Lymphoma	0	1734	T	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Lymphoma	0	1196	C	T	0	1	0	0	0	0	0	0	Dolle 2002	393	missense	CCG	CTG	P	L
+Control	Lymphoma	0	1210	T	C	1	0	0	0	0	0	0	0	Dolle 2002	398	missense	TGG	CGG	W	R
+Control	Lymphoma	0	1238	T	C	1	0	0	0	0	0	0	0	Dolle 2002	407	missense	CTG	CCG	L	P
+Control	Lymphoma	0	1627	G	A	0	1	0	0	0	0	0	0	Dolle 2002	537	missense	GAA	AAA	E	K
+Control	Lymphoma	0	2791	A	G	1	0	0	0	0	0	0	0	Dolle 2002	925	missense	ATG	GTG	M	V
+Control	Lymphoma	0	2822	A	T	0	0	0	0	1	0	0	0	Dolle 2002	935	missense	AAC	ATC	N	I
+Control	Lymphoma	0	2854	T	G	0	0	0	0	0	1	0	0	Dolle 2002	946	missense	TAT	GAT	Y	D
+Control	Lymphoma	0	2868	G	C	0	0	0	1	0	0	0	0	Dolle 2002	950	missense	CAG	CAC	Q	H
+Control	Lymphoma	0	50	T	A	0	0	0	0	1	0	0	0	Dolle 2002	11	nonsense	TTA	TAA	L	*
+Control	Lymphoma	0	1030	G	T	0	0	1	0	0	0	0	0	Dolle 2002	338	nonsense	GAA	TAA	E	*
+Control	Lymphoma	0	2142	G	A	0	1	0	0	0	0	0	0	Dolle 2002	708	nonsense	TGG	TGA	W	*
+Control	Lymphoma	0	451	G	C	0	0	0	1	0	0	0	0	Dolle 2002	145	missense	GGC	CGC	G	R
+Control	Lymphoma	0	1434	T	C	1	0	0	0	0	0	0	0	Dolle 2002	472	silent	TAT	TAC	Y	Y
+Control	Skin	3	361	C	DEL	0	0	0	0	0	0	0	1	Frijhoff 1997	115	frameshift	-	-	-	-
+Control	Skin	4	544	T	DEL	0	0	0	0	0	0	0	1	Frijhoff 1997	176	frameshift	-	-	-	-
+Control	Skin	1	567	INS	T	0	0	0	0	0	0	1	0	Frijhoff 1997	183	frameshift	-	-	-	-
+Control	Skin	1	578	-	DEL	0	0	0	0	0	0	0	1	Frijhoff 1997	187	frameshift	-	-	-	-
+Control	Skin	4	629	-	DEL	0	0	0	0	0	0	0	1	Frijhoff 1997	204	frameshift	-	-	-	-
+Control	Skin	1	1527	CG	DEL	0	0	0	0	0	0	0	1	Frijhoff 1997	503	frameshift	-	-	-	-
+Control	Skin	1	1543	INS	CA	0	0	0	0	0	0	1	0	Frijhoff 1997	509	frameshift	-	-	-	-
+Control	Skin	3	1652	C	DEL	0	0	0	0	0	0	0	1	Frijhoff 1997	545	frameshift	-	-	-	-
+Control	Skin	3	365	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	116	missense	ACG	ATG	T	M
+Control	Skin	1	1090	G	A	0	1	0	0	0	0	0	0	Frijhoff 1997	358	missense	GAG	AAG	E	K
+Control	Skin	1	1187	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	390	missense	TCG	TTG	S	L
+Control	Skin	4	2374	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	786	missense	CGT	TGT	R	C
+Control	Skin	1	2659	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	881	missense	CGG	TGG	R	W
+Control	Skin	2	2659	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	881	missense	CGG	TGG	R	W
+Control	Skin	2	1072	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	352	nonsense	CGA	TGA	R	*
+Control	Skin	4	1072	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	352	nonsense	CGA	TGA	R	*
+Control	Skin	3	2713	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	899	nonsense	GGA	TGA	G	*
+Control	Skin	0	461	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	148	missense	TCG	TTG	S	L
+Control	Skin	0	461	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	148	missense	TCG	TTG	S	L
+Control	Skin	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2000	203	missense	TGG	CGG	W	R
+Control	Skin	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2000	203	missense	TGG	CGG	W	R
+Control	Skin	0	637	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	207	missense	GGC	AGC	G	S
+Control	Skin	0	637	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	207	missense	GGC	TGC	G	C
+Control	Skin	0	928	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	304	missense	GAA	AAA	E	K
+Control	Skin	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Skin	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Skin	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Skin	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Skin	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Skin	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Skin	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Skin	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Skin	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Skin	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Skin	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Skin	0	1196	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	393	missense	CCG	CTG	P	L
+Control	Skin	0	1196	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	393	missense	CCG	CTG	P	L
+Control	Skin	0	1520	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	501	missense	CCG	CTG	P	L
+Control	Skin	0	1616	T	C	1	0	0	0	0	0	0	0	Ikehata 2000	533	missense	CTG	CCG	L	P
+Control	Skin	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Skin	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Skin	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Skin	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Skin	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Skin	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Skin	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Skin	0	2374	C	G	0	0	0	1	0	0	0	0	Ikehata 2000	786	missense	CGT	GGT	R	G
+Control	Skin	0	2392	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	792	missense	GAC	AAC	D	N
+Control	Skin	0	2713	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	899	missense	GGA	AGA	G	R
+Control	Skin	0	2713	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	899	missense	GGA	AGA	G	R
+Control	Skin	0	2728	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	904	missense	GAA	AAA	E	K
+Control	Skin	0	2743	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	909	missense	CGC	TGC	R	C
+Control	Skin	0	2839	A	C	0	0	0	0	0	1	0	0	Ikehata 2000	941	missense	ACG	CCG	T	P
+Control	Skin	0	236	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	73	nonsense	TGG	TAG	W	*
+Control	Skin	0	928	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	304	nonsense	GAA	TAA	E	*
+Control	Skin	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Skin	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Skin	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Skin	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Skin	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Skin	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Skin	0	1403	C	G	0	0	0	1	0	0	0	0	Ikehata 2000	462	nonsense	TCA	TGA	S	*
+Control	Skin	0	2551	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	845	nonsense	CAG	TAG	Q	*
+Control	Skin	0	2818	G	T	0	0	1	0	0	0	0	0	Ikehata 2000	934	nonsense	GAA	TAA	E	*
+Control	Skin	0	3014	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	999	nonsense	TGG	TAG	W	*
+Control	Skin Dermis	0	49	-	DEL	0	0	0	0	0	0	0	1	Ikehata 2003	11	frameshift	-	-	-	-
+Control	Skin Dermis	0	2335	INS	A	0	0	0	0	0	0	1	0	Ikehata 2003	773	frameshift	-	-	-	-
+Control	Skin Dermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Dermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Dermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Dermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Dermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Dermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Dermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Dermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Dermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Dermis	0	637	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	207	missense	GGC	AGC	G	S
+Control	Skin Dermis	0	928	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	304	missense	GAA	AAA	E	K
+Control	Skin Dermis	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	358	missense	GAG	AAG	E	K
+Control	Skin Dermis	0	1180	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	388	missense	CGC	TGC	R	C
+Control	Skin Dermis	0	1180	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	388	missense	CGC	TGC	R	C
+Control	Skin Dermis	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	390	missense	TCG	TTG	S	L
+Control	Skin Dermis	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	390	missense	TCG	TTG	S	L
+Control	Skin Dermis	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	390	missense	TCG	TTG	S	L
+Control	Skin Dermis	0	1283	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	422	missense	CCA	CTA	P	L
+Control	Skin Dermis	0	1333	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	439	missense	CGC	TGC	R	C
+Control	Skin Dermis	0	1333	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	439	missense	CGC	TGC	R	C
+Control	Skin Dermis	0	1388	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	457	missense	TCG	TTG	S	L
+Control	Skin Dermis	0	1388	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	457	missense	TCG	TTG	S	L
+Control	Skin Dermis	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	537	missense	GAA	AAA	E	K
+Control	Skin Dermis	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	537	missense	GAA	AAA	E	K
+Control	Skin Dermis	0	1646	G	T	0	0	1	0	0	0	0	0	Ikehata 2003	543	missense	GGT	GTT	G	V
+Control	Skin Dermis	0	1721	G	T	0	0	1	0	0	0	0	0	Ikehata 2003	568	missense	TGG	TTG	W	L
+Control	Skin Dermis	0	1783	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	589	missense	GGC	AGC	G	S
+Control	Skin Dermis	0	1783	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	589	missense	GGC	AGC	G	S
+Control	Skin Dermis	0	1831	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	605	missense	GGT	AGT	G	S
+Control	Skin Dermis	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	786	missense	CGT	TGT	R	C
+Control	Skin Dermis	0	2392	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	792	missense	GAC	AAC	D	N
+Control	Skin Dermis	0	2659	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	881	missense	CGG	TGG	R	W
+Control	Skin Dermis	0	2713	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	899	missense	GGA	AGA	G	R
+Control	Skin Dermis	0	2743	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	909	missense	CGC	TGC	R	C
+Control	Skin Dermis	0	2822	A	T	0	0	0	0	1	0	0	0	Ikehata 2003	935	missense	AAC	ATC	N	I
+Control	Skin Dermis	0	436	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	140	nonsense	CGA	TGA	R	*
+Control	Skin Dermis	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	352	nonsense	CGA	TGA	R	*
+Control	Skin Dermis	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	352	nonsense	CGA	TGA	R	*
+Control	Skin Dermis	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	352	nonsense	CGA	TGA	R	*
+Control	Skin Epidermis	0	781	C	DEL	0	0	0	0	0	0	0	1	Ikehata 2003	255	frameshift	-	-	-	-
+Control	Skin Epidermis	0	1977	-	DEL	0	0	0	0	0	0	0	1	Ikehata 2003	653	frameshift	-	-	-	-
+Control	Skin Epidermis	0	461	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	148	missense	TCG	TTG	S	L
+Control	Skin Epidermis	0	611	A	T	0	0	0	0	1	0	0	0	Ikehata 2003	198	missense	GAA	GTA	E	V
+Control	Skin Epidermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Epidermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Epidermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Epidermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Epidermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Epidermis	0	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+Control	Skin Epidermis	0	928	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	304	missense	GAA	AAA	E	K
+Control	Skin Epidermis	0	1085	G	C	0	0	0	1	0	0	0	0	Ikehata 2003	356	missense	CGT	CCT	R	P
+Control	Skin Epidermis	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	358	missense	GAG	AAG	E	K
+Control	Skin Epidermis	0	1180	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	388	missense	CGC	TGC	R	C
+Control	Skin Epidermis	0	1265	A	T	0	0	0	0	1	0	0	0	Ikehata 2003	416	missense	GAA	GTA	E	V
+Control	Skin Epidermis	0	1271	A	C	0	0	0	0	0	1	0	0	Ikehata 2003	418	missense	CAC	CCC	H	P
+Control	Skin Epidermis	0	1333	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	439	missense	CGC	TGC	R	C
+Control	Skin Epidermis	0	1333	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	439	missense	CGC	TGC	R	C
+Control	Skin Epidermis	0	1388	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	457	missense	TCG	TTG	S	L
+Control	Skin Epidermis	0	1388	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	457	missense	TCG	TTG	S	L
+Control	Skin Epidermis	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	537	missense	GAA	AAA	E	K
+Control	Skin Epidermis	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	537	missense	GAA	AAA	E	K
+Control	Skin Epidermis	0	1658	G	T	0	0	1	0	0	0	0	0	Ikehata 2003	547	missense	GGC	GTC	G	V
+Control	Skin Epidermis	0	1784	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	589	missense	GGC	GAC	G	D
+Control	Skin Epidermis	0	1831	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	605	missense	GGT	AGT	G	S
+Control	Skin Epidermis	0	2362	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	782	missense	GAT	AAT	D	N
+Control	Skin Epidermis	0	2362	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	782	missense	GAT	AAT	D	N
+Control	Skin Epidermis	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	786	missense	CGT	TGT	R	C
+Control	Skin Epidermis	0	2375	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	786	missense	CGT	CAT	R	H
+Control	Skin Epidermis	0	2659	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	881	missense	CGG	TGG	R	W
+Control	Skin Epidermis	0	2659	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	881	missense	CGG	TGG	R	W
+Control	Skin Epidermis	0	2713	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	899	missense	GGA	AGA	G	R
+Control	Skin Epidermis	0	2713	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	899	missense	GGA	AGA	G	R
+Control	Skin Epidermis	0	2718	AG	GT	0	0	0	0	0	0	0	0	Ikehata 2003	900	missense	TTAGGG	TTGTGG	G	W
+Control	Skin Epidermis	0	2740	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	908	missense	GAC	AAC	D	N
+Control	Skin Epidermis	0	2743	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	909	missense	CGC	TGC	R	C
+Control	Skin Epidermis	0	2744	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	909	missense	CGC	CAC	R	H
+Control	Skin Epidermis	0	2817	C	A	0	0	1	0	0	0	0	0	Ikehata 2003	933	missense	AGC	AGA	S	R
+Control	Skin Epidermis	0	2840	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	941	missense	ACG	ATG	T	M
+Control	Skin Epidermis	0	139	G	T	0	0	1	0	0	0	0	0	Ikehata 2003	41	nonsense	GAG	TAG	E	*
+Control	Skin Epidermis	0	559	G	T	0	0	1	0	0	0	0	0	Ikehata 2003	181	nonsense	GAA	TAA	E	*
+Control	Skin Epidermis	0	1187	C	A	0	0	1	0	0	0	0	0	Ikehata 2003	390	nonsense	TCG	TAG	S	*
+Control	Skin Epidermis	0	1342	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	442	nonsense	CGA	TGA	R	*
+Control	Skin Epidermis	0	2317	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	767	nonsense	CAG	TAG	Q	*
+Control	Spleen	0	644	T	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Spleen	0	1169	ttaac	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Spleen	0	1537	GATG	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Spleen	0	1584	A	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Spleen	0	2340	A	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Spleen	0	2340	A	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Spleen	0	2413	A	DEL	0	0	0	0	0	0	0	1	Dolle 2002	-	frameshift	-	-	-	-
+Control	Spleen	0	157	C	G	0	0	0	1	0	0	0	0	Dolle 2002	47	missense	CCT	GCT	P	A
+Control	Spleen	0	178	C	A	0	0	1	0	0	0	0	0	Dolle 2002	54	missense	CTG	ATG	L	M
+Control	Spleen	0	316	T	G	0	0	0	0	0	1	0	0	Dolle 2002	100	missense	TAC	GAC	Y	D
+Control	Spleen	0	433	A	C	0	0	0	0	0	1	0	0	Dolle 2002	139	missense	ACG	CCG	T	P
+Control	Spleen	0	508	G	C	0	0	0	1	0	0	0	0	Dolle 2002	164	missense	GAC	CAC	D	H
+Control	Spleen	0	625	T	C	1	0	0	0	0	0	0	0	Dolle 2002	203	missense	TGG	CGG	W	R
+Control	Spleen	0	637	G	A	0	1	0	0	0	0	0	0	Dolle 2002	207	missense	GGC	AGC	G	S
+Control	Spleen	0	638	G	A	0	1	0	0	0	0	0	0	Dolle 2002	207	missense	GGC	GAC	G	D
+Control	Spleen	0	928	G	A	0	1	0	0	0	0	0	0	Dolle 2002	304	missense	GAA	AAA	E	K
+Control	Spleen	0	986	T	C	1	0	0	0	0	0	0	0	Dolle 2002	323	missense	ATT	ACT	I	T
+Control	Spleen	0	1000	T	C	1	0	0	0	0	0	0	0	Dolle 2002	328	missense	TGC	CGC	C	R
+Control	Spleen	0	1090	G	A	0	1	0	0	0	0	0	0	Dolle 2002	358	missense	GAG	AAG	E	K
+Control	Spleen	0	1090	G	A	0	1	0	0	0	0	0	0	Dolle 2002	358	missense	GAG	AAG	E	K
+Control	Spleen	0	1196	C	T	0	1	0	0	0	0	0	0	Dolle 2002	393	missense	CCG	CTG	P	L
+Control	Spleen	0	1196	C	T	0	1	0	0	0	0	0	0	Dolle 2002	393	missense	CCG	CTG	P	L
+Control	Spleen	0	1325	T	G	0	0	0	0	0	1	0	0	Dolle 2002	436	missense	ATG	AGG	M	R
+Control	Spleen	0	1394	G	T	0	0	1	0	0	0	0	0	Dolle 2002	459	missense	GGG	GTG	G	V
+Control	Spleen	0	1473	G	C	0	0	0	1	0	0	0	0	Dolle 2002	485	missense	CAG	CAC	Q	H
+Control	Spleen	0	1526	A	G	1	0	0	0	0	0	0	0	Dolle 2002	503	missense	TAC	TGC	Y	C
+Control	Spleen	0	1627	G	A	0	1	0	0	0	0	0	0	Dolle 2002	537	missense	GAA	AAA	E	K
+Control	Spleen	0	2713	G	A	0	1	0	0	0	0	0	0	Dolle 2002	899	missense	GGA	AGA	G	R
+Control	Spleen	0	2975	T	A	0	0	0	0	1	0	0	0	Dolle 2002	986	missense	ATC	AAC	I	N
+Control	Spleen	0	192	G	A	0	1	0	0	0	0	0	0	Dolle 2002	58	nonsense	TGG	TGA	W	*
+Control	Spleen	0	229	G	T	0	0	1	0	0	0	0	0	Dolle 2002	71	nonsense	GAA	TAA	E	*
+Control	Spleen	0	409	G	T	0	0	1	0	0	0	0	0	Dolle 2002	131	nonsense	GAA	TAA	E	*
+Control	Spleen	0	548	T	G	0	0	0	0	0	1	0	0	Dolle 2002	177	nonsense	TTA	TGA	L	*
+Control	Spleen	0	590	G	A	0	1	0	0	0	0	0	0	Dolle 2002	191	nonsense	TGG	TAG	W	*
+Control	Spleen	0	627	G	A	0	1	0	0	0	0	0	0	Dolle 2002	203	nonsense	TGG	TGA	W	*
+Control	Spleen	0	945	T	G	0	0	0	0	0	1	0	0	Dolle 2002	309	nonsense	TAT	TAG	Y	*
+Control	Spleen	0	1592	C	A	0	0	1	0	0	0	0	0	Dolle 2002	525	nonsense	TCG	TAG	S	*
+Control	Spleen	0	1639	GC	TA	0	0	0	0	0	0	0	0	Dolle 2002	541	nonsense	GCG	TAG	A	*
+Control	Spleen	0	2041	C	T	0	1	0	0	0	0	0	0	Dolle 2002	675	nonsense	CAA	TAA	Q	*
+Control	Spleen	0	2077	C	T	0	1	0	0	0	0	0	0	Dolle 2002	687	nonsense	CAG	TAG	Q	*
+Control	Spleen	0	2169	G	A	0	1	0	0	0	0	0	0	Dolle 2002	717	nonsense	TGG	TGA	W	*
+Control	Spleen	0	2287	C	T	0	1	0	0	0	0	0	0	Dolle 2002	757	nonsense	CAA	TAA	Q	*
+Control	Spleen	0	2338	A	T	0	0	0	0	1	0	0	0	Dolle 2002	774	nonsense	AAA	TAA	K	*
+Control	Spleen	0	2493	C	A	0	0	1	0	0	0	0	0	Dolle 2002	825	nonsense	TGC	TGA	C	*
+Control	Spleen	0	2796	T	G	0	0	0	0	0	1	0	0	Dolle 2002	926	nonsense	TAT	TAG	Y	*
+Control	Spleen	0	513	T	G	0	0	0	0	0	1	0	0	Ikehata 2000	165	missense	AGT	AGG	S	R
+Control	Spleen	0	619	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	201	missense	GAT	AAT	D	N
+Control	Spleen	0	621	T	A	0	0	0	0	1	0	0	0	Ikehata 2000	201	missense	GAT	GAA	D	E
+Control	Spleen	0	637	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	207	missense	GGC	AGC	G	S
+Control	Spleen	0	859	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	281	missense	GAG	AAG	E	K
+Control	Spleen	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Spleen	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Spleen	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Spleen	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Spleen	0	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	358	missense	GAG	AAG	E	K
+Control	Spleen	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Spleen	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Spleen	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Spleen	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Spleen	0	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	390	missense	TCG	TTG	S	L
+Control	Spleen	0	1196	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	393	missense	CCG	CTG	P	L
+Control	Spleen	0	1393	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	459	missense	GGG	AGG	G	R
+Control	Spleen	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Spleen	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Spleen	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Spleen	0	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	537	missense	GAA	AAA	E	K
+Control	Spleen	0	1831	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	605	missense	GGT	AGT	G	S
+Control	Spleen	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Spleen	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Spleen	0	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	786	missense	CGT	TGT	R	C
+Control	Spleen	0	2392	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	792	missense	GAC	AAC	D	N
+Control	Spleen	0	2574	C	A	0	0	1	0	0	0	0	0	Ikehata 2000	852	missense	AGC	AGA	S	R
+Control	Spleen	0	2740	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	908	missense	GAC	AAC	D	N
+Control	Spleen	0	2744	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	909	missense	CGC	CAC	R	H
+Control	Spleen	0	2813	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	932	missense	CCG	CTG	P	L
+Control	Spleen	0	2817	C	A	0	0	1	0	0	0	0	0	Ikehata 2000	933	missense	AGC	AGA	S	R
+Control	Spleen	0	3083	A	T	0	0	0	0	1	0	0	0	Ikehata 2000	1022	missense	CAA	CTA	Q	L
+Control	Spleen	0	66	G	A	0	1	0	0	0	0	0	0	Ikehata 2000	16	nonsense	TGG	TGA	W	*
+Control	Spleen	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Spleen	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Spleen	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Spleen	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Spleen	0	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2000	352	nonsense	CGA	TGA	R	*
+Control	Spleen	0	1910	T	A	0	0	0	0	1	0	0	0	Ikehata 2000	631	nonsense	TTA	TAA	L	*
+Control	Spleen	0	97	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+Control	Spleen	0	1534	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+Control	Spleen	0	1584	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+Control	Spleen	0	2340	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+Control	Spleen	0	92	A	G	1	0	0	0	0	0	0	0	Ono 1999	25	missense	AAT	AGT	N	S
+Control	Spleen	0	625	T	C	1	0	0	0	0	0	0	0	Ono 1999	203	missense	TGG	CGG	W	R
+Control	Spleen	0	928	G	A	0	1	0	0	0	0	0	0	Ono 1999	304	missense	GAA	AAA	E	K
+Control	Spleen	0	1090	G	A	0	1	0	0	0	0	0	0	Ono 1999	358	missense	GAG	AAG	E	K
+Control	Spleen	0	1090	G	A	0	1	0	0	0	0	0	0	Ono 1999	358	missense	GAG	AAG	E	K
+Control	Spleen	0	1187	C	T	0	1	0	0	0	0	0	0	Ono 1999	390	missense	TCG	TTG	S	L
+Control	Spleen	0	1187	C	T	0	1	0	0	0	0	0	0	Ono 1999	390	missense	TCG	TTG	S	L
+Control	Spleen	0	1388	C	T	0	1	0	0	0	0	0	0	Ono 1999	457	missense	TCG	TTG	S	L
+Control	Spleen	0	1520	C	T	0	1	0	0	0	0	0	0	Ono 1999	501	missense	CCG	CTG	P	L
+Control	Spleen	0	1588	C	A	0	0	1	0	0	0	0	0	Ono 1999	524	missense	CTT	ATT	L	I
+Control	Spleen	0	1627	G	A	0	1	0	0	0	0	0	0	Ono 1999	537	missense	GAA	AAA	E	K
+Control	Spleen	0	2659	C	T	0	1	0	0	0	0	0	0	Ono 1999	881	missense	CGG	TGG	R	W
+Control	Spleen	0	2659	C	T	0	1	0	0	0	0	0	0	Ono 1999	881	missense	CGG	TGG	R	W
+Control	Spleen	0	2713	G	A	0	1	0	0	0	0	0	0	Ono 1999	899	missense	GGA	AGA	G	R
+Control	Spleen	0	2743	C	T	0	1	0	0	0	0	0	0	Ono 1999	909	missense	CGC	TGC	R	C
+Control	Spleen	0	928	G	T	0	0	1	0	0	0	0	0	Ono 1999	304	nonsense	GAA	TAA	E	*
+Control	Spleen	0	1072	C	T	0	1	0	0	0	0	0	0	Ono 1999	352	nonsense	CGA	TGA	R	*
+Control	Spleen	0	1072	C	T	0	1	0	0	0	0	0	0	Ono 1999	352	nonsense	CGA	TGA	R	*
+Control	Spleen	0	1572	G	A	0	1	0	0	0	0	0	0	Ono 1999	518	nonsense	TGG	TGA	W	*
+Control	Spleen	0	1632	C	A	0	0	1	0	0	0	0	0	Ono 1999	538	nonsense	TAC	TAA	Y	*
+EMS	Bone Marrow	400	881	-	DEL	0	0	0	0	0	0	0	1	Suzuki 1997	288	frameshift	-	-	-	-
+EMS	Bone Marrow	400	700	G	T	0	0	1	0	0	0	0	0	Suzuki 1997	228	missense	GCC	TCC	A	S
+EMS	Bone Marrow	400	1223	G	A	0	1	0	0	0	0	0	0	Suzuki 1997	402	missense	TGC	TAC	C	Y
+EMS	Bone Marrow	400	1644	G	A	0	1	0	0	0	0	0	0	Suzuki 1997	542	missense	ATG	ATA	M	I
+EMS	Bone Marrow	400	477	G	A	0	1	0	0	0	0	0	0	Suzuki 1997	153	nonsense	TGG	TGA	W	*
+EMS	Bone Marrow	400	679	C	T	0	1	0	0	0	0	0	0	Suzuki 1997	221	nonsense	CAA	TAA	Q	*
+EMS	Bone Marrow	400	1072	C	T	0	1	0	0	0	0	0	0	Suzuki 1997	352	nonsense	CGA	TGA	R	*
+EMS	Bone Marrow	400	1773	G	A	0	1	0	0	0	0	0	0	Suzuki 1997	585	nonsense	TGG	TGA	W	*
+EMS	Bone Marrow	400	2317	C	T	0	1	0	0	0	0	0	0	Suzuki 1997	767	nonsense	CAG	TAG	Q	*
+EMS	Bone Marrow	400	2448	G	A	0	1	0	0	0	0	0	0	Suzuki 1997	810	nonsense	TGG	TGA	W	*
+EMS	Bone Marrow	400	2488	C	T	0	1	0	0	0	0	0	0	Suzuki 1997	824	nonsense	CAG	TAG	Q	*
+ENU	Bone Marrow	50	106	C	T	0	1	0	0	0	0	0	0	Douglas 1996	30	missense	CAT	TAT	H	Y
+ENU	Bone Marrow	50	235	T	A	0	0	0	0	1	0	0	0	Douglas 1996	73	missense	TGG	AGG	W	R
+ENU	Bone Marrow	50	275	T	A	0	0	0	0	1	0	0	0	Douglas 1996	86	missense	GTC	GAC	V	D
+ENU	Bone Marrow	50	371	A	T	0	0	0	0	1	0	0	0	Douglas 1996	118	missense	AAT	ATT	N	I
+ENU	Bone Marrow	50	500	A	G	1	0	0	0	0	0	0	0	Douglas 1996	161	missense	TAC	TGC	Y	C
+ENU	Bone Marrow	50	636	C	A	0	0	1	0	0	0	0	0	Douglas 1996	206	missense	AGC	AGA	S	R
+ENU	Bone Marrow	50	662	T	C	1	0	0	0	0	0	0	0	Douglas 1996	215	missense	CTG	CCG	L	P
+ENU	Bone Marrow	50	1049	T	C	1	0	0	0	0	0	0	0	Douglas 1996	344	missense	CTG	CCG	L	P
+ENU	Bone Marrow	50	1078	G	T	0	0	1	0	0	0	0	0	Douglas 1996	354	missense	GTT	TTT	V	F
+ENU	Bone Marrow	50	1264	G	A	0	1	0	0	0	0	0	0	Douglas 1996	416	missense	GAA	AAA	E	K
+ENU	Bone Marrow	50	1287	G	A	0	1	0	0	0	0	0	0	Douglas 1996	423	missense	ATG	ATA	M	I
+ENU	Bone Marrow	50	1316	T	C	1	0	0	0	0	0	0	0	Douglas 1996	433	missense	CTA	CCA	L	P
+ENU	Bone Marrow	50	1376	T	A	0	0	0	0	1	0	0	0	Douglas 1996	453	missense	GTG	GAG	V	E
+ENU	Bone Marrow	50	1387	T	C	1	0	0	0	0	0	0	0	Douglas 1996	457	missense	TCG	CCG	S	P
+ENU	Bone Marrow	50	1397	A	T	0	0	0	0	1	0	0	0	Douglas 1996	460	missense	AAT	ATT	N	I
+ENU	Bone Marrow	50	1421	A	G	1	0	0	0	0	0	0	0	Douglas 1996	468	missense	CAC	CGC	H	R
+ENU	Bone Marrow	50	1508	A	T	0	0	0	0	1	0	0	0	Douglas 1996	497	missense	GAT	GTT	D	V
+ENU	Bone Marrow	50	1523	T	A	0	0	0	0	1	0	0	0	Douglas 1996	502	missense	ATG	AAG	M	K
+ENU	Bone Marrow	50	1526	A	G	1	0	0	0	0	0	0	0	Douglas 1996	503	missense	TAC	TGC	Y	C
+ENU	Bone Marrow	50	1532	G	T	0	0	1	0	0	0	0	0	Douglas 1996	505	missense	CGC	CTC	R	L
+ENU	Bone Marrow	50	1619	T	A	0	0	0	0	1	0	0	0	Douglas 1996	534	missense	ATC	AAC	I	N
+ENU	Bone Marrow	50	1649	A	T	0	0	0	0	1	0	0	0	Douglas 1996	544	missense	AAC	ATC	N	I
+ENU	Bone Marrow	50	1650	C	A	0	0	1	0	0	0	0	0	Douglas 1996	544	missense	AAC	AAA	N	K
+ENU	Bone Marrow	50	1712	G	T	0	0	1	0	0	0	0	0	Douglas 1996	565	missense	GGC	GTC	G	V
+ENU	Bone Marrow	50	1723	G	A	0	1	0	0	0	0	0	0	Douglas 1996	569	missense	GAC	AAC	D	N
+ENU	Bone Marrow	50	1733	A	T	0	0	0	0	1	0	0	0	Douglas 1996	572	missense	GAT	GTT	D	V
+ENU	Bone Marrow	50	1733	A	T	0	0	0	0	1	0	0	0	Douglas 1996	572	missense	GAT	GTT	D	V
+ENU	Bone Marrow	50	1778	C	A	0	0	1	0	0	0	0	0	Douglas 1996	587	missense	GCT	GAT	A	D
+ENU	Bone Marrow	50	2140	T	C	1	0	0	0	0	0	0	0	Douglas 1996	708	missense	TGG	CGG	W	R
+ENU	Bone Marrow	50	2374	C	T	0	1	0	0	0	0	0	0	Douglas 1996	786	missense	CGT	TGT	R	C
+ENU	Bone Marrow	50	2374	C	T	0	1	0	0	0	0	0	0	Douglas 1996	786	missense	CGT	TGT	R	C
+ENU	Bone Marrow	50	2375	G	T	0	0	1	0	0	0	0	0	Douglas 1996	786	missense	CGT	CTT	R	L
+ENU	Bone Marrow	50	2387	A	T	0	0	0	0	1	0	0	0	Douglas 1996	790	missense	GAT	GTT	D	V
+ENU	Bone Marrow	50	2434	T	C	1	0	0	0	0	0	0	0	Douglas 1996	806	missense	TGG	CGG	W	R
+ENU	Bone Marrow	50	2494	A	G	1	0	0	0	0	0	0	0	Douglas 1996	826	missense	ACG	GCG	T	A
+ENU	Bone Marrow	50	2740	G	T	0	0	1	0	0	0	0	0	Douglas 1996	908	missense	GAC	TAC	D	Y
+ENU	Bone Marrow	50	2816	G	A	0	1	0	0	0	0	0	0	Douglas 1996	933	missense	AGC	AAC	S	N
+ENU	Bone Marrow	50	2840	C	T	0	1	0	0	0	0	0	0	Douglas 1996	941	missense	ACG	ATG	T	M
+ENU	Bone Marrow	50	430	C	T	0	1	0	0	0	0	0	0	Douglas 1996	138	nonsense	CAG	TAG	Q	*
+ENU	Bone Marrow	50	659	T	A	0	0	0	0	1	0	0	0	Douglas 1996	214	nonsense	TTG	TAG	L	*
+ENU	Bone Marrow	50	751	C	T	0	1	0	0	0	0	0	0	Douglas 1996	245	nonsense	CAG	TAG	Q	*
+ENU	Bone Marrow	50	847	G	T	0	0	1	0	0	0	0	0	Douglas 1996	277	nonsense	GAA	TAA	E	*
+ENU	Bone Marrow	50	1030	G	T	0	0	1	0	0	0	0	0	Douglas 1996	338	nonsense	GAA	TAA	E	*
+ENU	Bone Marrow	50	1194	T	A	0	0	0	0	1	0	0	0	Douglas 1996	392	nonsense	TAT	TAA	Y	*
+ENU	Bone Marrow	50	1212	G	A	0	1	0	0	0	0	0	0	Douglas 1996	398	nonsense	TGG	TGA	W	*
+ENU	Bone Marrow	50	1212	G	A	0	1	0	0	0	0	0	0	Douglas 1996	398	nonsense	TGG	TGA	W	*
+ENU	Bone Marrow	50	1242	T	A	0	0	0	0	1	0	0	0	Douglas 1996	408	nonsense	TAT	TAA	Y	*
+ENU	Bone Marrow	50	1477	G	T	0	0	1	0	0	0	0	0	Douglas 1996	487	nonsense	GAA	TAA	E	*
+ENU	Bone Marrow	50	1705	C	T	0	1	0	0	0	0	0	0	Douglas 1996	563	nonsense	CAG	TAG	Q	*
+ENU	Bone Marrow	50	1999	A	T	0	0	0	0	1	0	0	0	Douglas 1996	661	nonsense	AAG	TAG	K	*
+ENU	Bone Marrow	50	2077	C	T	0	1	0	0	0	0	0	0	Douglas 1996	687	nonsense	CAG	TAG	Q	*
+ENU	Bone Marrow	50	2168	G	A	0	1	0	0	0	0	0	0	Douglas 1996	717	nonsense	TGG	TAG	W	*
+ENU	Bone Marrow	50	2709	G	A	0	1	0	0	0	0	0	0	Douglas 1996	897	nonsense	TGG	TGA	W	*
+ENU	Bone Marrow	50	2771	G	A	0	1	0	0	0	0	0	0	Douglas 1996	918	nonsense	TGG	TAG	W	*
+ENU	Bone Marrow	50	2805	C	A	0	0	1	0	0	0	0	0	Douglas 1996	929	nonsense	TAC	TAA	Y	*
+ENU	Bone Marrow	50	1029	T	A	0	0	0	0	1	0	0	0	Douglas 1996	337	silent	ATT	ATA	I	I
+ENU	Bone Marrow	50	1407	C	A	0	0	1	0	0	0	0	0	Douglas 1996	463	silent	GGC	GGA	G	G
+ENU	Bone Marrow	150	625	T	A	0	0	0	0	1	0	0	0	Mientjes 1998	203	missense	TGG	AGG	W	R
+ENU	Bone Marrow	150	1187	C	T	0	1	0	0	0	0	0	0	Mientjes 1998	390	missense	TCG	TTG	S	L
+ENU	Bone Marrow	150	1252	G	A	0	1	0	0	0	0	0	0	Mientjes 1998	412	missense	GAA	AAA	E	K
+ENU	Bone Marrow	150	2374	C	T	0	1	0	0	0	0	0	0	Mientjes 1998	786	missense	CGT	TGT	R	C
+ENU	Bone Marrow	150	2819	A	T	0	0	0	0	1	0	0	0	Mientjes 1998	934	missense	GAA	GTA	E	V
+ENU	Bone Marrow	150	281	C	G	0	0	0	1	0	0	0	0	Mientjes 1998	88	nonsense	TCA	TGA	S	*
+ENU	Bone Marrow	150	1212	G	A	0	1	0	0	0	0	0	0	Mientjes 1998	398	nonsense	TGG	TGA	W	*
+ENU	Bone Marrow	150	1385	G	A	0	1	0	0	0	0	0	0	Mientjes 1998	456	nonsense	TGG	TAG	W	*
+ENU	Bone Marrow	150	25	-	DEL(115bp)	0	0	0	0	0	0	0	0	Mientjes 1998	-	frameshift	-	-	-	-
+ENU	Bone Marrow	150	1402	T	C	1	0	0	0	0	0	0	0	Mientjes 1998	462	missense	TCA	CCA	S	P
+ENU	Bone Marrow	150	2714	G	A	0	1	0	0	0	0	0	0	Mientjes 1998	899	missense	GGA	GAA	G	E
+ENU	Bone Marrow	150	2869	T	C	1	0	0	0	0	0	0	0	Mientjes 1998	951	missense	TGG	CGG	W	R
+ENU	Bone Marrow	150	281	C	A	0	0	1	0	0	0	0	0	Mientjes 1998	88	nonsense	TCA	TAA	S	*
+ENU	Bone Marrow	150	387	C	G	0	0	0	1	0	0	0	0	Mientjes 1998	123	nonsense	TAC	TAG	Y	*
+ENU	Bone Marrow	150	945	T	A	0	0	0	0	1	0	0	0	Mientjes 1998	309	nonsense	TAT	TAA	Y	*
+ENU	Bone Marrow	150	409	G	T	0	0	1	0	0	0	0	0	Mientjes 1998	131	nonsense	GAA	TAA	E	*
+ENU	Bone Marrow	150	590	G	A	0	1	0	0	0	0	0	0	Mientjes 1998	191	nonsense	TGG	TAG	W	*
+ENU	Bone Marrow	150	1111	C	T	0	1	0	0	0	0	0	0	Mientjes 1998	365	nonsense	CAG	TAG	Q	*
+ENU	Bone Marrow	150	1212	G	A	0	1	0	0	0	0	0	0	Mientjes 1998	398	nonsense	TGG	TGA	W	*
+ENU	Bone Marrow	150	1476	T	A	0	0	0	0	1	0	0	0	Mientjes 1998	486	nonsense	TAT	TAA	Y	*
+ENU	Bone Marrow	150	1582	A	T	0	0	0	0	1	0	0	0	Mientjes 1998	522	nonsense	AAA	TAA	K	*
+ENU	Bone Marrow	150	2440	G	T	0	0	1	0	0	0	0	0	Mientjes 1998	808	nonsense	GAA	TAA	E	*
+ENU	Bone Marrow	150	2467	C	T	0	1	0	0	0	0	0	0	Mientjes 1998	817	nonsense	CAG	TAG	Q	*
+ENU	Bone Marrow	100	951	G	DEL	0	0	0	0	0	0	0	1	Suzuki 1997	311	frameshift	-	-	-	-
+ENU	Bone Marrow	100	388	T	C	1	0	0	0	0	0	0	0	Suzuki 1997	124	missense	TCG	CCG	S	P
+ENU	Bone Marrow	100	571	G	A	0	1	0	0	0	0	0	0	Suzuki 1997	185	missense	GCG	ACG	A	T
+ENU	Bone Marrow	100	1166	A	T	0	0	0	0	1	0	0	0	Suzuki 1997	383	missense	AAC	ATC	N	I
+ENU	Bone Marrow	100	1190	A	T	0	0	0	0	1	0	0	0	Suzuki 1997	391	missense	CAT	CTT	H	L
+ENU	Bone Marrow	100	1259	A	T	0	0	0	0	1	0	0	0	Suzuki 1997	414	missense	AAT	ATT	N	I
+ENU	Bone Marrow	100	1397	A	T	0	0	0	0	1	0	0	0	Suzuki 1997	460	missense	AAT	ATT	N	I
+ENU	Bone Marrow	100	2390	A	G	1	0	0	0	0	0	0	0	Suzuki 1997	791	missense	AAC	AGC	N	S
+ENU	Bone Marrow	100	2392	G	A	0	1	0	0	0	0	0	0	Suzuki 1997	792	missense	GAC	AAC	D	N
+ENU	Bone Marrow	100	2744	G	T	0	0	1	0	0	0	0	0	Suzuki 1997	909	missense	CGC	CTC	R	L
+ENU	Bone Marrow	100	25	G	T	0	0	1	0	0	0	0	0	Suzuki 1997	8	nonsense	GAA	TAA	E	*
+ENU	Bone Marrow	100	52	C	T	0	1	0	0	0	0	0	0	Suzuki 1997	12	nonsense	CAA	TAA	Q	*
+ENU	Bone Marrow	100	85	C	T	0	1	0	0	0	0	0	0	Suzuki 1997	23	nonsense	CAA	TAA	Q	*
+ENU	Bone Marrow	100	237	G	A	0	1	0	0	0	0	0	0	Suzuki 1997	73	nonsense	TGG	TGA	W	*
+ENU	Bone Marrow	100	333	T	A	0	0	0	0	1	0	0	0	Suzuki 1997	105	nonsense	TAT	TAA	Y	*
+ENU	Bone Marrow	100	745	G	T	0	0	1	0	0	0	0	0	Suzuki 1997	243	nonsense	GAA	TAA	E	*
+ENU	Bone Marrow	100	1385	G	A	0	1	0	0	0	0	0	0	Suzuki 1997	456	nonsense	TGG	TAG	W	*
+ENU	Bone Marrow	100	2849	T	A	0	0	0	0	1	0	0	0	Suzuki 1997	944	nonsense	TTG	TAG	L	*
+ENU	Germ Cells	50	383	G	A	0	1	0	0	0	0	0	0	Douglas 1995	122	missense	TGT	TAT	C	Y
+ENU	Germ Cells	50	1187	C	T	0	1	0	0	0	0	0	0	Douglas 1995	390	missense	TCG	TTG	S	L
+ENU	Germ Cells	50	1213	T	A	0	0	0	0	1	0	0	0	Douglas 1995	399	missense	TAC	AAC	Y	N
+ENU	Germ Cells	50	1265	A	G	1	0	0	0	0	0	0	0	Douglas 1995	416	missense	GAA	GGA	E	G
+ENU	Germ Cells	50	1267	A	C	0	0	0	0	0	1	0	0	Douglas 1995	417	missense	ACC	CCC	T	P
+ENU	Germ Cells	50	1393	G	A	0	1	0	0	0	0	0	0	Douglas 1995	459	missense	GGG	AGG	G	R
+ENU	Germ Cells	50	1511	T	A	0	0	0	0	1	0	0	0	Douglas 1995	498	missense	ATT	AAT	I	N
+ENU	Germ Cells	50	1523	T	C	1	0	0	0	0	0	0	0	Douglas 1995	502	missense	ATG	ACG	M	T
+ENU	Germ Cells	50	1576	A	T	0	0	0	0	1	0	0	0	Douglas 1995	520	missense	ATC	TTC	I	F
+ENU	Germ Cells	50	1655	T	A	0	0	0	0	1	0	0	0	Douglas 1995	546	missense	CTT	CAT	L	H
+ENU	Germ Cells	50	1673	A	G	1	0	0	0	0	0	0	0	Douglas 1995	552	missense	TAC	TGC	Y	C
+ENU	Germ Cells	50	1734	T	A	0	0	0	0	1	0	0	0	Douglas 1995	572	missense	GAT	GAA	D	E
+ENU	Germ Cells	50	1826	T	A	0	0	0	0	1	0	0	0	Douglas 1995	603	missense	ATG	AAG	M	K
+ENU	Germ Cells	50	1826	T	G	0	0	0	0	0	1	0	0	Douglas 1995	603	missense	ATG	AGG	M	R
+ENU	Germ Cells	50	2729	A	T	0	0	0	0	1	0	0	0	Douglas 1995	904	missense	GAA	GTA	E	V
+ENU	Germ Cells	50	2775	T	A	0	0	0	0	1	0	0	0	Douglas 1995	919	missense	GAT	GAA	D	E
+ENU	Germ Cells	50	2804	A	G	1	0	0	0	0	0	0	0	Douglas 1995	929	missense	TAC	TGC	Y	C
+ENU	Germ Cells	50	2822	A	T	0	0	0	0	1	0	0	0	Douglas 1995	935	missense	AAC	ATC	N	I
+ENU	Germ Cells	50	2891	A	T	0	0	0	0	1	0	0	0	Douglas 1995	958	missense	AAC	ATC	N	I
+ENU	Germ Cells	50	2940	T	A	0	0	0	0	1	0	0	0	Douglas 1995	974	missense	CAT	CAA	H	Q
+ENU	Germ Cells	50	2999	G	A	0	1	0	0	0	0	0	0	Douglas 1995	994	missense	GGT	GAT	G	D
+ENU	Germ Cells	50	3013	T	G	0	0	0	0	0	1	0	0	Douglas 1995	999	missense	TGG	GGG	W	G
+ENU	Germ Cells	50	3022	T	C	1	0	0	0	0	0	0	0	Douglas 1995	1002	missense	TCA	CCA	S	P
+ENU	Germ Cells	50	3023	C	T	0	1	0	0	0	0	0	0	Douglas 1995	1002	missense	TCA	TTA	S	L
+ENU	Germ Cells	50	163	C	T	0	1	0	0	0	0	0	0	Douglas 1995	49	nonsense	CAA	TAA	Q	*
+ENU	Germ Cells	50	170	T	A	0	0	0	0	1	0	0	0	Douglas 1995	51	nonsense	TTG	TAG	L	*
+ENU	Germ Cells	50	436	C	T	0	1	0	0	0	0	0	0	Douglas 1995	140	nonsense	CGA	TGA	R	*
+ENU	Germ Cells	50	556	GG	TA	0	0	0	0	0	0	0	0	Douglas 1995	180	nonsense	GGA	TAA	Gly	*
+ENU	Germ Cells	50	1185	T	A	0	0	0	0	1	0	0	0	Douglas 1995	389	nonsense	TGT	TGA	C	*
+ENU	Germ Cells	50	2543	G	A	0	1	0	0	0	0	0	0	Douglas 1995	842	nonsense	TGG	TAG	W	*
+ENU	Liver	50	355	TTT	DEL	0	0	0	0	0	0	0	1	Douglas 1996	-	frameshift	-	-	-	-
+ENU	Liver	50	62	A	G	1	0	0	0	0	0	0	0	Douglas 1996	15	missense	GAC	GGC	D	G
+ENU	Liver	50	259	G	T	0	0	1	0	0	0	0	0	Douglas 1996	81	missense	GCC	TCC	A	S
+ENU	Liver	50	275	T	A	0	0	0	0	1	0	0	0	Douglas 1996	86	missense	GTC	GAC	V	D
+ENU	Liver	50	594	T	A	0	0	0	0	1	0	0	0	Douglas 1996	192	missense	AGT	AGA	S	R
+ENU	Liver	50	679	C	A	0	0	1	0	0	0	0	0	Douglas 1996	221	missense	CAA	AAA	Q	K
+ENU	Liver	50	906	A	T	0	0	0	0	1	0	0	0	Douglas 1996	296	missense	GAA	GAT	E	D
+ENU	Liver	50	1091	A	T	0	0	0	0	1	0	0	0	Douglas 1996	358	missense	GAG	GTG	E	V
+ENU	Liver	50	1108	G	C	0	0	0	1	0	0	0	0	Douglas 1996	364	missense	GGT	CGT	G	R
+ENU	Liver	50	1143	T	A	0	0	0	0	1	0	0	0	Douglas 1996	375	missense	GAT	GAA	D	E
+ENU	Liver	50	1180	C	G	0	0	0	1	0	0	0	0	Douglas 1996	388	missense	CGC	GGC	R	G
+ENU	Liver	50	1190	A	T	0	0	0	0	1	0	0	0	Douglas 1996	391	missense	CAT	CTT	H	L
+ENU	Liver	50	1270	C	T	0	1	0	0	0	0	0	0	Douglas 1996	418	missense	CAC	TAC	H	Y
+ENU	Liver	50	1271	A	G	1	0	0	0	0	0	0	0	Douglas 1996	418	missense	CAC	CGC	H	R
+ENU	Liver	50	1397	A	G	1	0	0	0	0	0	0	0	Douglas 1996	460	missense	AAT	AGT	N	S
+ENU	Liver	50	1398	T	A	0	0	0	0	1	0	0	0	Douglas 1996	460	missense	AAT	AAA	N	K
+ENU	Liver	50	1484	G	T	0	0	1	0	0	0	0	0	Douglas 1996	489	missense	GGC	GTC	G	V
+ENU	Liver	50	1486	G	A	0	1	0	0	0	0	0	0	Douglas 1996	490	missense	GGA	AGA	G	R
+ENU	Liver	50	1523	T	A	0	0	0	0	1	0	0	0	Douglas 1996	502	missense	ATG	AAG	M	K
+ENU	Liver	50	1531	C	T	0	1	0	0	0	0	0	0	Douglas 1996	505	missense	CGC	TGC	R	C
+ENU	Liver	50	1532	G	A	0	1	0	0	0	0	0	0	Douglas 1996	505	missense	CGC	CAC	R	H
+ENU	Liver	50	1637	A	T	0	0	0	0	1	0	0	0	Douglas 1996	540	missense	CAC	CTC	H	L
+ENU	Liver	50	1637	A	G	1	0	0	0	0	0	0	0	Douglas 1996	540	missense	CAC	CGC	H	R
+ENU	Liver	50	1672	T	A	0	0	0	0	1	0	0	0	Douglas 1996	552	missense	TAC	AAC	Y	N
+ENU	Liver	50	1678	C	G	0	0	0	1	0	0	0	0	Douglas 1996	554	missense	CAG	GAG	Q	E
+ENU	Liver	50	1694	A	G	1	0	0	0	0	0	0	0	Douglas 1996	559	missense	TAT	TGT	Y	C
+ENU	Liver	50	1794	T	A	0	0	0	0	1	0	0	0	Douglas 1996	592	missense	TTT	TTA	F	L
+ENU	Liver	50	1808	A	T	0	0	0	0	1	0	0	0	Douglas 1996	597	missense	AAC	ATC	N	I
+ENU	Liver	50	2315	G	T	0	0	1	0	0	0	0	0	Douglas 1996	766	missense	TCA	TTA	S	L
+ENU	Liver	50	2374	C	T	0	1	0	0	0	0	0	0	Douglas 1996	786	missense	CGT	TGT	R	C
+ENU	Liver	50	2389	A	G	1	0	0	0	0	0	0	0	Douglas 1996	791	missense	AAC	GAC	N	D
+ENU	Liver	50	2452	G	A	0	1	0	0	0	0	0	0	Douglas 1996	812	missense	GCG	ACG	A	T
+ENU	Liver	50	2740	G	T	0	0	1	0	0	0	0	0	Douglas 1996	908	missense	GAC	TAC	D	Y
+ENU	Liver	50	2744	G	A	0	1	0	0	0	0	0	0	Douglas 1996	909	missense	CGC	CAC	R	H
+ENU	Liver	50	2818	G	A	0	1	0	0	0	0	0	0	Douglas 1996	934	missense	GAA	AAA	E	K
+ENU	Liver	50	2824	G	A	0	1	0	0	0	0	0	0	Douglas 1996	936	missense	GGT	AGT	G	S
+ENU	Liver	50	2830	C	G	0	0	0	1	0	0	0	0	Douglas 1996	938	missense	CGC	GGC	R	G
+ENU	Liver	50	2995	A	T	0	0	0	0	1	0	0	0	Douglas 1996	993	missense	ATT	TTT	I	F
+ENU	Liver	50	20	C	A	0	0	1	0	0	0	0	0	Douglas 1996	7	nonsense	TCA	TAA	S	*
+ENU	Liver	50	85	C	T	0	1	0	0	0	0	0	0	Douglas 1996	23	nonsense	CAA	TAA	Q	*
+ENU	Liver	50	229	G	T	0	0	1	0	0	0	0	0	Douglas 1996	71	nonsense	GAA	TAA	E	*
+ENU	Liver	50	501	C	A	0	0	1	0	0	0	0	0	Douglas 1996	161	nonsense	TAC	TAA	Y	*
+ENU	Liver	50	606	T	A	0	0	0	0	1	0	0	0	Douglas 1996	196	nonsense	TAT	TAA	Y	*
+ENU	Liver	50	656	C	A	0	0	1	0	0	0	0	0	Douglas 1996	213	nonsense	TCG	TAG	S	*
+ENU	Liver	50	759	C	A	0	0	1	0	0	0	0	0	Douglas 1996	247	nonsense	TGC	TGA	C	*
+ENU	Liver	50	763	G	T	0	0	1	0	0	0	0	0	Douglas 1996	249	nonsense	GAG	TAG	E	*
+ENU	Liver	50	945	T	A	0	0	0	0	1	0	0	0	Douglas 1996	309	nonsense	TAT	TAA	Y	*
+ENU	Liver	50	1002	C	A	0	0	1	0	0	0	0	0	Douglas 1996	328	nonsense	TGC	TGA	C	*
+ENU	Liver	50	1185	T	A	0	0	0	0	1	0	0	0	Douglas 1996	389	nonsense	TGT	TGA	C	*
+ENU	Liver	50	1233	C	A	0	0	1	0	0	0	0	0	Douglas 1996	405	nonsense	TAC	TAA	Y	*
+ENU	Liver	50	1242	T	A	0	0	0	0	1	0	0	0	Douglas 1996	408	nonsense	TAT	TAA	Y	*
+ENU	Liver	50	1444	A	T	0	0	0	0	1	0	0	0	Douglas 1996	476	nonsense	AAA	TAA	K	*
+ENU	Liver	50	1677	G	A	0	1	0	0	0	0	0	0	Douglas 1996	553	nonsense	TGG	TGA	W	*
+ENU	Liver	50	1721	G	A	0	1	0	0	0	0	0	0	Douglas 1996	568	nonsense	TGG	TAG	W	*
+ENU	Liver	50	1782	C	A	0	0	1	0	0	0	0	0	Douglas 1996	588	nonsense	TAC	TAA	Y	*
+ENU	Liver	50	2440	G	T	0	0	1	0	0	0	0	0	Douglas 1996	808	nonsense	GAA	TAA	E	*
+ENU	Liver	50	2544	G	A	0	1	0	0	0	0	0	0	Douglas 1996	842	nonsense	TGG	TGA	W	*
+ENU	Liver	50	2835	C	A	0	0	1	0	0	0	0	0	Douglas 1996	939	nonsense	TGC	TGA	C	*
+ENU	Liver	50	1875	A	G	1	0	0	0	0	0	0	0	Douglas 1996	619	silent	GAA	GAG	E	E
+ENU	Liver	50	2331	A	G	1	0	0	0	0	0	0	0	Douglas 1996	771	silent	GGC	GGG	G	G
+ENU	Liver	150	1190	A	T	0	0	0	0	1	0	0	0	Mientjes 1998	391	missense	CAT	CTT	H	L
+ENU	Liver	150	1313	G	A	0	1	0	0	0	0	0	0	Mientjes 1998	432	nonsense	TGG	TAG	W	*
+ENU	Liver	150	1823	G	T	0	0	1	0	0	0	0	0	Mientjes 1998	602	missense	TGT	TTT	C	F
+ENU	Liver	150	1720	T	A	0	0	0	0	1	0	0	0	Mientjes 1998	568	missense	TGG	AGG	W	R
+ENU	Liver	150	2714	G	A	0	1	0	0	0	0	0	0	Mientjes 1998	899	missense	GGA	GAA	G	E
+ENU	Liver	150	2840	C	A	0	0	1	0	0	0	0	0	Mientjes 1998	941	missense	ACG	AAG	T	K
+ENU	Liver	150	1661	G	T	0	0	1	0	0	0	0	0	Mientjes 1998	548	missense	GGT	GTT	G	V
+ENU	Liver	150	2389	A	T	0	0	0	0	1	0	0	0	Mientjes 1998	791	missense	AAC	TAC	N	Y
+ENU	Liver	150	1090	G	T	0	0	1	0	0	0	0	0	Mientjes 1998	358	nonsense	GAG	TAG	E	*
+ENU	Liver	150	2666	G	T	0	0	1	0	0	0	0	0	Mientjes 1998	883	missense	GGC	GTC	G	V
+ENU	Liver	150	1828	A	C	0	0	0	0	0	1	0	0	Mientjes 1998	604	missense	AAC	CAC	N	H
+ENU	Liver	150	2717	T	A	0	0	0	0	1	0	0	0	Mientjes 1998	900	nonsense	TTA	TAA	L	*
+ENU	Liver	150	1334	INS	tc	0	0	0	0	0	0	1	0	Mientjes 1998	-	frameshift	-	-	-	-
+ENU	Liver	150	1307	A	DEL	0	0	0	0	0	0	0	1	Mientjes 1998	-	frameshift	-	-	-	-
+ENU	Liver	150	2390	A	G	1	0	0	0	0	0	0	0	Mientjes 1998	791	missense	AAC	AGC	N	S
+ENU	Liver	150	2073	A	C	0	0	0	0	0	1	0	0	Mientjes 1998	685	silent	CTA	CTC	L	L
+ENU	Liver	150	2744	G	A	0	1	0	0	0	0	0	0	Mientjes 1998	909	missense	CGC	CAC	R	H
+ENU	Liver	150	2557	A	T	0	0	0	0	1	0	0	0	Mientjes 1998	847	nonsense	AAA	TAA	K	*
+ENU	Liver	150	2392	G	A	0	1	0	0	0	0	0	0	Mientjes 1998	792	missense	GAC	AAC	D	N
+ENU	Liver	150	1523	T	G	0	0	0	0	0	1	0	0	Mientjes 1998	502	missense	ATG	AGG	M	R
+ENU	Liver	150	2714	G	T	0	0	1	0	0	0	0	0	Mientjes 1998	899	missense	GGA	GTA	G	V
+ENU	Liver	150	1187	C	T	0	1	0	0	0	0	0	0	Mientjes 1998	390	missense	TCG	TTG	S	L
+ENU	Liver	150	2393	A	T	0	0	0	0	1	0	0	0	Mientjes 1998	792	missense	GAC	GTC	D	V
+ENU	Liver	150	1398	T	A	0	0	0	0	1	0	0	0	Mientjes 1998	460	missense	AAT	AAA	N	K
+ENU	Liver	150	380	G	A	0	1	0	0	0	0	0	0	Mientjes 1998	121	missense	GGT	GAT	G	D
+Ercc1 -/m	Liver	1	163	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Ercc1 -/m	Liver	1	401	INS	-	0	0	0	0	0	0	1	0	Dolle 2006	-	frameshift	-	-	-	-
+Ercc1 -/m	Liver	1	827	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Ercc1 -/m	Liver	1	1646	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Ercc1 -/m	Liver	1	1710	-	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Ercc1 -/m	Liver	1	1832	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Ercc1 -/m	Liver	1	2340	A	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Ercc1 -/m	Liver	1	2581	A	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Ercc1 -/m	Liver	1	2921	TGG	ATGA	0	0	0	0	0	0	0	0	Dolle 2006	968	frameshift	-	-	-	-
+Ercc1 -/m	Liver	1	638	G	T	0	0	1	0	0	0	0	0	Dolle 2006	207	missense	GGC	GTC	G	V
+Ercc1 -/m	Liver	1	1187	C	T	0	1	0	0	0	0	0	0	Dolle 2006	390	missense	TCG	TTG	S	L
+Ercc1 -/m	Liver	1	1249	GAT	CGA	0	0	0	0	0	0	0	0	Dolle 2006	411	missense	GAT	CGA	D	R
+Ercc1 -/m	Liver	1	1627	G	A	0	1	0	0	0	0	0	0	Dolle 2006	537	missense	GAA	AAA	E	K
+Ercc1 -/m	Liver	1	1651	A	C	0	0	0	0	0	1	0	0	Dolle 2006	545	missense	AGT	CGT	S	R
+Ercc1 -/m	Liver	1	1722	G	T	0	0	1	0	0	0	0	0	Dolle 2006	568	missense	TGG	TGT	W	C
+Ercc1 -/m	Liver	1	1726	T	C	1	0	0	0	0	0	0	0	Dolle 2006	570	missense	TGG	CGG	W	R
+Ercc1 -/m	Liver	1	1728	G	T	0	0	1	0	0	0	0	0	Dolle 2006	570	missense	TGG	TGT	W	C
+Ercc1 -/m	Liver	1	1831	G	C	0	0	0	1	0	0	0	0	Dolle 2006	605	missense	GGT	CGT	G	R
+Ercc1 -/m	Liver	1	2594	A	T	0	0	0	0	1	0	0	0	Dolle 2006	859	missense	GAT	GTT	D	V
+Ercc1 -/m	Liver	1	2713	G	A	0	1	0	0	0	0	0	0	Dolle 2006	899	missense	GGA	AGA	G	R
+Ercc1 -/m	Liver	1	2714	G	C	0	0	0	1	0	0	0	0	Dolle 2006	899	missense	GGA	GCA	G	A
+Ercc1 -/m	Liver	1	2975	T	A	0	0	0	0	1	0	0	0	Dolle 2006	986	missense	ATC	AAC	I	N
+Ercc1 -/m	Liver	1	66	G	A	0	1	0	0	0	0	0	0	Dolle 2006	16	nonsense	TGG	TGA	W	*
+Ercc1 -/m	Liver	1	289	C	T	0	1	0	0	0	0	0	0	Dolle 2006	91	nonsense	CAG	TAG	Q	*
+Ercc1 -/m	Liver	1	1242	T	A	0	0	0	0	1	0	0	0	Dolle 2006	408	nonsense	TAT	TAA	Y	*
+Ercc1 -/m	Liver	1	1582	A	T	0	0	0	0	1	0	0	0	Dolle 2006	522	nonsense	AAA	TAA	K	*
+Ercc1 -/m	Liver	1	1626	C	A	0	0	1	0	0	0	0	0	Dolle 2006	536	nonsense	TGC	TGA	C	*
+Ercc1 -/m	Liver	1	1674	C	A	0	0	1	0	0	0	0	0	Dolle 2006	552	nonsense	TAC	TAA	Y	*
+Ercc1 -/m	Liver	1	1824	T	A	0	0	0	0	1	0	0	0	Dolle 2006	602	nonsense	TGT	TGA	C	*
+Ercc1 -/m	Liver	1	1824	T	A	0	0	0	0	1	0	0	0	Dolle 2006	602	nonsense	TGT	TGA	C	*
+Ercc1 -/m	Liver	1	2266	G	T	0	0	1	0	0	0	0	0	Dolle 2006	750	nonsense	GAG	TAG	E	*
+Ercc1 -/m	Liver	1	2299	C	T	0	1	0	0	0	0	0	0	Dolle 2006	761	nonsense	CAG	TAG	Q	*
+Ercc1 -/m	Liver	1	2407	G	T	0	0	1	0	0	0	0	0	Dolle 2006	797	nonsense	GAA	TAA	E	*
+Ercc1 -/m	Liver	1	2771	G	A	0	1	0	0	0	0	0	0	Dolle 2006	918	nonsense	TGG	TAG	W	*
+NDBzA	Liver	750	432	G	DEL	0	0	0	0	0	0	0	1	Jiao 1997	-	frameshift	-	-	-	-
+NDBzA	Liver	750	464	-	DEL	0	0	0	0	0	0	0	1	Jiao 1997	-	frameshift	-	-	-	-
+NDBzA	Liver	750	804	G	DEL	0	0	0	0	0	0	0	1	Jiao 1997	-	frameshift	-	-	-	-
+NDBzA	Liver	750	2101	INS	T	0	0	0	0	0	0	1	0	Jiao 1997	-	frameshift	-	-	-	-
+NDBzA	Liver	750	211	G	C	0	0	0	1	0	0	0	0	Jiao 1997	65	missense	GCA	CCA	A	P
+NDBzA	Liver	750	455	T	G	0	0	0	0	0	1	0	0	Jiao 1997	146	missense	GTT	GGT	V	G
+NDBzA	Liver	750	464	C	A	0	0	1	0	0	0	0	0	Jiao 1997	149	missense	GCG	GAG	A	E
+NDBzA	Liver	750	619	G	T	0	0	1	0	0	0	0	0	Jiao 1997	201	missense	GAT	TAT	D	Y
+NDBzA	Liver	750	636	C	A	0	0	1	0	0	0	0	0	Jiao 1997	206	missense	AGC	AGA	S	R
+NDBzA	Liver	750	652	G	T	0	0	1	0	0	0	0	0	Jiao 1997	212	missense	GTC	TTC	V	F
+NDBzA	Liver	750	656	C	T	0	1	0	0	0	0	0	0	Jiao 1997	213	missense	TCG	TTG	S	L
+NDBzA	Liver	750	683	T	A	0	0	0	0	1	0	0	0	Jiao 1997	222	missense	ATC	AAC	I	N
+NDBzA	Liver	750	928	G	A	0	1	0	0	0	0	0	0	Jiao 1997	304	missense	GAA	AAA	E	K
+NDBzA	Liver	750	962	T	C	1	0	0	0	0	0	0	0	Jiao 1997	315	missense	CTG	CCG	L	P
+NDBzA	Liver	750	1083	C	A	0	0	1	0	0	0	0	0	Jiao 1997	355	missense	AAC	AAA	N	K
+NDBzA	Liver	750	1091	A	G	1	0	0	0	0	0	0	0	Jiao 1997	358	missense	GAG	GGG	E	G
+NDBzA	Liver	750	1173	C	A	0	0	1	0	0	0	0	0	Jiao 1997	385	missense	AAC	AAA	N	K
+NDBzA	Liver	750	1174	G	T	0	0	1	0	0	0	0	0	Jiao 1997	386	missense	GCC	TCC	A	S
+NDBzA	Liver	750	1196	C	A	0	0	1	0	0	0	0	0	Jiao 1997	393	missense	CCG	CAG	P	Q
+NDBzA	Liver	750	1222	T	C	1	0	0	0	0	0	0	0	Jiao 1997	402	missense	TGC	CGC	C	R
+NDBzA	Liver	750	1261	A	G	1	0	0	0	0	0	0	0	Jiao 1997	415	missense	ATT	GTT	I	V
+NDBzA	Liver	750	1292	G	C	0	0	0	1	0	0	0	0	Jiao 1997	425	missense	CGT	CCT	R	P
+NDBzA	Liver	750	1305	T	A	0	0	0	0	1	0	0	0	Jiao 1997	429	missense	GAT	GAA	D	E
+NDBzA	Liver	750	1333	C	T	0	1	0	0	0	0	0	0	Jiao 1997	439	missense	CGC	TGC	R	C
+NDBzA	Liver	750	1334	G	A	0	1	0	0	0	0	0	0	Jiao 1997	439	missense	CGC	CAC	R	H
+NDBzA	Liver	750	1334	G	A	0	1	0	0	0	0	0	0	Jiao 1997	439	missense	CGC	CAC	R	H
+NDBzA	Liver	750	1386	G	T	0	0	1	0	0	0	0	0	Jiao 1997	456	missense	TGG	TGT	W	C
+NDBzA	Liver	750	1394	G	A	0	1	0	0	0	0	0	0	Jiao 1997	459	missense	GGG	GAG	G	E
+NDBzA	Liver	750	1405	G	C	0	0	0	1	0	0	0	0	Jiao 1997	463	missense	GGC	CGC	G	R
+NDBzA	Liver	750	1487	G	T	0	0	1	0	0	0	0	0	Jiao 1997	490	missense	GGA	GTA	G	V
+NDBzA	Liver	750	1520	C	G	0	0	0	1	0	0	0	0	Jiao 1997	501	missense	CCG	CGG	P	R
+NDBzA	Liver	750	1520	C	T	0	1	0	0	0	0	0	0	Jiao 1997	501	missense	CCG	CTG	P	L
+NDBzA	Liver	750	1522	A	G	1	0	0	0	0	0	0	0	Jiao 1997	502	missense	ATG	GTG	M	V
+NDBzA	Liver	750	1529	C	A	0	0	1	0	0	0	0	0	Jiao 1997	504	missense	GCG	GAG	A	E
+NDBzA	Liver	750	1658	G	T	0	0	1	0	0	0	0	0	Jiao 1997	547	missense	GGC	GTC	G	V
+NDBzA	Liver	750	1708	G	T	0	0	1	0	0	0	0	0	Jiao 1997	564	missense	GGC	TGC	G	C
+NDBzA	Liver	750	1718	T	C	1	0	0	0	0	0	0	0	Jiao 1997	567	missense	GTC	GCC	V	A
+NDBzA	Liver	750	1720	T	C	1	0	0	0	0	0	0	0	Jiao 1997	568	missense	TGG	CGG	W	R
+NDBzA	Liver	750	1783	G	A	0	1	0	0	0	0	0	0	Jiao 1997	589	missense	GGC	AGC	G	S
+NDBzA	Liver	750	1831	G	A	0	1	0	0	0	0	0	0	Jiao 1997	605	missense	GGT	AGT	G	S
+NDBzA	Liver	750	1838	T	G	0	0	0	0	0	1	0	0	Jiao 1997	607	missense	GTC	GGC	V	G
+NDBzA	Liver	750	2003	C	T	0	1	0	0	0	0	0	0	Jiao 1997	662	missense	CCG	CTG	P	L
+NDBzA	Liver	750	2143	T	C	1	0	0	0	0	0	0	0	Jiao 1997	709	missense	TCA	CCA	S	P
+NDBzA	Liver	750	2392	G	A	0	1	0	0	0	0	0	0	Jiao 1997	792	missense	GAC	AAC	D	N
+NDBzA	Liver	750	2447	G	C	0	0	0	1	0	0	0	0	Jiao 1997	810	missense	TGG	TCG	W	S
+NDBzA	Liver	750	2467	C	A	0	0	1	0	0	0	0	0	Jiao 1997	817	missense	CAG	AAG	Q	K
+NDBzA	Liver	750	2473	G	A	0	1	0	0	0	0	0	0	Jiao 1997	819	missense	GAA	AAA	E	K
+NDBzA	Liver	750	2574	C	A	0	0	1	0	0	0	0	0	Jiao 1997	852	missense	AGC	AGA	S	R
+NDBzA	Liver	750	2627	T	A	0	0	0	0	1	0	0	0	Jiao 1997	870	missense	GTT	GAT	V	D
+NDBzA	Liver	750	2666	G	T	0	0	1	0	0	0	0	0	Jiao 1997	883	missense	GGC	GTC	G	V
+NDBzA	Liver	750	2733	C	A	0	0	1	0	0	0	0	0	Jiao 1997	905	missense	AAC	AAA	N	K
+NDBzA	Liver	750	2823	C	A	0	0	1	0	0	0	0	0	Jiao 1997	935	missense	AAC	AAA	N	K
+NDBzA	Liver	750	2830	C	T	0	1	0	0	0	0	0	0	Jiao 1997	938	missense	CGC	TGC	R	C
+NDBzA	Liver	750	52	C	T	0	1	0	0	0	0	0	0	Jiao 1997	12	nonsense	CAA	TAA	Q	*
+NDBzA	Liver	750	236	G	A	0	1	0	0	0	0	0	0	Jiao 1997	73	nonsense	TGG	TAG	W	*
+NDBzA	Liver	750	424	G	T	0	0	1	0	0	0	0	0	Jiao 1997	136	nonsense	GAA	TAA	E	*
+NDBzA	Liver	750	436	C	T	0	1	0	0	0	0	0	0	Jiao 1997	140	nonsense	CGA	TGA	R	*
+NDBzA	Liver	750	590	G	A	0	1	0	0	0	0	0	0	Jiao 1997	191	nonsense	TGG	TAG	W	*
+NDBzA	Liver	750	591	G	A	0	1	0	0	0	0	0	0	Jiao 1997	191	nonsense	TGG	TGA	W	*
+NDBzA	Liver	750	1194	T	A	0	0	0	0	1	0	0	0	Jiao 1997	392	nonsense	TAT	TAA	Y	*
+NDBzA	Liver	750	1342	C	T	0	1	0	0	0	0	0	0	Jiao 1997	442	nonsense	CGA	TGA	R	*
+NDBzA	Liver	750	1342	C	T	0	1	0	0	0	0	0	0	Jiao 1997	442	nonsense	CGA	TGA	R	*
+NDBzA	Liver	750	1434	T	G	0	0	0	0	0	1	0	0	Jiao 1997	472	nonsense	TAT	TAG	Y	*
+NDBzA	Liver	750	1439	G	A	0	1	0	0	0	0	0	0	Jiao 1997	474	nonsense	TGG	TAG	W	*
+NDBzA	Liver	750	1571	G	A	0	1	0	0	0	0	0	0	Jiao 1997	518	nonsense	TGG	TAG	W	*
+NDBzA	Liver	750	1600	G	T	0	0	1	0	0	0	0	0	Jiao 1997	528	nonsense	GGA	TGA	G	*
+NDBzA	Liver	750	1627	G	T	0	0	1	0	0	0	0	0	Jiao 1997	537	nonsense	GAA	TAA	E	*
+NDBzA	Liver	750	1632	C	A	0	0	1	0	0	0	0	0	Jiao 1997	538	nonsense	TAC	TAA	Y	*
+NDBzA	Liver	750	1721	G	A	0	1	0	0	0	0	0	0	Jiao 1997	568	nonsense	TGG	TAG	W	*
+NDBzA	Liver	750	1775	C	A	0	0	1	0	0	0	0	0	Jiao 1997	586	nonsense	TCG	TAG	S	*
+NDBzA	Liver	750	1816	C	T	0	1	0	0	0	0	0	0	Jiao 1997	600	nonsense	CAG	TAG	Q	*
+NDBzA	Liver	750	2122	C	T	0	1	0	0	0	0	0	0	Jiao 1997	702	nonsense	CAA	TAA	Q	*
+NDBzA	Liver	750	2169	G	A	0	1	0	0	0	0	0	0	Jiao 1997	717	nonsense	TGG	TGA	W	*
+NDBzA	Liver	750	2169	G	A	0	1	0	0	0	0	0	0	Jiao 1997	717	nonsense	TGG	TGA	W	*
+NDBzA	Liver	750	2341	C	T	0	1	0	0	0	0	0	0	Jiao 1997	775	nonsense	CAA	TAA	Q	*
+NDBzA	Liver	750	2341	C	T	0	1	0	0	0	0	0	0	Jiao 1997	775	nonsense	CAA	TAA	Q	*
+NDBzA	Liver	750	2436	G	A	0	1	0	0	0	0	0	0	Jiao 1997	806	nonsense	TGG	TGA	W	*
+NDBzA	Liver	750	2818	G	T	0	0	1	0	0	0	0	0	Jiao 1997	934	nonsense	GAA	TAA	E	*
+NDBzA	Liver	750	2835	C	A	0	0	1	0	0	0	0	0	Jiao 1997	939	nonsense	TGC	TGA	C	*
+NDBzA	Liver	750	1569	A	G	1	0	0	0	0	0	0	0	Jiao 1997	517	silent	AAA	AAG	K	K
+NDMA	Liver	10	229	G	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	1163	INS	T	0	0	0	0	0	0	1	0	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	1182	C	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	1243	-	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	1430	-	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	1509	T	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	1605	-	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	1644	-	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	1744	A	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	1830	-	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	1995	-	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	2123	-	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	2255	INS	TTTTT	0	0	0	0	0	0	1	0	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	2357	T	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	2475		DEL(100bp)	0	0	0	0	0	0	0	0	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	2722	C	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	2909	A	DEL	0	0	0	0	0	0	0	1	Souliotis 1998	-	frameshift	-	-	-	-
+NDMA	Liver	10	217	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	67	missense	GAA	AAA	E	K
+NDMA	Liver	10	403	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	129	missense	GTT	ATT	V	I
+NDMA	Liver	10	457	A	G	1	0	0	0	0	0	0	0	Souliotis 1998	147	missense	AAC	GAC	N	D
+NDMA	Liver	10	556	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	180	missense	GGA	AGA	G	R
+NDMA	Liver	10	619	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	201	missense	GAT	AAT	D	N
+NDMA	Liver	10	646	C	T	0	1	0	0	0	0	0	0	Souliotis 1998	210	missense	CGT	TGT	R	C
+NDMA	Liver	10	809	A	G	1	0	0	0	0	0	0	0	Souliotis 1998	264	missense	GAA	GGA	E	G
+NDMA	Liver	10	955	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	313	missense	GTT	ATT	V	I
+NDMA	Liver	10	1090	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	358	missense	GAG	AAG	E	K
+NDMA	Liver	10	1168	T	G	0	0	0	0	0	1	0	0	Souliotis 1998	384	missense	TTT	GTT	F	V
+NDMA	Liver	10	1177	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	387	missense	GTG	ATG	V	M
+NDMA	Liver	10	1249	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	411	missense	GAT	AAT	D	N
+NDMA	Liver	10	1279	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	421	missense	GTG	ATG	V	M
+NDMA	Liver	10	1303	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	429	missense	GAT	AAT	D	N
+NDMA	Liver	10	1468	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	484	missense	GTG	ATG	V	M
+NDMA	Liver	10	1537	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	507	missense	GAT	AAT	D	N
+NDMA	Liver	10	1645	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	543	missense	GGT	AGT	G	S
+NDMA	Liver	10	1700	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	561	missense	CGT	CAT	R	H
+NDMA	Liver	10	1709	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	564	missense	GGC	GAC	G	D
+NDMA	Liver	10	2045	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	676	missense	GGT	GAT	G	D
+NDMA	Liver	10	2539	G	C	0	0	0	1	0	0	0	0	Souliotis 1998	841	missense	GCG	CCG	A	P
+NDMA	Liver	10	2638	A	G	1	0	0	0	0	0	0	0	Souliotis 1998	874	missense	AGC	GGC	S	G
+NDMA	Liver	10	2837	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	940	missense	GGG	GAG	G	E
+NDMA	Liver	10	2840	C	G	0	0	0	1	0	0	0	0	Souliotis 1998	941	missense	ACG	AGG	T	R
+NDMA	Liver	10	85	C	T	0	1	0	0	0	0	0	0	Souliotis 1998	23	nonsense	CAA	TAA	Q	*
+NDMA	Liver	10	237	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	73	nonsense	TGG	TGA	W	*
+NDMA	Liver	10	801	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	261	nonsense	TGG	TGA	W	*
+NDMA	Liver	10	2317	C	T	0	1	0	0	0	0	0	0	Souliotis 1998	767	nonsense	CAG	TAG	Q	*
+NDMA	Liver	10	2772	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	918	nonsense	TGG	TGA	W	*
+NDMA	Liver	10	2871	G	A	0	1	0	0	0	0	0	0	Souliotis 1998	951	nonsense	TGG	TGA	W	*
+Sunlight	Skin	1	988	G	DEL	0	0	0	0	0	0	0	1	Ikehata 2004	324	frameshift	-	-	-	-
+Sunlight	Skin	1	610	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	198	missense	GAA	AAA	E	K
+Sunlight	Skin	1	613	G	T	0	0	1	0	0	0	0	0	Ikehata 2004	199	missense	GAT	TAT	D	Y
+Sunlight	Skin	1	638	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	207	missense	GGC	GAC	G	D
+Sunlight	Skin	1	928	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	304	missense	GAA	AAA	E	K
+Sunlight	Skin	1	928	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	304	missense	GAA	AAA	E	K
+Sunlight	Skin	1	928	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	304	missense	GAA	AAA	E	K
+Sunlight	Skin	1	928	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	304	missense	GAA	AAA	E	K
+Sunlight	Skin	1	994	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	326	missense	GAA	AAA	E	K
+Sunlight	Skin	1	994	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	326	missense	GAA	AAA	E	K
+Sunlight	Skin	1	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	358	missense	GAG	AAG	E	K
+Sunlight	Skin	1	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	390	missense	TCG	TTG	S	L
+Sunlight	Skin	1	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	390	missense	TCG	TTG	S	L
+Sunlight	Skin	1	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	390	missense	TCG	TTG	S	L
+Sunlight	Skin	1	1195	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	393	missense	CCG	TCG	P	S
+Sunlight	Skin	1	1196	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	393	missense	CCG	CTG	P	L
+Sunlight	Skin	1	1388	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	457	missense	TCG	TTG	S	L
+Sunlight	Skin	1	1393	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	459	missense	GGG	AGG	G	R
+Sunlight	Skin	1	1397	A	T	0	0	0	0	1	0	0	0	Ikehata 2004	460	missense	AAT	ATT	N	I
+Sunlight	Skin	1	1399	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	461	missense	GAA	AAA	E	K
+Sunlight	Skin	1	1399	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	461	missense	GAA	AAA	E	K
+Sunlight	Skin	1	1399	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	461	missense	GAA	AAA	E	K
+Sunlight	Skin	1	1477	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	487	missense	GAA	AAA	E	K
+Sunlight	Skin	1	1477	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	487	missense	GAA	AAA	E	K
+Sunlight	Skin	1	1520	C	A	0	0	1	0	0	0	0	0	Ikehata 2004	501	missense	CCG	CAG	P	Q
+Sunlight	Skin	1	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	537	missense	GAA	AAA	E	K
+Sunlight	Skin	1	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	537	missense	GAA	AAA	E	K
+Sunlight	Skin	1	1652	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	545	missense	AGT	AAT	S	N
+Sunlight	Skin	1	1712	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	565	missense	GGC	GAC	G	D
+Sunlight	Skin	1	1831	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	605	missense	GGT	AGT	G	S
+Sunlight	Skin	1	2373	CC	TT	0	0	0	0	0	0	0	0	Ikehata 2004	785	missense	ACC	ATT	T	I
+Sunlight	Skin	1	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	786	missense	CGT	TGT	R	C
+Sunlight	Skin	1	2392	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	792	missense	GAC	AAC	D	N
+Sunlight	Skin	1	2392	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	792	missense	GAC	AAC	D	N
+Sunlight	Skin	1	2392	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	792	missense	GAC	AAC	D	N
+Sunlight	Skin	1	2714	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	899	missense	GGA	GAA	G	E
+Sunlight	Skin	1	2714	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	899	missense	GGA	GAA	G	E
+Sunlight	Skin	1	2714	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	899	missense	GGA	GAA	G	E
+Sunlight	Skin	1	2719	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	901	missense	GGG	AGG	G	R
+Sunlight	Skin	1	2728	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	904	missense	GAA	AAA	E	K
+Sunlight	Skin	1	2728	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	904	missense	GAA	AAA	E	K
+Sunlight	Skin	1	2740	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	908	missense	GAC	AAC	D	N
+Sunlight	Skin	1	2813	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	932	missense	CCG	CTG	P	L
+Sunlight	Skin	1	3011	C	A	0	0	1	0	0	0	0	0	Ikehata 2004	998	missense	TCC	TAC	S	Y
+Sunlight	Skin	1	126	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	36	nonsense	TGG	TGA	W	*
+Sunlight	Skin	1	139	G	T	0	0	1	0	0	0	0	0	Ikehata 2004	41	nonsense	GAG	TAG	E	*
+Sunlight	Skin	1	204	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	62	nonsense	TGG	TGA	W	*
+Sunlight	Skin	1	616	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	200	nonsense	CAG	TAG	Q	*
+Sunlight	Skin	1	667	A	T	0	0	0	0	1	0	0	0	Ikehata 2004	217	nonsense	AAA	TAA	K	*
+Sunlight	Skin	1	751	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	245	nonsense	CAG	TAG	Q	*
+Sunlight	Skin	1	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	352	nonsense	CGA	TGA	R	*
+Sunlight	Skin	1	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	352	nonsense	CGA	TGA	R	*
+Sunlight	Skin	1	1385	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	456	nonsense	TGG	TAG	W	*
+Sunlight	Skin	1	1980	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	654	nonsense	TGG	TGA	W	*
+Sunlight	Skin	1	2142	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	708	nonsense	TGG	TGA	W	*
+Sunlight	Skin	1	2324	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	769	nonsense	TGG	TAG	W	*
+Sunlight	Skin	1	2325	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	769	nonsense	TGG	TGA	W	*
+Sunlight	Skin	1	2436	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	806	nonsense	TGG	TGA	W	*
+Sunlight	Skin	1	2447	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	810	nonsense	TGG	TAG	W	*
+Sunlight	Skin	1	2551	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	845	nonsense	CAG	TAG	Q	*
+Sunlight	Skin	1	2551	C	T	0	1	0	0	0	0	0	0	Ikehata 2004	845	nonsense	CAG	TAG	Q	*
+Sunlight	Skin	1	2771	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	918	nonsense	TGG	TAG	W	*
+Sunlight	Skin	1	3029	C	A	0	0	1	0	0	0	0	0	Ikehata 2004	1004	nonsense	TCG	TAG	S	*
+Sunlight	Skin	1	2913	G	A	0	1	0	0	0	0	0	0	Ikehata 2004	965	silent	CAG	CAA	Q	Q
+UVB	Skin	3	2335	A	DEL	0	0	0	0	0	0	0	1	Frijhoff 1997	773	frameshift	-	-	-	-
+UVB	Skin	4	2335	INS	A	0	0	0	0	0	0	1	0	Frijhoff 1997	773	frameshift	-	-	-	-
+UVB	Skin	1	2651	INS	T	0	0	0	0	0	0	1	0	Frijhoff 1997	878	frameshift	-	-	-	-
+UVB	Skin	3	1090	G	A	0	1	0	0	0	0	0	0	Frijhoff 1997	358	missense	GAG	AAG	E	K
+UVB	Skin	1	1187	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	390	missense	TCG	TTG	S	L
+UVB	Skin	2	1187	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	390	missense	TCG	TTG	S	L
+UVB	Skin	3	1187	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	390	missense	TCG	TTG	S	L
+UVB	Skin	4	1187	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	390	missense	TCG	TTG	S	L
+UVB	Skin	1	1252	G	A	0	1	0	0	0	0	0	0	Frijhoff 1997	412	missense	GAA	AAA	E	K
+UVB	Skin	4	1264	G	A	0	1	0	0	0	0	0	0	Frijhoff 1997	416	missense	GAA	AAA	E	K
+UVB	Skin	3	1832	G	A	0	1	0	0	0	0	0	0	Frijhoff 1997	605	missense	GGT	GAT	G	D
+UVB	Skin	3	2374	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	786	missense	CGT	TGT	R	C
+UVB	Skin	4	162	CC	TT	0	0	0	0	0	0	0	0	Frijhoff 1997	48	nonsense	TCCCAA	TCTTAA	Q	*
+UVB	Skin	4	203	G	A	0	1	0	0	0	0	0	0	Frijhoff 1997	62	nonsense	TGG	TAG	W	*
+UVB	Skin	3	739	G	T	0	0	1	0	0	0	0	0	Frijhoff 1997	241	nonsense	GAG	TAG	E	*
+UVB	Skin	3	1072	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	352	nonsense	CGA	TGA	R	*
+UVB	Skin	4	1072	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	352	nonsense	CGA	TGA	R	*
+UVB	Skin	1	2365	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	783	nonsense	CAG	TAG	Q	*
+UVB	Skin	2	2365	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	783	nonsense	CAG	TAG	Q	*
+UVB	Skin	2	2447	G	A	0	1	0	0	0	0	0	0	Frijhoff 1997	810	nonsense	TGG	TAG	W	*
+UVB	Skin	1	2728	G	T	0	0	1	0	0	0	0	0	Frijhoff 1997	904	nonsense	GAA	TAA	E	*
+UVB	Skin	1	2908	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	964	nonsense	CAA	TAA	Q	*
+UVB	Skin	3	3014	G	A	0	1	0	0	0	0	0	0	Frijhoff 1997	999	nonsense	TGG	TAG	W	*
+UVB	Skin	4	3067	C	T	0	1	0	0	0	0	0	0	Frijhoff 1997	1017	nonsense	CAG	TAG	Q	*
+UVB	Skin Dermis	1	486	-	DEL	0	0	0	0	0	0	0	1	Ikehata 2003	156	frameshift	-	-	-	-
+UVB	Skin Dermis	1	1286	T	DEL	0	0	0	0	0	0	0	1	Ikehata 2003	423	frameshift	-	-	-	-
+UVB	Skin Dermis	1	620	A	G	1	0	0	0	0	0	0	0	Ikehata 2003	201	missense	GAT	GGT	D	G
+UVB	Skin Dermis	1	625	T	C	1	0	0	0	0	0	0	0	Ikehata 2003	203	missense	TGG	CGG	W	R
+UVB	Skin Dermis	1	994	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	326	missense	GAA	AAA	E	K
+UVB	Skin Dermis	1	1090	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	358	missense	GAG	AAG	E	K
+UVB	Skin Dermis	1	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	390	missense	TCG	TTG	S	L
+UVB	Skin Dermis	1	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	390	missense	TCG	TTG	S	L
+UVB	Skin Dermis	1	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	537	missense	GAA	AAA	E	K
+UVB	Skin Dermis	1	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	537	missense	GAA	AAA	E	K
+UVB	Skin Dermis	1	1783	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	589	missense	GGC	AGC	G	S
+UVB	Skin Dermis	1	2392	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	792	missense	GAC	AAC	D	N
+UVB	Skin Dermis	1	2713	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	899	missense	GGA	AGA	G	R
+UVB	Skin Dermis	1	2727	AG	GA	0	0	0	0	0	0	0	0	Ikehata 2003	903	missense	CAAGAA	CAGAAA	E	K
+UVB	Skin Dermis	1	2728	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	904	missense	GAA	AAA	E	K
+UVB	Skin Dermis	1	2728	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	904	missense	GAA	AAA	E	K
+UVB	Skin Dermis	1	2740	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	908	missense	GAC	AAC	D	N
+UVB	Skin Dermis	1	85	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	23	nonsense	CAA	TAA	Q	*
+UVB	Skin Dermis	1	616	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	200	nonsense	CAG	TAG	Q	*
+UVB	Skin Dermis	1	616	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	200	nonsense	CAG	TAG	Q	*
+UVB	Skin Dermis	1	800	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	261	nonsense	TGG	TAG	W	*
+UVB	Skin Dermis	1	1434	T	A	0	0	0	0	1	0	0	0	Ikehata 2003	472	nonsense	TAT	TAA	Y	*
+UVB	Skin Dermis	1	1440	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	474	nonsense	TGG	TGA	W	*
+UVB	Skin Dermis	1	1721	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	568	nonsense	TGG	TAG	W	*
+UVB	Skin Dermis	1	1747	A	T	0	0	0	0	1	0	0	0	Ikehata 2003	577	nonsense	AAA	TAA	K	*
+UVB	Skin Dermis	1	1773	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	585	nonsense	TGG	TGA	W	*
+UVB	Skin Dermis	1	1900	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	628	nonsense	CAG	TAG	Q	*
+UVB	Skin Dermis	1	2448	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	810	nonsense	TGG	TGA	W	*
+UVB	Skin Dermis	1	2772	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	918	nonsense	TGG	TGA	W	*
+UVB	Skin Dermis	1	2870	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	951	nonsense	TGG	TAG	W	*
+UVB	Skin Dermis	1	2870	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	951	nonsense	TGG	TAG	W	*
+UVB	Skin Dermis	1	3078	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	1020	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	205	T	DEL	0	0	0	0	0	0	0	1	Ikehata 2003	63	frameshift	-	-	-	-
+UVB	Skin Epidermis	1	434	CGCG	DEL	0	0	0	0	0	0	0	1	Ikehata 2003	139	frameshift	-	-	-	-
+UVB	Skin Epidermis	1	278	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	87	missense	CCC	CTC	P	L
+UVB	Skin Epidermis	1	619	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	201	missense	GAT	AAT	D	N
+UVB	Skin Epidermis	1	928	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	304	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	1010	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	331	missense	GGT	GAT	G	D
+UVB	Skin Epidermis	1	1075	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	353	missense	GGC	AGC	G	S
+UVB	Skin Epidermis	1	1087	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	357	missense	CAC	TAC	H	Y
+UVB	Skin Epidermis	1	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	390	missense	TCG	TTG	S	L
+UVB	Skin Epidermis	1	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	390	missense	TCG	TTG	S	L
+UVB	Skin Epidermis	1	1187	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	390	missense	TCG	TTG	S	L
+UVB	Skin Epidermis	1	1195	CC	TT	0	0	0	0	0	0	0	0	Ikehata 2003	393	missense	CCG	TTG	P	L
+UVB	Skin Epidermis	1	1235	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	406	missense	GGC	GAC	G	D
+UVB	Skin Epidermis	1	1252	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	412	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	1264	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	416	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	1264	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	416	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	1388	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	457	missense	TCG	TTG	S	L
+UVB	Skin Epidermis	1	1399	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	461	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	1477	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	487	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	1477	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	487	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	537	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	537	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	537	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	1627	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	537	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	1657	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	547	missense	GGC	AGC	G	S
+UVB	Skin Epidermis	1	1722	G	C	0	0	0	1	0	0	0	0	Ikehata 2003	568	missense	TGG	TGC	W	C
+UVB	Skin Epidermis	1	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	786	missense	CGT	TGT	R	C
+UVB	Skin Epidermis	1	2374	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	786	missense	CGT	TGT	R	C
+UVB	Skin Epidermis	1	2392	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	792	missense	GAC	AAC	D	N
+UVB	Skin Epidermis	1	2392	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	792	missense	GAC	AAC	D	N
+UVB	Skin Epidermis	1	2393	A	G	1	0	0	0	0	0	0	0	Ikehata 2003	792	missense	GAC	GGC	D	G
+UVB	Skin Epidermis	1	2525	T	A	0	0	0	0	1	0	0	0	Ikehata 2003	836	missense	ATT	AAT	I	N
+UVB	Skin Epidermis	1	2728	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	904	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	2728	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	904	missense	GAA	AAA	E	K
+UVB	Skin Epidermis	1	2729	A	T	0	0	0	0	1	0	0	0	Ikehata 2003	904	missense	GAA	GTA	E	V
+UVB	Skin Epidermis	1	2744	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	909	missense	CGC	CAC	R	H
+UVB	Skin Epidermis	1	2998	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	994	missense	GGT	AGT	G	S
+UVB	Skin Epidermis	1	66	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	16	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	66	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	16	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	204	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	62	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	424	G	T	0	0	1	0	0	0	0	0	Ikehata 2003	136	nonsense	GAA	TAA	E	*
+UVB	Skin Epidermis	1	477	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	153	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	590	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	191	nonsense	TGG	TAG	W	*
+UVB	Skin Epidermis	1	591	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	191	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	616	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	200	nonsense	CAG	TAG	Q	*
+UVB	Skin Epidermis	1	667	A	T	0	0	0	0	1	0	0	0	Ikehata 2003	217	nonsense	AAA	TAA	K	*
+UVB	Skin Epidermis	1	751	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	245	nonsense	CAG	TAG	Q	*
+UVB	Skin Epidermis	1	800	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	261	nonsense	TGG	TAG	W	*
+UVB	Skin Epidermis	1	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	352	nonsense	CGA	TGA	R	*
+UVB	Skin Epidermis	1	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	352	nonsense	CGA	TGA	R	*
+UVB	Skin Epidermis	1	1072	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	352	nonsense	CGA	TGA	R	*
+UVB	Skin Epidermis	1	1440	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	474	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	1571	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	518	nonsense	TGG	TAG	W	*
+UVB	Skin Epidermis	1	1582	A	T	0	0	0	0	1	0	0	0	Ikehata 2003	522	nonsense	AAA	TAA	K	*
+UVB	Skin Epidermis	1	1722	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	568	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	1722	GG	AA	0	0	0	0	0	0	0	0	Ikehata 2003	568	nonsense	TGGGAC	TGAAAC	W	*
+UVB	Skin Epidermis	1	1728	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	570	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	1773	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	585	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	2142	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	708	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	2365	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	783	nonsense	CAG	TAG	Q	*
+UVB	Skin Epidermis	1	2448	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	810	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	2871	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	951	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	3015	G	A	0	1	0	0	0	0	0	0	Ikehata 2003	999	nonsense	TGG	TGA	W	*
+UVB	Skin Epidermis	1	2370	C	T	0	1	0	0	0	0	0	0	Ikehata 2003	784	silent	TTC	TTT	F	F
+Xpa -/-	Kidney	1	126	G	A	0	1	0	0	0	0	0	0	Dolle 2006	36	nonsense	TGG	TGA	W	*
+Xpa -/-	Kidney	1	240	GG	AT	0	0	0	0	0	0	0	0	Dolle 2006	74	nonsense	CTGGAG	CTATAG	E	*
+Xpa -/-	Kidney	1	267	tgtc	DEL	0	0	0	0	0	0	0	0	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	274	G	T	0	0	1	0	0	0	0	0	Dolle 2006	86	missense	GTC	TTC	V	F
+Xpa -/-	Kidney	1	279	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	279	C	T	0	1	0	0	0	0	0	0	Dolle 2006	87	silent	CCC	CCT	P	P
+Xpa -/-	Kidney	1	303	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	303	C	A	0	0	1	0	0	0	0	0	Dolle 2006	95	nonsense	TAC	TAA	Y	*
+Xpa -/-	Kidney	1	303	C	G	0	0	0	1	0	0	0	0	Dolle 2006	95	nonsense	TAC	TAG	Y	*
+Xpa -/-	Kidney	1	318	C	A	0	0	1	0	0	0	0	0	Dolle 2006	100	nonsense	TAC	TAA	Y	*
+Xpa -/-	Kidney	1	318	C	A	0	0	1	0	0	0	0	0	Dolle 2006	100	nonsense	TAC	TAA	Y	*
+Xpa -/-	Kidney	1	477	G	A	0	1	0	0	0	0	0	0	Dolle 2006	153	nonsense	TGG	TGA	W	*
+Xpa -/-	Kidney	1	526	G	T	0	0	1	0	0	0	0	0	Dolle 2006	170	nonsense	GAA	TAA	E	*
+Xpa -/-	Kidney	1	548	T	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	555	C	DEL	0	0	0	0	0	0	0	0	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	616	C	T	0	1	0	0	0	0	0	0	Dolle 2006	200	nonsense	CAG	TAG	Q	*
+Xpa -/-	Kidney	1	669	A	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	763	G	T	0	0	1	0	0	0	0	0	Dolle 2006	249	nonsense	GAG	TAG	E	*
+Xpa -/-	Kidney	1	801	G	DEL	0	0	0	0	0	0	0	0	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	856	G	T	0	0	1	0	0	0	0	0	Dolle 2006	280	missense	GAT	TAT	D	Y
+Xpa -/-	Kidney	1	1072	C	T	0	1	0	0	0	0	0	0	Dolle 2006	352	nonsense	CGA	TGA	R	*
+Xpa -/-	Kidney	1	1072	C	T	0	1	0	0	0	0	0	0	Dolle 2006	352	nonsense	CGA	TGA	R	*
+Xpa -/-	Kidney	1	1090	G	T	0	0	1	0	0	0	0	0	Dolle 2006	358	nonsense	GAG	TAG	E	*
+Xpa -/-	Kidney	1	1282	C	A	0	0	1	0	0	0	0	0	Dolle 2006	422	missense	CCA	ACA	P	T
+Xpa -/-	Kidney	1	1518	C	A	0	0	1	0	0	0	0	0	Dolle 2006	500	nonsense	TGC	TGA	C	*
+Xpa -/-	Kidney	1	1522	A	DEL	0	0	0	0	0	0	0	0	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	1546	C	T	0	1	0	0	0	0	0	0	Dolle 2006	510	nonsense	CAG	TAG	Q	*
+Xpa -/-	Kidney	1	1574	CC	AGA	0	0	0	0	0	0	0	0	Dolle 2006	519	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	1584	A	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	1727	G	A	0	1	0	0	0	0	0	0	Dolle 2006	570	nonsense	TGG	TAG	W	*
+Xpa -/-	Kidney	1	1831	G	T	0	0	1	0	0	0	0	0	Dolle 2006	605	missense	GGT	TGT	G	C
+Xpa -/-	Kidney	1	1898	T	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	1944	C	A	0	0	1	0	0	0	0	0	Dolle 2006	642	nonsense	TAC	TAA	Y	*
+Xpa -/-	Kidney	1	2266	G	T	0	0	1	0	0	0	0	0	Dolle 2006	750	nonsense	GAG	TAG	E	*
+Xpa -/-	Kidney	1	2315	C	G	0	0	0	1	0	0	0	0	Dolle 2006	766	nonsense	TCA	TGA	S	*
+Xpa -/-	Kidney	1	2334	INS	T	0	0	0	0	0	0	1	0	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	2365	C	T	0	1	0	0	0	0	0	0	Dolle 2006	783	nonsense	CAG	TAG	Q	*
+Xpa -/-	Kidney	1	2367	G	DEL	0	0	0	0	0	0	0	0	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Kidney	1	2435	GG	AA	0	0	0	0	0	0	0	0	Dolle 2006	806	nonsense	TGG	TAA	W	*
+Xpa -/-	Liver	1	85	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	145	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	150	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	166	C	T	0	1	0	0	0	0	0	0	Dolle 2006	50	nonsense	CAG	TAG	Q	*
+Xpa -/-	Liver	1	191	G	A	0	1	0	0	0	0	0	0	Dolle 2006	58	nonsense	TGG	TAG	W	*
+Xpa -/-	Liver	1	256	G	T	0	0	1	0	0	0	0	0	Dolle 2006	80	nonsense	GAG	TAG	E	*
+Xpa -/-	Liver	1	288	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	303	C	G	0	0	0	1	0	0	0	0	Dolle 2006	95	nonsense	TAC	TAG	Y	*
+Xpa -/-	Liver	1	303	C	G	0	0	0	1	0	0	0	0	Dolle 2006	95	nonsense	TAC	TAG	Y	*
+Xpa -/-	Liver	1	343	G	DEL	0	0	0	0	0	0	0	0	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	389	C	A	0	0	1	0	0	0	0	0	Dolle 2006	124	nonsense	TCG	TAG	S	*
+Xpa -/-	Liver	1	423	GG	AT	0	0	0	0	0	0	0	0	Dolle 2006	135	missense	GAGGCC	GAATCC	A	S
+Xpa -/-	Liver	1	430	C	T	0	1	0	0	0	0	0	0	Dolle 2006	138	nonsense	CAG	TAG	Q	*
+Xpa -/-	Liver	1	501	C	A	0	0	1	0	0	0	0	0	Dolle 2006	161	nonsense	TAC	TAA	Y	*
+Xpa -/-	Liver	1	619	G	T	0	0	1	0	0	0	0	0	Dolle 2006	201	missense	GAT	TAT	D	Y
+Xpa -/-	Liver	1	679	C	T	0	1	0	0	0	0	0	0	Dolle 2006	221	nonsense	CAA	TAA	Q	*
+Xpa -/-	Liver	1	945	T	G	0	0	0	0	0	1	0	0	Dolle 2006	309	nonsense	TAT	TAG	Y	*
+Xpa -/-	Liver	1	1018	G	T	0	0	1	0	0	0	0	0	Dolle 2006	334	nonsense	GAG	TAG	E	*
+Xpa -/-	Liver	1	1072	C	T	0	1	0	0	0	0	0	0	Dolle 2006	352	nonsense	CGA	TGA	R	*
+Xpa -/-	Liver	1	1249	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	1350	GC	TT	0	0	0	0	0	0	0	0	Dolle 2006	444	nonsense	GTGCAG	GTTTAG	Q	*
+Xpa -/-	Liver	1	1395	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	1546	C	T	0	1	0	0	0	0	0	0	Dolle 2006	510	nonsense	CAG	TAG	Q	*
+Xpa -/-	Liver	1	1584	A	DEL	0	0	0	0	0	0	0	0	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	1614	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	1645	ggtaacag	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	1657	G	C	0	0	0	1	0	0	0	0	Dolle 2006	547	missense	GGC	CGC	G	R
+Xpa -/-	Liver	1	1681	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	1695	T	G	0	0	0	0	0	1	0	0	Dolle 2006	559	nonsense	TAT	TAG	Y	*
+Xpa -/-	Liver	1	1705	C	T	0	1	0	0	0	0	0	0	Dolle 2006	563	nonsense	CAG	TAG	Q	*
+Xpa -/-	Liver	1	1831	G	T	0	0	1	0	0	0	0	0	Dolle 2006	605	missense	GGT	TGT	G	C
+Xpa -/-	Liver	1	1832	G	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	2041	C	T	0	1	0	0	0	0	0	0	Dolle 2006	675	nonsense	CAA	TAA	Q	*
+Xpa -/-	Liver	1	2114	G	A	0	1	0	0	0	0	0	0	Dolle 2006	699	missense	CGC	CAC	R	H
+Xpa -/-	Liver	1	2292	T	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	2340	A	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	2583	C	DEL	0	0	0	0	0	0	0	1	Dolle 2006	-	frameshift	-	-	-	-
+Xpa -/-	Liver	1	2859	C	G	0	0	0	1	0	0	0	0	Dolle 2006	947	silent	GGC	GGG	G	G
+Xpa -/-	Liver	1	2904	C	G	0	0	0	1	0	0	0	0	Dolle 2006	962	nonsense	TAC	TAG	Y	*
+X-ray	Brain	200	2699	INS	DEL	0	0	0	0	0	0	1	1	Ono 1999	-	complex	-	-	-	-
+X-ray	Brain	200	186	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	280	INS	-	0	0	0	0	0	0	1	0	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	361	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	631	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	689	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	1144	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	1398	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	1471	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	1577	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	1581	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	1622	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	1924	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	2311	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	2340	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	2662	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	2990	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Brain	200	625	T	C	1	0	0	0	0	0	0	0	Ono 1999	203	missense	TGG	CGG	W	R
+X-ray	Brain	200	1090	G	A	0	1	0	0	0	0	0	0	Ono 1999	358	missense	GAG	AAG	E	K
+X-ray	Brain	200	1090	G	A	0	1	0	0	0	0	0	0	Ono 1999	358	missense	GAG	AAG	E	K
+X-ray	Brain	200	1187	C	T	0	1	0	0	0	0	0	0	Ono 1999	390	missense	TCG	TTG	S	L
+X-ray	Brain	200	1187	C	T	0	1	0	0	0	0	0	0	Ono 1999	390	missense	TCG	TTG	S	L
+X-ray	Brain	200	1627	G	A	0	1	0	0	0	0	0	0	Ono 1999	537	missense	GAA	AAA	E	K
+X-ray	Brain	200	2374	C	T	0	1	0	0	0	0	0	0	Ono 1999	786	missense	CGT	TGT	R	C
+X-ray	Brain	200	2374	C	T	0	1	0	0	0	0	0	0	Ono 1999	786	missense	CGT	TGT	R	C
+X-ray	Brain	200	204	G	A	0	1	0	0	0	0	0	0	Ono 1999	62	nonsense	TGG	TGA	W	*
+X-ray	Brain	200	1072	C	T	0	1	0	0	0	0	0	0	Ono 1999	352	nonsense	CGA	TGA	R	*
+X-ray	Brain	200	1072	C	T	0	1	0	0	0	0	0	0	Ono 1999	352	nonsense	CGA	TGA	R	*
+X-ray	Brain	200	1752	T	A	0	0	0	0	1	0	0	0	Ono 1999	578	nonsense	TAT	TAA	Y	*
+X-ray	Brain	200	2303	C	A	0	0	1	0	0	0	0	0	Ono 1999	762	nonsense	TCA	TAA	S	*
+X-ray	Liver	200	98	INS	DEL	0	0	0	0	0	0	1	1	Ono 1999	-	complex	-	-	-	-
+X-ray	Liver	200	137	INS	DEL	0	0	0	0	0	0	1	1	Ono 1999	-	complex	-	-	-	-
+X-ray	Liver	200	1187	INS	DEL	0	0	0	0	0	0	1	1	Ono 1999	-	complex	-	-	-	-
+X-ray	Liver	200	1578	INS	DEL	0	0	0	0	0	0	1	1	Ono 1999	-	complex	-	-	-	-
+X-ray	Liver	200	1975	INS	DEL	0	0	0	0	0	0	1	1	Ono 1999	-	complex	-	-	-	-
+X-ray	Liver	200	130	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	273	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	329	-	DEL(437 bp)	0	0	0	0	0	0	0	0	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	335	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	518	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	1037	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	1170	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	1202	INS	-	0	0	0	0	0	0	1	0	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	1314	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	1442	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	1766	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	2006	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	2257	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	2726	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	2914	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	3003	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Liver	200	625	T	C	1	0	0	0	0	0	0	0	Ono 1999	203	missense	TGG	CGG	W	R
+X-ray	Liver	200	1016	G	C	0	0	0	1	0	0	0	0	Ono 1999	333	missense	CGC	CCC	R	P
+X-ray	Liver	200	1141	G	T	0	0	1	0	0	0	0	0	Ono 1999	375	missense	GAT	TAT	D	Y
+X-ray	Liver	200	1187	C	T	0	1	0	0	0	0	0	0	Ono 1999	390	missense	TCG	TTG	S	L
+X-ray	Liver	200	1260	T	G	0	0	0	0	0	1	0	0	Ono 1999	414	missense	AAT	AAG	N	K
+X-ray	Liver	200	1627	G	A	0	1	0	0	0	0	0	0	Ono 1999	537	missense	GAA	AAA	E	K
+X-ray	Liver	200	2740	G	A	0	1	0	0	0	0	0	0	Ono 1999	908	missense	GAC	AAC	D	N
+X-ray	Liver	200	318	G	A	0	1	0	0	0	0	0	0	Ono 1999	100	nonsense	TAC	TAA	Y	*
+X-ray	Liver	200	1072	C	T	0	1	0	0	0	0	0	0	Ono 1999	352	nonsense	CGA	TGA	R	*
+X-ray	Liver	200	2303	C	A	0	0	1	0	0	0	0	0	Ono 1999	762	nonsense	TCA	TAA	S	*
+X-ray	Liver	200	2805	C	A	0	0	1	0	0	0	0	0	Ono 1999	929	nonsense	TAC	TAA	Y	*
+X-ray	Liver	200	2181	T	C	1	0	0	0	0	0	0	0	Ono 1999	721	silent	CGT	CGC	R	R
+X-ray	Spleen	200	477	INS	DEL	0	0	0	0	0	0	1	1	Ono 1999	-	complex	-	-	-	-
+X-ray	Spleen	200	1526	INS	DEL	0	0	0	0	0	0	1	1	Ono 1999	-	complex	-	-	-	-
+X-ray	Spleen	200	173	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	206	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	261	INS	-	0	0	0	0	0	0	1	0	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	271	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	527	INS	-	0	0	0	0	0	0	1	0	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	574	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	600	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	850	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	926	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	1053	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	1132	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	1662	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	2008	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	2030	INS	-	0	0	0	0	0	0	1	0	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	2226	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	3061	-	DEL	0	0	0	0	0	0	0	1	Ono 1999	-	frameshift	-	-	-	-
+X-ray	Spleen	200	1187	C	T	0	1	0	0	0	0	0	0	Ono 1999	390	missense	TCG	TTG	S	L
+X-ray	Spleen	200	2374	C	T	0	1	0	0	0	0	0	0	Ono 1999	786	missense	CGT	TGT	R	C
+X-ray	Spleen	200	2740	G	A	0	1	0	0	0	0	0	0	Ono 1999	908	missense	GAC	AAC	D	N
+X-ray	Spleen	200	126	G	A	0	1	0	0	0	0	0	0	Ono 1999	36	nonsense	TGG	TGA	W	*
+X-ray	Spleen	200	1072	C	T	0	1	0	0	0	0	0	0	Ono 1999	352	nonsense	CGA	TGA	R	*
+X-ray	Spleen	200	1072	C	T	0	1	0	0	0	0	0	0	Ono 1999	352	nonsense	CGA	TGA	R	*
+X-ray	Spleen	200	1159	C	T	0	1	0	0	0	0	0	0	Ono 1999	381	nonsense	CAG	TAG	Q	*
+X-ray	Spleen	200	2835	C	A	0	0	1	0	0	0	0	0	Ono 1999	939	nonsense	TGC	TGA	C	*
+X-ray	Spleen	200	2884	C	T	0	1	0	0	0	0	0	0	Ono 1999	956	nonsense	CAG	TAG	Q	*
+X-ray	Spleen	200	1092	G	A	0	1	0	0	0	0	0	0	Ono 1999	358	silent	GAG	GAA	E	E

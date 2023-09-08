@@ -1,0 +1,63 @@
+Exposure	Tissue	Dose	Position	Ref	Alt	Tech Rep1	Tech Rep2	Tech Difference	Background	Avg Freq	Count	A:T to G:C	G:C to A:T	G:C to T:A	G:C to C:G	A:T to T:A	A:T to C:G	Insertion	Deletion	Codon	Consequence	Ref Codon	Alt Codon	Ref A.A.	Alt A.A.	Type	Study	Technology	Tech Diff	mutation	aa_change	FunctionalChange	codon_position	PositionRef	residue_code	alt_code	CodonRef	residue_name	Domain	chromosome
+Control	Bone Marrow	0	182	A	C	0.0327	0.0239	1.3682	0.013	0.0283	1	0	0	0	0	0	1	0	0	55	missense	AAT	ACT	N	T	SNV	This Study	NGS	NA	A>C	N>T	1	2	164	Asn	Thr	55	Asn55	Sugar Binding (PF02837)	lacZ
+Control	Bone Marrow	0	247	G	T	0.0376	0.036	1.0422	1e-04	0.0368	1	0	0	1	0	0	0	0	0	77	missense	GAT	TAT	D	Y	SNV	This Study	NGS	NA	G>T	D>Y	1	1	229	Asp	Tyr	77	Asp77	Sugar Binding (PF02837)	lacZ
+Control	Bone Marrow	0	986	T	A	0.1358	0.1278	1.0625	1e-04	0.1318	1	0	0	0	0	1	0	0	0	323	missense	ATT	AAT	I	N	SNV	This Study	NGS	NA	T>A	I>N	1	2	968	Ile	Asn	323	Ile323	β-Galactosidase (PF00703)	lacZ
+Control	Bone Marrow	0	1154	T	G	0.0043	0.0042	1.0338	0.0023	0.0043	1	0	0	0	0	0	1	0	0	379	missense	ATG	AGG	M	R	SNV	This Study	NGS	NA	T>G	M>R	1	2	1136	Met	Arg	379	Met379	TIM Barrel (PF02836)	lacZ
+Control	Bone Marrow	0	1336	G	T	0.0249	0.0253	1.0174	0.0021	0.0251	1	0	0	1	0	0	0	0	0	440	missense	GTA	TTA	V	L	SNV	This Study	NGS	NA	G>T	V>L	1	1	1318	Val	Leu	440	Val440	TIM Barrel (PF02836)	lacZ
+Control	Bone Marrow	0	1622	T	G	0.0085	0.0089	1.0426	0.0047	0.0087	1	0	0	0	0	0	1	0	0	535	missense	CTT	CGT	L	R	SNV	This Study	NGS	NA	T>G	L>R	1	2	1604	Leu	Arg	535	Leu535	TIM Barrel (PF02836)	lacZ
+Control	Bone Marrow	0	1622	T	G	0.0337	0.0319	1.0547	1e-04	0.0328	1	0	0	0	0	0	1	0	0	535	missense	CTT	CGT	L	R	SNV	This Study	NGS	NA	T>G	L>R	1	2	1604	Leu	Arg	535	Leu535	TIM Barrel (PF02836)	lacZ
+Control	Bone Marrow	0	2035	G	A	0.0503	0.0681	1.355	2e-04	0.0592	8	0	1	0	0	0	0	0	0	673	missense	GCT	ACT	A	T	SNV	This Study	NGS	NA	G>A	A>T	1	1	2017	Ala	Thr	673	Ala673	NA	lacZ
+Control	Bone Marrow	0	2514	T	G	0.0634	0.0478	1.328	0	0.0556	1	0	0	0	0	0	1	0	0	832	missense	GAT	GAG	D	E	SNV	This Study	NGS	NA	T>G	D>E	1	3	2496	Asp	Glu	832	Asp832	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Bone Marrow	0	1891	C	T	0.0176	0.0212	1.2043	4e-04	0.0194	1	0	1	0	0	0	0	0	0	625	nonsense	CAG	TAG	Q	*	SNV	This Study	NGS	NA	C>T	Q>*	1	1	1873	Gln	NA	625	Gln625	TIM Barrel (PF02836)	lacZ
+Control	Bone Marrow	0	2068	G	T	0.1144	0.1173	1.0252	2e-04	0.1159	1	0	0	1	0	0	0	0	0	684	nonsense	GAA	TAA	E	*	SNV	This Study	NGS	NA	G>T	E>*	1	1	2050	Glu	NA	684	Glu684	NA	lacZ
+Control	Bone Marrow	0	2095	C	T	0.0763	0.0763	1.0001	1e-04	0.0763	1	0	1	0	0	0	0	0	0	693	nonsense	CAA	TAA	Q	*	SNV	This Study	NGS	NA	C>T	Q>*	1	1	2077	Gln	NA	693	Gln693	NA	lacZ
+Control	Bone Marrow	0	2545	C	T	0.0439	0.0464	1.0567	1e-04	0.0451	1	0	1	0	0	0	0	0	0	843	nonsense	CAG	TAG	Q	*	SNV	This Study	NGS	NA	C>T	Q>*	1	1	2527	Gln	NA	843	Gln843	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Bone Marrow	0	3040	C	T	0.0184	0.0181	1.0179	1e-04	0.0182	1	0	1	0	0	0	0	0	0	1008	nonsense	CAG	TAG	Q	*	SNV	This Study	NGS	NA	C>T	Q>*	1	1	3022	Gln	NA	1008	Gln1008	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Bone Marrow	0	3040	C	T	0.0291	0.0309	1.0613	0.0013	0.03	1	0	1	0	0	0	0	0	0	1008	nonsense	CAG	TAG	Q	*	SNV	This Study	NGS	NA	C>T	Q>*	1	1	3022	Gln	NA	1008	Gln1008	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Bone Marrow	0	3040	C	T	0.2079	0.2391	1.1501	1e-04	0.2235	17	0	1	0	0	0	0	0	0	1008	nonsense	CAG	TAG	Q	*	SNV	This Study	NGS	NA	C>T	Q>*	1	1	3022	Gln	NA	1008	Gln1008	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Bone Marrow	0	3040	C	T	0.0118	0.0103	1.1511	1e-04	0.0111	1	0	1	0	0	0	0	0	0	1008	nonsense	CAG	TAG	Q	*	SNV	This Study	NGS	NA	C>T	Q>*	1	1	3022	Gln	NA	1008	Gln1008	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Bone Marrow	0	2556	G	A	0.0258	0.0239	1.081	0.0087	0.0248	1	0	1	0	0	0	0	0	0	846	silent	GGG	GGA	G	G	SNV	This Study	NGS	NA	G>A	G>G	0	3	2538	Gly	Gly	846	Gly846	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Brain	0	1970	T	G	0.1117	0.1266	1.1333	3e-04	0.1191	1	0	0	0	0	0	1	0	0	651	missense	CTC	CGC	L	R	SNV	This Study	NGS	NA	T>G	L>R	1	2	1952	Leu	Arg	651	Leu651	NA	lacZ
+Control	Brain	0	2326	A	G	0.1213	0.082	1.4788	0.0164	0.1016	1	1	0	0	0	0	0	0	0	770	missense	ATT	GTT	I	V	SNV	This Study	NGS	NA	A>G	I>V	1	1	2308	Ile	Val	770	Ile770	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Brain	0	2327	T	A	0.1191	0.0817	1.4573	0.0163	0.1004	1	0	0	0	0	1	0	0	0	770	missense	ATT	AAT	I	N	SNV	This Study	NGS	NA	T>A	I>N	1	2	2309	Ile	Asn	770	Ile770	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Brain	0	2779	C	A	0.0665	0.0641	1.0379	5e-04	0.0653	1	0	0	1	0	0	0	0	0	921	missense	CCA	ACA	P	T	SNV	This Study	NGS	NA	C>A	P>T	1	1	2761	Pro	Thr	921	Pro921	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Cauda	0	1891	C	T	0.0148	0.0146	1.0138	1e-04	0.0147	1	0	1	0	0	0	0	0	0	625	nonsense	CAG	TAG	Q	*	SNV	This Study	NGS	NA	C>T	Q>*	1	1	1873	Gln	NA	625	Gln625	TIM Barrel (PF02836)	lacZ
+Control	Cauda	0	2068	G	T	0.1244	0.1303	1.0479	5e-04	0.1274	4	0	0	1	0	0	0	0	0	684	nonsense	GAA	TAA	E	*	SNV	This Study	NGS	NA	G>T	E>*	1	1	2050	Glu	NA	684	Glu684	NA	lacZ
+Control	Liver	0	2095	C	T	0.0093	0.0111	1.2003	3e-04	0.0102	1	0	1	0	0	0	0	0	0	693	nonsense	CAA	TAA	Q	*	SNV	This Study	NGS	NA	C>T	Q>*	1	1	2077	Gln	NA	693	Gln693	NA	lacZ
+Control	Liver	0	2545	C	T	0.027	0.0264	1.0248	4e-04	0.0267	1	0	1	0	0	0	0	0	0	843	nonsense	CAG	TAG	Q	*	SNV	This Study	NGS	NA	C>T	Q>*	1	1	2527	Gln	NA	843	Gln843	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Ovary	0	3040	C	T	0.775	0.7832	1.0106	1e-04	0.7791	40	0	1	0	0	0	0	0	0	1008	nonsense	CAG	TAG	Q	*	SNV	This Study	NGS	NA	C>T	Q>*	1	1	3022	Gln	NA	1008	Gln1008	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Bone Marrow	0	353	C	T	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	112	missense	CCG	CTG	P	L	SNV	Douglas 1994	Sanger	NA	C>T	P>L	1	2	335	Pro	Leu	112	Pro112	Sugar Binding (PF02837)	lacZ
+Control	Bone Marrow	0	353	C	T	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	112	missense	CCG	CTG	P	L	SNV	Douglas 1994	Sanger	NA	C>T	P>L	1	2	335	Pro	Leu	112	Pro112	Sugar Binding (PF02837)	lacZ
+Control	Bone Marrow	0	514	C	T	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	166	missense	CGT	TGT	R	C	SNV	Douglas 1994	Sanger	NA	C>T	R>C	1	1	496	Arg	Cys	166	Arg166	Sugar Binding (PF02837)	lacZ
+Control	Bone Marrow	0	514	C	T	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	166	missense	CGT	TGT	R	C	SNV	Douglas 1994	Sanger	NA	C>T	R>C	1	1	496	Arg	Cys	166	Arg166	Sugar Binding (PF02837)	lacZ
+Control	Bone Marrow	0	514	C	T	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	166	missense	CGT	TGT	R	C	SNV	Douglas 1994	Sanger	NA	C>T	R>C	1	1	496	Arg	Cys	166	Arg166	Sugar Binding (PF02837)	lacZ
+Control	Brain	0	2362	G	A	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	782	missense	GAT	AAT	D	N	SNV	Dolle 2002	Sanger	NA	G>A	D>N	1	1	2344	Asp	Asn	782	Asp782	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Germ Cells	0	587	G	C	NA	NA	NA	NA	NA	NA	0	0	0	1	0	0	0	0	190	missense	CGC	CCC	R	P	SNV	Douglas 1994	Sanger	NA	G>C	R>P	1	2	569	Arg	Pro	190	Arg190	Sugar Binding (PF02837)	lacZ
+Control	Germ Cells	0	1097	A	T	NA	NA	NA	NA	NA	NA	0	0	0	0	1	0	0	0	360	missense	CAT	CTT	H	L	SNV	Douglas 1994	Sanger	NA	A>T	H>L	1	2	1079	His	Leu	360	His360	TIM Barrel (PF02836)	lacZ
+Control	Heart	0	524	C	T	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	169	missense	TCT	TTT	S	F	SNV	Ikehata 2000	Sanger	NA	C>T	S>F	1	2	506	Ser	Phe	169	Ser169	Sugar Binding (PF02837)	lacZ
+Control	Kidney	0	2416	C	A	NA	NA	NA	NA	NA	NA	0	0	1	0	0	0	0	0	800	missense	CGC	AGC	R	S	SNV	Dolle 2006	Sanger	NA	C>A	R>S	1	1	2398	Arg	Ser	800	Arg800	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Kidney	0	2451	G	A	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	811	silent	AAG	AAA	K	K	SNV	Dolle 2006	Sanger	NA	G>A	K>K	0	3	2433	Lys	Lys	811	Lys811	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Liver	0	2545	C	T	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	843	nonsense	CAG	TAG	Q	*	SNV	Dolle 2006	Sanger	NA	C>T	Q>*	1	1	2527	Gln	NA	843	Gln843	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Liver	0	1103	T	C	NA	NA	NA	NA	NA	NA	1	0	0	0	0	0	0	0	362	missense	CTG	CCG	L	P	SNV	Douglas 1994	Sanger	NA	T>C	L>P	1	2	1085	Leu	Pro	362	Leu362	TIM Barrel (PF02836)	lacZ
+Control	Liver	0	2633	T	C	NA	NA	NA	NA	NA	NA	1	0	0	0	0	0	0	0	872	missense	GTG	GCG	V	A	SNV	Douglas 1994	Sanger	NA	T>C	V>A	1	2	2615	Val	Ala	872	Val872	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Liver	0	1962	T	C	NA	NA	NA	NA	NA	NA	1	0	0	0	0	0	0	0	648	silent	GAT	GAC	D	D	SNV	Douglas 1994	Sanger	NA	T>C	D>D	0	3	1944	Asp	Asp	648	Asp648	NA	lacZ
+Control	Liver	0	2404	A	T	NA	NA	NA	NA	NA	NA	0	0	0	0	1	0	0	0	796	missense	AGT	TGT	S	C	SNV	Ikehata 2000	Sanger	NA	A>T	S>C	1	1	2386	Ser	Cys	796	Ser796	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Liver	0	1361	G	A	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	448	missense	CGT	CAT	R	H	SNV	Ono 1999	Sanger	NA	G>A	R>H	1	2	1343	Arg	His	448	Arg448	TIM Barrel (PF02836)	lacZ
+Control	Liver	0	899	A	T	NA	NA	NA	NA	NA	NA	0	0	0	0	1	0	0	0	294	missense	AAC	ATC	N	I	SNV	Souliotis 1998	Sanger	NA	A>T	N>I	1	2	881	Asn	Ile	294	Asn294	β-Galactosidase (PF00703)	lacZ
+Control	Liver	0	1114	G	A	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	366	missense	GTC	ATC	V	I	SNV	Souliotis 1998	Sanger	NA	G>A	V>I	1	1	1096	Val	Ile	366	Val366	TIM Barrel (PF02836)	lacZ
+Control	Liver	0	1202	A	G	NA	NA	NA	NA	NA	NA	1	0	0	0	0	0	0	0	395	missense	CAT	CGT	H	R	SNV	Souliotis 1998	Sanger	NA	A>G	H>R	1	2	1184	His	Arg	395	His395	TIM Barrel (PF02836)	lacZ
+Control	Liver	0	1492	G	A	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	492	missense	GAC	AAC	D	N	SNV	Souliotis 1998	Sanger	NA	G>A	D>N	1	1	1474	Asp	Asn	492	Asp492	TIM Barrel (PF02836)	lacZ
+Control	Liver	0	1561	G	A	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	515	missense	GTG	ATG	V	M	SNV	Souliotis 1998	Sanger	NA	G>A	V>M	1	1	1543	Val	Met	515	Val515	TIM Barrel (PF02836)	lacZ
+Control	Liver	0	2215	G	C	NA	NA	NA	NA	NA	NA	0	0	0	1	0	0	0	0	733	missense	GCG	CCG	A	P	SNV	Souliotis 1998	Sanger	NA	G>C	A>P	1	1	2197	Ala	Pro	733	Ala733	NA	lacZ
+Control	Lymphoma	0	1238	T	C	NA	NA	NA	NA	NA	NA	1	0	0	0	0	0	0	0	407	missense	CTG	CCG	L	P	SNV	Dolle 2002	Sanger	NA	T>C	L>P	1	2	1220	Leu	Pro	407	Leu407	TIM Barrel (PF02836)	lacZ
+Control	Lymphoma	0	2791	A	G	NA	NA	NA	NA	NA	NA	1	0	0	0	0	0	0	0	925	missense	ATG	GTG	M	V	SNV	Dolle 2002	Sanger	NA	A>G	M>V	1	1	2773	Met	Val	925	Met925	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Skin	4	544	T	DEL	NA	NA	NA	NA	NA	NA	0	0	0	0	0	0	0	1	176	frameshift	-	-	-	-	Deletion	Frijhoff 1997	Sanger	NA	T>DEL	->-	0	1	526	NA	NA	176	NA176	Sugar Binding (PF02837)	lacZ
+Control	Skin	1	567	INS	T	NA	NA	NA	NA	NA	NA	0	0	0	0	0	0	1	0	183	frameshift	-	-	-	-	Insertion	Frijhoff 1997	Sanger	NA	INS>T	->-	0	3	549	NA	NA	183	NA183	Sugar Binding (PF02837)	lacZ
+Control	Skin	1	578	-	DEL	NA	NA	NA	NA	NA	NA	0	0	0	0	0	0	0	1	187	frameshift	-	-	-	-	Deletion	Frijhoff 1997	Sanger	NA	->DEL	->-	0	2	560	NA	NA	187	NA187	Sugar Binding (PF02837)	lacZ
+Control	Skin Epidermis	0	1977	-	DEL	NA	NA	NA	NA	NA	NA	0	0	0	0	0	0	0	1	653	frameshift	-	-	-	-	Deletion	Ikehata 2003	Sanger	NA	->DEL	->-	0	3	1959	NA	NA	653	NA653	NA	lacZ
+Control	Skin Epidermis	0	2362	G	A	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	782	missense	GAT	AAT	D	N	SNV	Ikehata 2003	Sanger	NA	G>A	D>N	1	1	2344	Asp	Asn	782	Asp782	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Skin Epidermis	0	2362	G	A	NA	NA	NA	NA	NA	NA	0	1	0	0	0	0	0	0	782	missense	GAT	AAT	D	N	SNV	Ikehata 2003	Sanger	NA	G>A	D>N	1	1	2344	Asp	Asn	782	Asp782	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Spleen	0	508	G	C	NA	NA	NA	NA	NA	NA	0	0	0	1	0	0	0	0	164	missense	GAC	CAC	D	H	SNV	Dolle 2002	Sanger	NA	G>C	D>H	1	1	490	Asp	His	164	Asp164	Sugar Binding (PF02837)	lacZ
+Control	Spleen	0	986	T	C	NA	NA	NA	NA	NA	NA	1	0	0	0	0	0	0	0	323	missense	ATT	ACT	I	T	SNV	Dolle 2002	Sanger	NA	T>C	I>T	1	2	968	Ile	Thr	323	Ile323	β-Galactosidase (PF00703)	lacZ
+Control	Spleen	0	3083	A	T	NA	NA	NA	NA	NA	NA	0	0	0	0	1	0	0	0	1022	missense	CAA	CTA	Q	L	SNV	Ikehata 2000	Sanger	NA	A>T	Q>L	1	2	3065	Gln	Leu	1022	Gln1022	β-Galactosidase Small Chain (PF02929)	lacZ
+Control	Spleen	0	92	A	G	NA	NA	NA	NA	NA	NA	1	0	0	0	0	0	0	0	25	missense	AAT	AGT	N	S	SNV	Ono 1999	Sanger	NA	A>G	N>S	1	2	74	Asn	Ser	25	Asn25	NA	lacZ

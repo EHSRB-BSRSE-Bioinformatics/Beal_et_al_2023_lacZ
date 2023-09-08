@@ -1,0 +1,497 @@
+residue_name	Domain	n
+Gly207	Sugar Binding (PF02837)	56
+Trp203	Sugar Binding (PF02837)	37
+Asp201	Sugar Binding (PF02837)	36
+Ser148	Sugar Binding (PF02837)	17
+Arg210	Sugar Binding (PF02837)	14
+Ala149	Sugar Binding (PF02837)	10
+Val146	Sugar Binding (PF02837)	9
+Arg204	Sugar Binding (PF02837)	7
+Gly145	Sugar Binding (PF02837)	7
+Ser206	Sugar Binding (PF02837)	7
+Glu198	Sugar Binding (PF02837)	6
+Trp62	Sugar Binding (PF02837)	6
+Gly121	Sugar Binding (PF02837)	5
+Tyr100	Sugar Binding (PF02837)	5
+Ala65	Sugar Binding (PF02837)	4
+Gln200	Sugar Binding (PF02837)	4
+Leu184	Sugar Binding (PF02837)	4
+Thr120	Sugar Binding (PF02837)	4
+Val212	Sugar Binding (PF02837)	4
+Arg166	Sugar Binding (PF02837)	3
+Arg52	Sugar Binding (PF02837)	3
+Asp193	Sugar Binding (PF02837)	3
+Gln135	Sugar Binding (PF02837)	3
+Gln91	Sugar Binding (PF02837)	3
+Glu67	Sugar Binding (PF02837)	3
+Gly160	Sugar Binding (PF02837)	3
+Gly162	Sugar Binding (PF02837)	3
+Leu134	Sugar Binding (PF02837)	3
+Leu54	Sugar Binding (PF02837)	3
+Pro119	Sugar Binding (PF02837)	3
+Pro168	Sugar Binding (PF02837)	3
+Thr139	Sugar Binding (PF02837)	3
+Trp73	Sugar Binding (PF02837)	3
+Val86	Sugar Binding (PF02837)	3
+Ala185	Sugar Binding (PF02837)	2
+Asn102	Sugar Binding (PF02837)	2
+Asn155	Sugar Binding (PF02837)	2
+Asp199	Sugar Binding (PF02837)	2
+Asp211	Sugar Binding (PF02837)	2
+Cys154	Sugar Binding (PF02837)	2
+Gly180	Sugar Binding (PF02837)	2
+Gly194	Sugar Binding (PF02837)	2
+Gly94	Sugar Binding (PF02837)	2
+His216	Sugar Binding (PF02837)	2
+Leu197	Sugar Binding (PF02837)	2
+Leu215	Sugar Binding (PF02837)	2
+Pro112	Sugar Binding (PF02837)	2
+Pro87	Sugar Binding (PF02837)	2
+Ser124	Sugar Binding (PF02837)	2
+Ser165	Sugar Binding (PF02837)	2
+Ser192	Sugar Binding (PF02837)	2
+Ser88	Sugar Binding (PF02837)	2
+Val186	Sugar Binding (PF02837)	2
+Ala135	Sugar Binding (PF02837)	1
+Ala81	Sugar Binding (PF02837)	1
+Ala97	Sugar Binding (PF02837)	1
+Arg190	Sugar Binding (PF02837)	1
+Asn118	Sugar Binding (PF02837)	1
+Asn147	Sugar Binding (PF02837)	1
+Asn55	Sugar Binding (PF02837)	1
+Asp164	Sugar Binding (PF02837)	1
+Asp77	Sugar Binding (PF02837)	1
+Asp82	Sugar Binding (PF02837)	1
+Asp96	Sugar Binding (PF02837)	1
+Cys122	Sugar Binding (PF02837)	1
+Gln138	Sugar Binding (PF02837)	1
+Gln49	Sugar Binding (PF02837)	1
+Gln50	Sugar Binding (PF02837)	1
+Glu181	Sugar Binding (PF02837)	1
+Glu71	Sugar Binding (PF02837)	1
+Gly137	Sugar Binding (PF02837)	1
+Ile208	Sugar Binding (PF02837)	1
+Ile99	Sugar Binding (PF02837)	1
+Leu152	Sugar Binding (PF02837)	1
+Leu173	Sugar Binding (PF02837)	1
+Leu74	Sugar Binding (PF02837)	1
+Lys217	Sugar Binding (PF02837)	1
+Met205	Sugar Binding (PF02837)	1
+Pro70	Sugar Binding (PF02837)	1
+Pro98	Sugar Binding (PF02837)	1
+Ser169	Sugar Binding (PF02837)	1
+Ser213	Sugar Binding (PF02837)	1
+Ser53	Sugar Binding (PF02837)	1
+Thr101	Sugar Binding (PF02837)	1
+Thr104	Sugar Binding (PF02837)	1
+Thr116	Sugar Binding (PF02837)	1
+Tyr105	Sugar Binding (PF02837)	1
+Tyr161	Sugar Binding (PF02837)	1
+Val103	Sugar Binding (PF02837)	1
+Val129	Sugar Binding (PF02837)	1
+Val84	Sugar Binding (PF02837)	1
+Ser390	TIM Barrel (PF02836)	100
+Glu537	TIM Barrel (PF02836)	89
+Glu358	TIM Barrel (PF02836)	72
+His540	TIM Barrel (PF02836)	67
+Gly605	TIM Barrel (PF02836)	59
+Trp568	TIM Barrel (PF02836)	54
+Pro393	TIM Barrel (PF02836)	39
+Arg439	TIM Barrel (PF02836)	33
+Gly547	TIM Barrel (PF02836)	30
+Gly406	TIM Barrel (PF02836)	29
+Gly564	TIM Barrel (PF02836)	27
+Tyr503	TIM Barrel (PF02836)	26
+Gly459	TIM Barrel (PF02836)	25
+Gly565	TIM Barrel (PF02836)	24
+Gly353	TIM Barrel (PF02836)	23
+His391	TIM Barrel (PF02836)	23
+Pro501	TIM Barrel (PF02836)	23
+Met502	TIM Barrel (PF02836)	20
+Ser545	TIM Barrel (PF02836)	19
+Asn460	TIM Barrel (PF02836)	18
+Asn544	TIM Barrel (PF02836)	17
+Glu416	TIM Barrel (PF02836)	17
+Glu461	TIM Barrel (PF02836)	17
+Arg505	TIM Barrel (PF02836)	16
+Ser457	TIM Barrel (PF02836)	16
+Ala541	TIM Barrel (PF02836)	13
+Glu412	TIM Barrel (PF02836)	13
+Arg388	TIM Barrel (PF02836)	12
+His418	TIM Barrel (PF02836)	11
+Arg356	TIM Barrel (PF02836)	10
+Asp375	TIM Barrel (PF02836)	10
+Ala386	TIM Barrel (PF02836)	9
+Asn414	TIM Barrel (PF02836)	9
+Cys402	TIM Barrel (PF02836)	9
+Gly463	TIM Barrel (PF02836)	9
+Gly589	TIM Barrel (PF02836)	9
+Pro532	TIM Barrel (PF02836)	9
+Trp570	TIM Barrel (PF02836)	9
+Arg404	TIM Barrel (PF02836)	8
+Asn355	TIM Barrel (PF02836)	8
+Cys602	TIM Barrel (PF02836)	8
+Gly528	TIM Barrel (PF02836)	8
+Leu546	TIM Barrel (PF02836)	8
+Ala504	TIM Barrel (PF02836)	7
+Glu487	TIM Barrel (PF02836)	7
+Gly543	TIM Barrel (PF02836)	7
+Ser462	TIM Barrel (PF02836)	7
+Arg611	TIM Barrel (PF02836)	6
+Gln485	TIM Barrel (PF02836)	6
+Ser452	TIM Barrel (PF02836)	6
+Gly419	TIM Barrel (PF02836)	5
+His357	TIM Barrel (PF02836)	5
+Met436	TIM Barrel (PF02836)	5
+Pro422	TIM Barrel (PF02836)	5
+Pro430	TIM Barrel (PF02836)	5
+Pro451	TIM Barrel (PF02836)	5
+Arg482	TIM Barrel (PF02836)	4
+Asp403	TIM Barrel (PF02836)	4
+Asp569	TIM Barrel (PF02836)	4
+Arg561	TIM Barrel (PF02836)	3
+Arg599	TIM Barrel (PF02836)	3
+Asp497	TIM Barrel (PF02836)	3
+Asp572	TIM Barrel (PF02836)	3
+Cys389	TIM Barrel (PF02836)	3
+Gly488	TIM Barrel (PF02836)	3
+Gly489	TIM Barrel (PF02836)	3
+Gly490	TIM Barrel (PF02836)	3
+Gly590	TIM Barrel (PF02836)	3
+His622	TIM Barrel (PF02836)	3
+Ile498	TIM Barrel (PF02836)	3
+Leu533	TIM Barrel (PF02836)	3
+Leu606	TIM Barrel (PF02836)	3
+Lys380	TIM Barrel (PF02836)	3
+Met542	TIM Barrel (PF02836)	3
+Met603	TIM Barrel (PF02836)	3
+Phe592	TIM Barrel (PF02836)	3
+Pro513	TIM Barrel (PF02836)	3
+Val387	TIM Barrel (PF02836)	3
+Arg336	TIM Barrel (PF02836)	2
+Arg446	TIM Barrel (PF02836)	2
+Arg557	TIM Barrel (PF02836)	2
+Asn345	TIM Barrel (PF02836)	2
+Asn449	TIM Barrel (PF02836)	2
+Asn597	TIM Barrel (PF02836)	2
+Asn604	TIM Barrel (PF02836)	2
+Asp411	TIM Barrel (PF02836)	2
+Asp429	TIM Barrel (PF02836)	2
+Asp507	TIM Barrel (PF02836)	2
+Asp509	TIM Barrel (PF02836)	2
+Asp610	TIM Barrel (PF02836)	2
+Cys500	TIM Barrel (PF02836)	2
+Gln381	TIM Barrel (PF02836)	2
+Gln573	TIM Barrel (PF02836)	2
+Gly346	TIM Barrel (PF02836)	2
+His359	TIM Barrel (PF02836)	2
+His464	TIM Barrel (PF02836)	2
+Leu524	TIM Barrel (PF02836)	2
+Leu535	TIM Barrel (PF02836)	2
+Phe549	TIM Barrel (PF02836)	2
+Trp398	TIM Barrel (PF02836)	2
+Tyr552	TIM Barrel (PF02836)	2
+Val354	TIM Barrel (PF02836)	2
+Val453	TIM Barrel (PF02836)	2
+Val567	TIM Barrel (PF02836)	2
+Ala466	TIM Barrel (PF02836)	1
+Ala495	TIM Barrel (PF02836)	1
+Ala539	TIM Barrel (PF02836)	1
+Ala555	TIM Barrel (PF02836)	1
+Ala587	TIM Barrel (PF02836)	1
+Ala616	TIM Barrel (PF02836)	1
+Arg352	TIM Barrel (PF02836)	1
+Arg425	TIM Barrel (PF02836)	1
+Arg448	TIM Barrel (PF02836)	1
+Asn383	TIM Barrel (PF02836)	1
+Asn385	TIM Barrel (PF02836)	1
+Asp469	TIM Barrel (PF02836)	1
+Asp492	TIM Barrel (PF02836)	1
+Asp594	TIM Barrel (PF02836)	1
+Gln365	TIM Barrel (PF02836)	1
+Gln370	TIM Barrel (PF02836)	1
+Gln554	TIM Barrel (PF02836)	1
+Gln623	TIM Barrel (PF02836)	1
+Gln624	TIM Barrel (PF02836)	1
+Gln628	TIM Barrel (PF02836)	1
+Gly364	TIM Barrel (PF02836)	1
+Gly465	TIM Barrel (PF02836)	1
+Gly548	TIM Barrel (PF02836)	1
+His360	TIM Barrel (PF02836)	1
+His363	TIM Barrel (PF02836)	1
+His395	TIM Barrel (PF02836)	1
+His468	TIM Barrel (PF02836)	1
+Ile415	TIM Barrel (PF02836)	1
+Ile499	TIM Barrel (PF02836)	1
+Ile520	TIM Barrel (PF02836)	1
+Ile534	TIM Barrel (PF02836)	1
+Leu342	TIM Barrel (PF02836)	1
+Leu344	TIM Barrel (PF02836)	1
+Leu362	TIM Barrel (PF02836)	1
+Leu407	TIM Barrel (PF02836)	1
+Leu433	TIM Barrel (PF02836)	1
+Lys521	TIM Barrel (PF02836)	1
+Lys522	TIM Barrel (PF02836)	1
+Met372	TIM Barrel (PF02836)	1
+Met379	TIM Barrel (PF02836)	1
+Met420	TIM Barrel (PF02836)	1
+Met423	TIM Barrel (PF02836)	1
+Phe384	TIM Barrel (PF02836)	1
+Phe512	TIM Barrel (PF02836)	1
+Phe608	TIM Barrel (PF02836)	1
+Phe626	TIM Barrel (PF02836)	1
+Phe629	TIM Barrel (PF02836)	1
+Pro361	TIM Barrel (PF02836)	1
+Pro396	TIM Barrel (PF02836)	1
+Thr400	TIM Barrel (PF02836)	1
+Thr417	TIM Barrel (PF02836)	1
+Thr441	TIM Barrel (PF02836)	1
+Thr494	TIM Barrel (PF02836)	1
+Thr496	TIM Barrel (PF02836)	1
+Trp456	TIM Barrel (PF02836)	1
+Trp474	TIM Barrel (PF02836)	1
+Trp553	TIM Barrel (PF02836)	1
+Tyr399	TIM Barrel (PF02836)	1
+Tyr405	TIM Barrel (PF02836)	1
+Tyr538	TIM Barrel (PF02836)	1
+Tyr559	TIM Barrel (PF02836)	1
+Val366	TIM Barrel (PF02836)	1
+Val421	TIM Barrel (PF02836)	1
+Val440	TIM Barrel (PF02836)	1
+Val484	TIM Barrel (PF02836)	1
+Val515	TIM Barrel (PF02836)	1
+Val607	TIM Barrel (PF02836)	1
+Glu304	β-Galactosidase (PF00703)	32
+Trp301	β-Galactosidase (PF00703)	21
+Arg333	β-Galactosidase (PF00703)	16
+Gly331	β-Galactosidase (PF00703)	14
+Ala272	β-Galactosidase (PF00703)	6
+Glu326	β-Galactosidase (PF00703)	4
+Arg255	β-Galactosidase (PF00703)	3
+Glu324	β-Galactosidase (PF00703)	3
+Ser259	β-Galactosidase (PF00703)	3
+Val256	β-Galactosidase (PF00703)	3
+Val295	β-Galactosidase (PF00703)	3
+Val313	β-Galactosidase (PF00703)	3
+Arg251	β-Galactosidase (PF00703)	2
+Cys328	β-Galactosidase (PF00703)	2
+Glu296	β-Galactosidase (PF00703)	2
+Gly270	β-Galactosidase (PF00703)	2
+Ile279	β-Galactosidase (PF00703)	2
+Ile323	β-Galactosidase (PF00703)	2
+Leu254	β-Galactosidase (PF00703)	2
+Lys299	β-Galactosidase (PF00703)	2
+Ser269	β-Galactosidase (PF00703)	2
+Ser302	β-Galactosidase (PF00703)	2
+Ala228	β-Galactosidase (PF00703)	1
+Ala238	β-Galactosidase (PF00703)	1
+Ala242	β-Galactosidase (PF00703)	1
+Ala268	β-Galactosidase (PF00703)	1
+Ala303	β-Galactosidase (PF00703)	1
+Ala311	β-Galactosidase (PF00703)	1
+Ala325	β-Galactosidase (PF00703)	1
+Arg288	β-Galactosidase (PF00703)	1
+Arg310	β-Galactosidase (PF00703)	1
+Asn294	β-Galactosidase (PF00703)	1
+Asp224	β-Galactosidase (PF00703)	1
+Asp280	β-Galactosidase (PF00703)	1
+Asp287	β-Galactosidase (PF00703)	1
+Asp319	β-Galactosidase (PF00703)	1
+Gln221	β-Galactosidase (PF00703)	1
+Gln245	β-Galactosidase (PF00703)	1
+Gln262	β-Galactosidase (PF00703)	1
+Glu264	β-Galactosidase (PF00703)	1
+Glu281	β-Galactosidase (PF00703)	1
+His226	β-Galactosidase (PF00703)	1
+Ile222	β-Galactosidase (PF00703)	1
+Leu315	β-Galactosidase (PF00703)	1
+Pro298	β-Galactosidase (PF00703)	1
+Ser236	β-Galactosidase (PF00703)	1
+Trp261	β-Galactosidase (PF00703)	1
+Val244	β-Galactosidase (PF00703)	1
+Val258	β-Galactosidase (PF00703)	1
+Val267	β-Galactosidase (PF00703)	1
+Arg786	β-Galactosidase Small Chain (PF02929)	142
+Arg909	β-Galactosidase Small Chain (PF02929)	91
+Gly899	β-Galactosidase Small Chain (PF02929)	67
+Arg881	β-Galactosidase Small Chain (PF02929)	53
+Asp792	β-Galactosidase Small Chain (PF02929)	49
+Thr941	β-Galactosidase Small Chain (PF02929)	23
+Asp908	β-Galactosidase Small Chain (PF02929)	22
+Asn791	β-Galactosidase Small Chain (PF02929)	20
+Gly901	β-Galactosidase Small Chain (PF02929)	19
+Arg938	β-Galactosidase Small Chain (PF02929)	18
+Ser933	β-Galactosidase Small Chain (PF02929)	17
+Pro932	β-Galactosidase Small Chain (PF02929)	15
+Ala880	β-Galactosidase Small Chain (PF02929)	13
+Arg952	β-Galactosidase Small Chain (PF02929)	13
+Asn935	β-Galactosidase Small Chain (PF02929)	12
+Glu904	β-Galactosidase Small Chain (PF02929)	11
+Gly936	β-Galactosidase Small Chain (PF02929)	11
+Gly994	β-Galactosidase Small Chain (PF02929)	9
+Trp951	β-Galactosidase Small Chain (PF02929)	8
+Gly883	β-Galactosidase Small Chain (PF02929)	7
+Trp897	β-Galactosidase Small Chain (PF02929)	6
+Gly953	β-Galactosidase Small Chain (PF02929)	5
+Gly995	β-Galactosidase Small Chain (PF02929)	5
+Ile993	β-Galactosidase Small Chain (PF02929)	5
+Trp810	β-Galactosidase Small Chain (PF02929)	5
+Glu934	β-Galactosidase Small Chain (PF02929)	4
+Leu898	β-Galactosidase Small Chain (PF02929)	4
+Ser852	β-Galactosidase Small Chain (PF02929)	4
+Thr785	β-Galactosidase Small Chain (PF02929)	4
+Arg942	β-Galactosidase Small Chain (PF02929)	3
+Asp782	β-Galactosidase Small Chain (PF02929)	3
+Asp987	β-Galactosidase Small Chain (PF02929)	3
+Gln817	β-Galactosidase Small Chain (PF02929)	3
+Gly763	β-Galactosidase Small Chain (PF02929)	3
+Val895	β-Galactosidase Small Chain (PF02929)	3
+Ala787	β-Galactosidase Small Chain (PF02929)	2
+Ala805	β-Galactosidase Small Chain (PF02929)	2
+Ala812	β-Galactosidase Small Chain (PF02929)	2
+Ala841	β-Galactosidase Small Chain (PF02929)	2
+Ala912	β-Galactosidase Small Chain (PF02929)	2
+Arg781	β-Galactosidase Small Chain (PF02929)	2
+Arg809	β-Galactosidase Small Chain (PF02929)	2
+Asn905	β-Galactosidase Small Chain (PF02929)	2
+Asp954	β-Galactosidase Small Chain (PF02929)	2
+Asp997	β-Galactosidase Small Chain (PF02929)	2
+Gln890	β-Galactosidase Small Chain (PF02929)	2
+Gln950	β-Galactosidase Small Chain (PF02929)	2
+Gly947	β-Galactosidase Small Chain (PF02929)	2
+His840	β-Galactosidase Small Chain (PF02929)	2
+Ile770	β-Galactosidase Small Chain (PF02929)	2
+Ile986	β-Galactosidase Small Chain (PF02929)	2
+Leu777	β-Galactosidase Small Chain (PF02929)	2
+Leu780	β-Galactosidase Small Chain (PF02929)	2
+Leu884	β-Galactosidase Small Chain (PF02929)	2
+Leu937	β-Galactosidase Small Chain (PF02929)	2
+Leu967	β-Galactosidase Small Chain (PF02929)	2
+Lys847	β-Galactosidase Small Chain (PF02929)	2
+Pro788	β-Galactosidase Small Chain (PF02929)	2
+Pro907	β-Galactosidase Small Chain (PF02929)	2
+Ser1002	β-Galactosidase Small Chain (PF02929)	2
+Ser998	β-Galactosidase Small Chain (PF02929)	2
+Trp806	β-Galactosidase Small Chain (PF02929)	2
+Trp999	β-Galactosidase Small Chain (PF02929)	2
+Val930	β-Galactosidase Small Chain (PF02929)	2
+Ala1005	β-Galactosidase Small Chain (PF02929)	1
+Ala889	β-Galactosidase Small Chain (PF02929)	1
+Ala892	β-Galactosidase Small Chain (PF02929)	1
+Arg800	β-Galactosidase Small Chain (PF02929)	1
+Arg961	β-Galactosidase Small Chain (PF02929)	1
+Asn958	β-Galactosidase Small Chain (PF02929)	1
+Asp790	β-Galactosidase Small Chain (PF02929)	1
+Asp832	β-Galactosidase Small Chain (PF02929)	1
+Asp859	β-Galactosidase Small Chain (PF02929)	1
+Asp916	β-Galactosidase Small Chain (PF02929)	1
+Asp919	β-Galactosidase Small Chain (PF02929)	1
+Cys886	β-Galactosidase Small Chain (PF02929)	1
+Cys914	β-Galactosidase Small Chain (PF02929)	1
+Cys939	β-Galactosidase Small Chain (PF02929)	1
+Gln1017	β-Galactosidase Small Chain (PF02929)	1
+Gln1022	β-Galactosidase Small Chain (PF02929)	1
+Gln757	β-Galactosidase Small Chain (PF02929)	1
+Gln775	β-Galactosidase Small Chain (PF02929)	1
+Gln863	β-Galactosidase Small Chain (PF02929)	1
+Gln966	β-Galactosidase Small Chain (PF02929)	1
+Glu750	β-Galactosidase Small Chain (PF02929)	1
+Glu797	β-Galactosidase Small Chain (PF02929)	1
+Glu819	β-Galactosidase Small Chain (PF02929)	1
+Glu903	β-Galactosidase Small Chain (PF02929)	1
+Glu943	β-Galactosidase Small Chain (PF02929)	1
+Gly900	β-Galactosidase Small Chain (PF02929)	1
+Gly940	β-Galactosidase Small Chain (PF02929)	1
+Gly981	β-Galactosidase Small Chain (PF02929)	1
+His1015	β-Galactosidase Small Chain (PF02929)	1
+His815	β-Galactosidase Small Chain (PF02929)	1
+His949	β-Galactosidase Small Chain (PF02929)	1
+His974	β-Galactosidase Small Chain (PF02929)	1
+Ile749	β-Galactosidase Small Chain (PF02929)	1
+Ile836	β-Galactosidase Small Chain (PF02929)	1
+Ile882	β-Galactosidase Small Chain (PF02929)	1
+Leu776	β-Galactosidase Small Chain (PF02929)	1
+Leu823	β-Galactosidase Small Chain (PF02929)	1
+Leu976	β-Galactosidase Small Chain (PF02929)	1
+Leu984	β-Galactosidase Small Chain (PF02929)	1
+Lys773	β-Galactosidase Small Chain (PF02929)	1
+Lys774	β-Galactosidase Small Chain (PF02929)	1
+Lys854	β-Galactosidase Small Chain (PF02929)	1
+Met925	β-Galactosidase Small Chain (PF02929)	1
+Met991	β-Galactosidase Small Chain (PF02929)	1
+NA908	β-Galactosidase Small Chain (PF02929)	1
+Phe931	β-Galactosidase Small Chain (PF02929)	1
+Pro1001	β-Galactosidase Small Chain (PF02929)	1
+Pro779	β-Galactosidase Small Chain (PF02929)	1
+Pro879	β-Galactosidase Small Chain (PF02929)	1
+Pro902	β-Galactosidase Small Chain (PF02929)	1
+Pro921	β-Galactosidase Small Chain (PF02929)	1
+Pro928	β-Galactosidase Small Chain (PF02929)	1
+Pro948	β-Galactosidase Small Chain (PF02929)	1
+Ser1000	β-Galactosidase Small Chain (PF02929)	1
+Ser766	β-Galactosidase Small Chain (PF02929)	1
+Ser796	β-Galactosidase Small Chain (PF02929)	1
+Ser874	β-Galactosidase Small Chain (PF02929)	1
+Thr778	β-Galactosidase Small Chain (PF02929)	1
+Thr826	β-Galactosidase Small Chain (PF02929)	1
+Thr970	β-Galactosidase Small Chain (PF02929)	1
+Trp1020	β-Galactosidase Small Chain (PF02929)	1
+Tyr1014	β-Galactosidase Small Chain (PF02929)	1
+Tyr929	β-Galactosidase Small Chain (PF02929)	1
+Tyr946	β-Galactosidase Small Chain (PF02929)	1
+Val870	β-Galactosidase Small Chain (PF02929)	1
+Val872	β-Galactosidase Small Chain (PF02929)	1
+Ala716	NA	5
+Ser640	NA	4
+Ala691	NA	3
+Asn38	NA	3
+Glu8	NA	3
+Leu652	NA	3
+Leu670	NA	3
+Ser7	NA	3
+Ala705	NA	2
+Arg46	NA	2
+Asp45	NA	2
+Cys748	NA	2
+Gln12	NA	2
+Gly712	NA	2
+Leu722	NA	2
+Met745	NA	2
+Phe8	NA	2
+Pro31	NA	2
+Pro47	NA	2
+Thr44	NA	2
+Thr741	NA	2
+Val698	NA	2
+Ala34	NA	1
+Ala673	NA	1
+Ala707	NA	1
+Ala733	NA	1
+Ala736	NA	1
+Arg43	NA	1
+Arg699	NA	1
+Asn25	NA	1
+Asn725	NA	1
+Asp15	NA	1
+Gln634	NA	1
+Gln687	NA	1
+Gln702	NA	1
+Glu40	NA	1
+Gly676	NA	1
+Gly692	NA	1
+His30	NA	1
+Leu11	NA	1
+Leu24	NA	1
+Leu651	NA	1
+Leu740	NA	1
+Pro19	NA	1
+Pro32	NA	1
+Pro662	NA	1
+Pro688	NA	1
+Pro703	NA	1
+Pro8	NA	1
+Ser35	NA	1
+Ser709	NA	1
+Thr2	NA	1
+Trp16	NA	1
+Trp708	NA	1

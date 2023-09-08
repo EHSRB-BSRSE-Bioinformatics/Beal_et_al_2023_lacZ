@@ -1,0 +1,2670 @@
+---
+title: "LacZ Saturation Analysis"
+author: "Matthew J. Meier"
+date: "09/08/2023"
+output:
+  html_document:
+    code_folding: show
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+knitr::opts_chunk$set(dev = "png") # set output device; png, svg, svglite
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+library(tidyverse)
+library(ggplot2)
+library(Biostrings)
+library(msa)
+library(vtree)
+library(Gviz)
+library(Pviz)
+library(reutils)
+library(GenomicRanges)
+library(GenVisR)
+library(bio3d)
+library(grantham)
+library(doBy)
+library(plyranges)
+library(flextable)
+library(ggh4x)
+library(oddsratio)
+options(ucscChromosomeNames = FALSE)
+```
+
+
+## Read data
+
+This data was read from lacZ sequencing data compiled across multiple studies.
+
+```{r read-data, message = FALSE}
+snvs <- read_delim("data/raw/SNV_data.txt", delim = "\t")
+ins <- read_delim("data/raw/Insertion_data.txt", delim = "\t")
+del <- read_delim("data/raw/Deletion_data.txt", delim = "\t")
+historical <- read_delim("data/raw/Historical_data.txt", delim = "\t")
+
+snvs$Type <- "SNV"
+ins$Type <- "Insertion"
+del$Type <- "Deletion"
+snvs$Study <- "This Study"
+ins$Study <- "This Study"
+del$Study <- "This Study"
+snvs$Technology <- "NGS"
+ins$Technology <- "NGS"
+del$Technology <- "NGS"
+historical$Technology <- "Sanger"
+
+historical <- historical %>%
+  mutate(Type = case_when(
+    Deletion == 1 ~ "Deletion",
+    Insertion == 1 ~ "Insertion",
+    str_detect(Alt, regex("del", ignore_case = TRUE)) ~ "Deletion",
+    str_length(Ref) < str_length(Alt) ~ "Insertion",
+    str_length(Ref) > str_length(Alt) ~ "Deletion",
+    str_length(Ref) > 1 & str_length(Ref) == str_length(Alt) ~ "Complex",
+    !str_detect(Alt, regex("del", ignore_case = TRUE)) ~ "SNV"
+  )) %>%
+  mutate(Codon = as.numeric(Codon))
+
+snvs_ins_del_clean <- snvs %>%
+  dplyr::full_join(ins, keep = F, na_matches = "never") %>%
+  dplyr::full_join(del, keep = F, na_matches = "never") %>%
+  dplyr::full_join(historical,
+    keep = F, na_matches = "never"
+  ) %>%
+  dplyr::mutate(mutation = paste0(Ref, ">", Alt)) %>%
+  dplyr::mutate(aa_change = paste0(`Ref A.A.`, ">", `Alt A.A.`)) %>%
+  mutate(FunctionalChange = ifelse(test = `Ref A.A.` == `Alt A.A.`,
+    yes = 0,
+    no = 1
+  )) %>%
+  dplyr::mutate(Ref = str_to_upper(Ref), Alt = str_to_upper(Alt)) %>%
+  mutate(codon_position = ((Position - 1) %% 3) + 1)
+
+
+# Rewrite position as relative to lacZ reference
+# Get index of pre-insertion
+index <- snvs_ins_del_clean["Position"] < 26
+# Transform by subtracting 3
+snvs_ins_del_clean$PositionRef[index] <- snvs_ins_del_clean$Position[index] - 3
+# Get index post-insertion
+index <- snvs_ins_del_clean["Position"] > 40
+# Subtract 18
+snvs_ins_del_clean$PositionRef[index] <- snvs_ins_del_clean$Position[index] - 18
+
+# Add amino acid 3 letter code
+snvs_ins_del_clean <- snvs_ins_del_clean %>%
+  dplyr::mutate(residue_code = Biostrings::AMINO_ACID_CODE[
+    `Ref A.A.` # this still won't work for multi-codon mutations
+  ]) %>%
+  dplyr::mutate(alt_code = Biostrings::AMINO_ACID_CODE[
+    `Alt A.A.` # this still won't work for multi-codon mutations
+  ]) %>%
+  dplyr::mutate(CodonRef = ceiling(PositionRef / 3))
+
+# Also add complete residue name
+snvs_ins_del_clean$residue_name <- paste(snvs_ins_del_clean$residue_code, snvs_ins_del_clean$Codon, sep = "")
+
+# Add domain information
+# Sugar Binding (49-219; PF02837)
+# β-Galactosidase (221-334; PF00703)
+# TIM Barrel (336-630; PF02836)
+# β-Galactosidase Small Chain (749-1022; PF02929)
+# domain_breakpoints_nuc <- c(49*3, 219*3, 221*3, 334*3, 336*3, 630*3, 749*3, 1022*3)
+d1 <- dplyr::between(snvs_ins_del_clean$Codon, 49, 219)
+d2 <- dplyr::between(snvs_ins_del_clean$Codon, 221, 334)
+d3 <- dplyr::between(snvs_ins_del_clean$Codon, 336, 630)
+d4 <- dplyr::between(snvs_ins_del_clean$Codon, 749, 1022)
+snvs_ins_del_clean$Domain[d1] <- "Sugar Binding (PF02837)"
+snvs_ins_del_clean$Domain[d2] <- "β-Galactosidase (PF00703)"
+snvs_ins_del_clean$Domain[d3] <- "TIM Barrel (PF02836)"
+snvs_ins_del_clean$Domain[d4] <- "β-Galactosidase Small Chain (PF02929)"
+
+snvs_ins_del_clean %>%
+  dplyr::group_by(Domain) %>%
+  tally()
+# Domain                                    n
+# 1 Sugar Binding (PF02837)                 901
+# 2 TIM Barrel (PF02836)                   2124
+# 3 β-Galactosidase (PF00703)               384
+# 4 β-Galactosidase Small Chain (PF02929)  1401
+# 5 NA                                     1655
+
+historical_clean <- snvs_ins_del_clean %>%
+  dplyr::filter(!Study == "This Study")
+
+duplicated <- snvs_ins_del_clean %>% duplicated()
+duplicates <- snvs_ins_del_clean[duplicated, ]
+
+snvs_ins_del_collapsed <- snvs_ins_del_clean %>%
+  distinct() # This will collapse duplicated lines, i.e., same mutation but
+# from different animals/samples
+
+knitr::kable(snvs_ins_del_clean %>% head())
+```
+
+## Plots
+
+First, some plots to look at the composition of the data.
+
+By position:
+
+```{r plots, warning = F}
+# Number of mutations by position (grouped in histogram)
+snvs_ins_del_clean %>%
+  group_by(Position) %>%
+  tally() %>%
+  ggplot(aes(x = Position)) +
+  geom_histogram() +
+  ggtitle("Number of mutations by position (grouped in histogram)")
+
+# Number of mutations by position, high granularity
+snvs_ins_del_clean %>%
+  group_by(Position, Alt) %>%
+  tally() %>%
+  ggplot(aes(x = Position, y = n)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Number of mutations by position, high granularity")
+
+# Number of mutations by position, colored by type
+snvs_ins_del_clean %>%
+  group_by(Position, Type, Alt) %>%
+  tally() %>%
+  ggplot(aes(x = Position, y = n, fill = Type)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Number of mutations by position, colored by type")
+
+# Number of mutations by position, colored by type, log scale
+snvs_ins_del_clean %>%
+  group_by(Position, Type, Alt) %>%
+  tally() %>%
+  ggplot(aes(x = Position, y = log2(n + 1), fill = Type)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Number of mutations by position, colored by type, log scale")
+```
+
+This section explores the numbers of singletons, etc.
+
+```{r}
+# Number of total mutations at a given position,
+# including historical data, and including indels
+# This removes mutations observed in multiple samples.
+snvs_ins_del_clean %>%
+  group_by(Position, Alt) %>%
+  unique() %>%
+  tally() %>%
+  pull(n) %>%
+  sum()
+
+snvs_ins_del_clean %>%
+  group_by(Position, Alt) %>%
+  tally() %>%
+  ggplot(aes(x = factor(n))) +
+  geom_histogram(stat = "count") +
+  stat_count(
+    geom = "text",
+    color = "black",
+    aes(label = ..count.., angle = 0),
+    size = 2,
+    position = position_stack(vjust = 1.1)
+  ) +
+  xlab("Number of times mutation observed") +
+  ggtitle("Mutations per position: all mutations")
+
+# Number of each mutation (position, alt base)
+# including multiple counts of individual mutants
+# This won't be reported but is here for curiosity.
+snvs_ins_del_clean %>%
+  group_by(Position, Alt) %>%
+  mutate(num_occurrences_includes_counts = sum(Count)) %>%
+  select(Position, num_occurrences_includes_counts) %>%
+  unique() %>%
+  group_by(num_occurrences_includes_counts) %>%
+  tally() %>%
+  pull(n) %>%
+  sum()
+
+snvs_ins_del_clean %>%
+  group_by(Position, Alt) %>%
+  mutate(num_occurrences_includes_counts = sum(Count)) %>%
+  select(Position, num_occurrences_includes_counts) %>%
+  unique() %>%
+  ggplot(aes(x = factor(num_occurrences_includes_counts))) +
+  geom_histogram(stat = "count") +
+  stat_count(
+    geom = "text",
+    color = "black",
+    aes(label = ..count.., angle = 0),
+    size = 2,
+    position = position_stack(vjust = 1.1)
+  ) +
+  xlab("Number of times mutation observed") +
+  ggtitle("All mutations")
+
+# Number of mutations of various types per nucleotide
+snvs_ins_del_clean %>%
+  group_by(Position, Type, Alt) %>%
+  tally() %>%
+  ggplot(aes(x = factor(n), fill = Type)) +
+  geom_histogram(stat = "count") +
+  stat_count(
+    geom = "text",
+    color = "black",
+    aes(label = ..count.., angle = 0),
+    size = 2,
+    position = position_stack(vjust = 0.9)
+  ) +
+  xlab("Number of times mutation observed") +
+  ggtitle("Mutations by type: group by position and alternate allele")
+
+# Number of mutations of various types per nucleotide
+snvs_ins_del_clean %>%
+  group_by(Position, Type) %>%
+  tally() %>%
+  ggplot(aes(x = factor(n), fill = Type)) +
+  geom_histogram(stat = "count") +
+  stat_count(
+    geom = "text",
+    color = "black",
+    aes(label = ..count.., angle = 0),
+    size = 2,
+    position = position_stack(vjust = 0.9)
+  ) +
+  xlab("Number of times mutation observed") +
+  ggtitle("Mutations by type: group by position")
+
+# Number of mutations of various types per nucleotide
+snvs_ins_del_clean %>%
+  group_by(Position, Type, Alt, Tissue, Dose, Exposure) %>%
+  tally() %>%
+  ggplot(aes(x = factor(n), fill = Type)) +
+  geom_histogram(stat = "count") +
+  stat_count(
+    geom = "text",
+    color = "black",
+    aes(label = ..count.., angle = 0),
+    size = 2,
+    position = position_stack(vjust = 0.9)
+  ) +
+  xlab("Number of times mutation observed") +
+  ggtitle("Mutations by type: group by position, alternate allele, tissue, dose, and exposure")
+
+# Number of mutations per codon
+snvs_ins_del_clean %>%
+  filter(Type == "SNV") %>%
+  group_by(Codon, Type, `Alt Codon`) %>%
+  drop_na(Codon) %>%
+  tally() %>%
+  ggplot(aes(x = factor(n), fill = Type)) +
+  geom_histogram(binwidth = 1, stat = "count") +
+  stat_count(
+    geom = "text",
+    color = "white",
+    aes(label = ..count.., angle = 0),
+    size = 2,
+    position = position_stack(vjust = 0.5)
+  ) +
+  xlab("Number of times mutation observed") +
+  ggtitle("Number of mutations per codon")
+```
+
+Here are some numbers to answer the question of how many singletons vs repeated mutations were observed in the data, broken down in various ways:
+
+```{r counting, warning = FALSE}
+# Number of mutations in total
+snvs_ins_del_clean %>% tally() # 6,465
+
+# Number of mutations per chemical
+snvs_ins_del_clean %>%
+  group_by(Exposure) %>%
+  tally()
+#    Exposure      n
+#  1 BaP        1919
+#  2 BaP-IU     1008
+#  3 CEDU         14
+#  4 Control    1727
+#  5 EMS          11
+#  6 ENU         809
+#  7 Ercc1 -/m    34
+#  8 NDBzA        80
+#  9 NDMA         47
+# 10 PRC         205
+# 11 Sunlight     64
+# 12 TEM         258
+# 13 UVB         120
+# 14 X-ray        91
+# 15 Xpa -/-      78
+
+# Number of mutations by type
+snvs_ins_del_clean %>%
+  group_by(Type) %>%
+  tally()
+#   Type          n
+# 1 Complex      20
+# 2 Deletion   1080
+# 3 Insertion   218
+# 4 SNV        5147
+
+# How many singleton mutations?
+snvs_ins_del_clean %>%
+  group_by(Position, Alt) %>%
+  tally() %>%
+  filter(n == 1) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  ungroup() %>%
+  count() # 1,225
+# tally() %>% pull(n) %>% sum()
+
+# How many non-singleton mutations?
+snvs_ins_del_clean %>%
+  group_by(Position, Alt) %>%
+  tally() %>%
+  filter(n > 1) %>%
+  group_by(n) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  tally() %>%
+  pull(n) %>%
+  sum() # There are 946
+
+# How many singleton mutations, SNVs only?
+snvs_ins_del_clean %>%
+  filter(Type == "SNV") %>%
+  group_by(Position, Alt) %>%
+  tally() %>%
+  filter(n == 1) %>%
+  group_by(n) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  tally() %>%
+  pull(n) %>%
+  sum() # There are 707
+
+# How many non-singleton mutations, SNVs only?
+snvs_ins_del_clean %>%
+  filter(Type == "SNV") %>%
+  group_by(Position, Alt) %>%
+  tally() %>%
+  filter(n > 1) %>%
+  group_by(n) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  tally() %>%
+  pull(n) %>%
+  sum() # There are 690
+
+# How many singleton mutations, deletions only?
+snvs_ins_del_clean %>%
+  filter(Type == "Deletion") %>%
+  group_by(Position, Alt) %>%
+  tally() %>%
+  filter(n == 1) %>%
+  group_by(n) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  tally() %>%
+  pull(n) %>%
+  sum() # There are 377
+
+# How many non-singleton mutations, deletions only?
+snvs_ins_del_clean %>%
+  filter(Type == "Deletion") %>%
+  group_by(Position, Alt) %>%
+  tally() %>%
+  filter(n > 1) %>%
+  group_by(n) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  tally() %>%
+  pull(n) %>%
+  sum() # There are 222
+
+# How many singleton mutations, insertions only?
+snvs_ins_del_clean %>%
+  filter(Type == "Insertion") %>%
+  group_by(Position, Alt) %>%
+  tally() %>%
+  filter(n == 1) %>%
+  group_by(n) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  tally() %>%
+  pull(n) %>%
+  sum() # There are 169
+
+# How many non-singleton mutations, insertions only?
+snvs_ins_del_clean %>%
+  filter(Type == "Insertion") %>%
+  group_by(Position, Alt) %>%
+  tally() %>%
+  filter(n > 1) %>%
+  group_by(n) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  tally() %>%
+  pull(n) %>%
+  sum() # There are 20
+
+# Codons, singletons
+snvs_ins_del_clean %>%
+  filter(Type == "SNV") %>%
+  group_by(Codon, `Alt Codon`) %>%
+  drop_na(Codon) %>%
+  tally() %>%
+  group_by(n) %>%
+  filter(n == 1) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  tally() %>%
+  pull(n) %>%
+  sum()
+
+# Codons, non-singletons
+snvs_ins_del_clean %>%
+  filter(Type == "SNV") %>%
+  group_by(Codon, `Alt Codon`) %>%
+  drop_na(Codon) %>%
+  tally() %>%
+  group_by(n) %>%
+  filter(n > 1) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  tally() %>%
+  pull(n) %>%
+  sum()
+
+# Codons, number of unique loci (codons) that are mutated more than once
+snvs_ins_del_clean %>%
+  filter(Type == "SNV") %>%
+  group_by(Codon) %>%
+  drop_na(Codon) %>%
+  tally() %>%
+  group_by(n) %>%
+  filter(n > 1) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  tally() %>%
+  pull(n) %>%
+  sum()
+
+# Total number of codons that are mutated
+snvs_ins_del_clean %>%
+  drop_na(Codon) %>%
+  pull(Codon) %>%
+  unique() %>%
+  length()
+snvs_ins_del_clean %>%
+  filter(Type == "SNV") %>%
+  drop_na(Codon) %>%
+  pull(Codon) %>%
+  unique() %>%
+  length()
+
+snvs_ins_del_clean %>%
+  group_by(Codon) %>%
+  tally() %>%
+  group_by(n) %>%
+  filter(n > 1) %>%
+  dplyr::rename(Number_of_times_observed = n) %>%
+  tally() %>%
+  pull(n) %>%
+  sum()
+```
+
+# Read lacZ sequence
+
+Compare the MutaMouse lacZ sequence to the reference sequence. This also 
+
+```{r read-lacz}
+# Manually downloaded...
+# laczref <- readDNAStringSet("data/raw/lacZ.reference.paper.fa", format="fasta",
+#               use.names=TRUE, with.qualities=FALSE)
+
+################################################################################
+# Load sequence from NCBI
+################################################################################
+
+betagal <- esearch("beta galactosidase", "protein")
+betagal_x <- efetch(betagal, rettype = "fasta", retmode = "xml")
+
+tmp <- tempfile()
+lacZ_NCBI <- efetch(
+  uid = "V00296.1",
+  db = "nucleotide",
+  retmode = "text",
+  rettype = "fasta",
+  outfile = tmp
+)
+laczref <- readDNAStringSet(tmp)
+
+lacz_mutamouse <- readDNAStringSet("data/raw/lacZ.fa",
+  format = "fasta",
+  use.names = TRUE,
+  with.qualities = FALSE
+)
+
+alignment <- msa(c(laczref, lacz_mutamouse))
+print(alignment)
+
+laczref_aa <- Biostrings::translate(laczref)
+lacz_mutamouse_aa <- Biostrings::translate(lacz_mutamouse)
+
+alignment <- msa(c(laczref, lacz_mutamouse))
+print(alignment, show = "complete", showNames = T, type = "upperlower")
+# help("print,MsaDNAMultipleAlignment-method")
+# msa::msaPrettyPrint(alignment, output = "asis")
+
+positions <- snvs_ins_del_clean %>%
+  dplyr::arrange(Position) %>%
+  pull(Position)
+
+positions_other_studies <- snvs_ins_del_clean %>%
+  dplyr::filter(!Study == "This Study") %>%
+  dplyr::arrange(Position) %>%
+  pull(Position)
+```
+
+# How many mutations did we observe at CpG sites? SNVs only.
+
+```{r CpGs_data, message=FALSE, progress=FALSE}
+# Where is ref C or G?
+snvs %>%
+  group_by(Ref) %>%
+  tally()
+
+snvs %>%
+  group_by(Ref) %>%
+  dplyr::mutate(purine_pyrimidine = ifelse(Ref %in% c("C", "G"), yes = "C/G", no = "A/T")) %>%
+  tally()
+
+snvs %>%
+  group_by(Ref) %>%
+  dplyr::mutate(purine_pyrimidine = ifelse(Ref %in% c("C", "G"), yes = "C/G", no = "A/T")) %>%
+  dplyr::group_by(purine_pyrimidine) %>%
+  tally() %>%
+  dplyr::mutate(freq = round(n / sum(n), 3))
+
+# Break down by compound
+snvs_genvisr <- snvs %>%
+  dplyr::mutate(sample = Exposure, reference = Ref, variant = Alt) %>%
+  dplyr::select(sample, reference, variant)
+GenVisR::TvTi(snvs_genvisr, fileType = "MGI", progress = F)
+GenVisR::TvTi(snvs_genvisr, fileType = "MGI", out = "data", progress = F)
+
+# All together
+snvs_genvisr <- snvs %>%
+  dplyr::mutate(sample = "All lacZ Mutations", reference = Ref, variant = Alt) %>%
+  dplyr::select(sample, reference, variant)
+GenVisR::TvTi(snvs_genvisr, fileType = "MGI", progress = F)
+
+tv_ti_table <- GenVisR::TvTi(snvs_genvisr, fileType = "MGI", out = "data", progress = F)
+tv_ti_table
+tv_ti_ratio <- tv_ti_table$main %>% dplyr::mutate(Class = str_extract(string = trans_tranv, pattern = regex("\\(\\w++\\)")))
+tv_ti_ratio %>%
+  dplyr::group_by(Class) %>%
+  dplyr::mutate(class_count = sum(Freq))
+```
+
+# Nucleotide mutation by type figure
+
+```{r, fig.width = 7, fig.height = 5}
+################################################################################
+# lacZ Sequence Visualization
+################################################################################
+
+lacZ_vis <- SequenceTrack(lacz_mutamouse, ucscChromosomeNames = FALSE)
+# plotTracks(lacZ_vis, chromosome = "lacZ", from = 10, to = 40)
+snvs_ins_del_clean$chromosome <- "lacZ"
+lacZ_granges <- makeGRangesFromDataFrame(snvs_ins_del_clean,
+  keep.extra.columns = T,
+  ignore.strand = T,
+  seqinfo = NULL,
+  seqnames.field = "chromosome",
+  start.field = "Position",
+  end.field = "Position",
+  starts.in.df.are.0based = FALSE
+)
+
+lacZ_annotation <- AnnotationTrack(lacZ_granges, name = "lacZ data")
+# plotTracks(list(lacZ_annotation, lacZ_vis), from=2200, to=2375)
+
+# Some parameters to use in other tracks...
+roundup <- function(x) {
+  round(x + 5, -1)
+}
+# Set a y limit to be reused across all tracks
+overall_ylim_nt <- c(0, roundup(snvs_ins_del_clean %>%
+  group_by(Position) %>%
+  tally() %>% pull(n) %>% max()))
+# overall_ylim = NULL
+
+# Value to scale axis text
+axis_scale <- 0.5
+
+dat_all <- snvs_ins_del_clean %>%
+  group_by(Position) %>%
+  tally()
+all_mutations <- DataTrack(
+  data = dat_all$n,
+  start = dat_all$Position,
+  end = dat_all$Position,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "All Types",
+  type = "h",
+  ylim = overall_ylim_nt,
+  cex.axis = axis_scale
+)
+dat_nonsense <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "nonsense") %>%
+  group_by(Position) %>%
+  tally()
+nonsense <- DataTrack(
+  data = dat_nonsense$n,
+  start = dat_nonsense$Position,
+  end = dat_nonsense$Position,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Nonsense",
+  type = "h",
+  ylim = overall_ylim_nt,
+  cex.axis = axis_scale
+)
+dat_missense <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>%
+  group_by(Position) %>%
+  tally()
+missense <- DataTrack(
+  data = dat_missense$n,
+  start = dat_missense$Position,
+  end = dat_missense$Position,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Missense",
+  type = "h",
+  ylim = overall_ylim_nt,
+  cex.axis = axis_scale
+)
+dat_frameshift <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "frameshift") %>%
+  group_by(Position) %>%
+  tally()
+frameshift <- DataTrack(
+  data = dat_frameshift$n,
+  start = dat_frameshift$Position,
+  end = dat_frameshift$Position,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Frameshift",
+  type = "h",
+  ylim = overall_ylim_nt,
+  cex.axis = axis_scale
+)
+dat_insertions <- snvs_ins_del_clean %>%
+  dplyr::filter(Type == "Insertion") %>%
+  group_by(Position) %>%
+  tally()
+insertions <- DataTrack(
+  data = dat_insertions$n,
+  start = dat_insertions$Position,
+  end = dat_insertions$Position,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Insertions",
+  type = "h",
+  ylim = overall_ylim_nt,
+  cex.axis = axis_scale
+)
+dat_deletions <- snvs_ins_del_clean %>%
+  dplyr::filter(Type == "Deletion") %>%
+  group_by(Position) %>%
+  tally()
+deletions <- DataTrack(
+  data = dat_deletions$n,
+  start = dat_deletions$Position,
+  end = dat_deletions$Position,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Deletions",
+  type = "h",
+  ylim = overall_ylim_nt,
+  cex.axis = axis_scale
+)
+
+# plotTracks(list(lacZ_vis, all_mutations), type="horizon")
+
+domains_feature_fill <- "slategray4"
+
+domains_nt <- AnnotationTrack(
+  start = c(49 * 3, 221 * 3, 336 * 3, 749 * 3),
+  end = c(219 * 3, 334 * 3, 630 * 3, 1022 * 3),
+  chromosome = "lacZ",
+  fill = domains_feature_fill,
+  id = c(
+    "Sugar Binding",
+    "β-Galactosidase",
+    "TIM Barrel",
+    "β-Galactosidase Small Chain"
+  ),
+  genome = "lacZ", name = "Domains"
+)
+
+domain_ht_nt <- HighlightTrack(
+  trackList = list(
+    all_mutations,
+    missense,
+    nonsense,
+    frameshift,
+    insertions,
+    deletions
+  ),
+  start = c(49 * 3, 221 * 3, 336 * 3, 749 * 3),
+  end = c(219 * 3, 334 * 3, 630 * 3, 1022 * 3),
+  chromosome = "lacZ",
+  fill = c(
+    "#FFE5E5", # rgb(255, 229, 229)
+    "#F4FAED", # rgb(244, 250, 237),
+    "#F0EAF5", # rgb(240, 234, 245),
+    "#FCF0E6"
+  ), # rgb(252, 240, 230)), #"snow3","snow2"
+  col = "#000000FF", # rgb(0,0,0, alpha=1)
+  lwd = 0.2,
+  inBackground = T
+)
+
+# hs <- as.numeric(levels(ranked_hotspots[["Position"]]))
+# hotspots_range <- GRanges(seqnames = "lacZ",
+#                   ranges = IRanges(start = hs,
+#                                    end = hs))
+#
+# deTrack <- AnnotationTrack(range = hotspots_range,
+#                            genome = "lacZ",
+#                            chromosome = "lacZ",
+#                            name = "Hotspots",
+#                            stacking = "squish")
+
+gtrack <- GenomeAxisTrack(
+  add53 = TRUE,
+  littleTicks = TRUE,
+  name = "lacZ gene",
+  showId = T
+)
+
+displayPars(domains_nt) <- list(size = 5)
+
+plotTracks(
+  list( # lacZ_vis,deTrack,
+    domains_nt,
+    domain_ht_nt,
+    gtrack
+  ),
+  featureAnnotation = "id",
+  fontcolor.feature = "white",
+  background.title = "slategrey",
+  background.panel = "transparent",
+  fontsize.feature = 7,
+  stackHeight = 1
+)
+```
+
+# Nucleotide mutation by sequencing technology figure
+
+```{r}
+dat_nt_ngs <- snvs_ins_del_clean %>%
+  dplyr::filter(Technology == "NGS") %>%
+  group_by(Position) %>%
+  tally()
+ngs_nt <- DataTrack(
+  data = dat_nt_ngs$n,
+  start = dat_nt_ngs$Position,
+  end = dat_nt_ngs$Position,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "NGS",
+  type = "h",
+  ylim = overall_ylim_nt,
+  cex.axis = axis_scale
+)
+
+dat_nt_sanger <- snvs_ins_del_clean %>%
+  dplyr::filter(Technology == "Sanger") %>%
+  group_by(Position) %>%
+  tally()
+sanger_nt <- DataTrack(
+  data = dat_nt_sanger$n,
+  start = dat_nt_sanger$Position,
+  end = dat_nt_sanger$Position,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Sanger",
+  type = "h",
+  ylim = overall_ylim_nt,
+  cex.axis = axis_scale
+)
+
+domain_ht_nt_tech <- HighlightTrack(
+  trackList = list(
+    all_mutations,
+    ngs_nt,
+    sanger_nt
+  ),
+  start = c(49 * 3, 221 * 3, 336 * 3, 749 * 3),
+  end = c(219 * 3, 334 * 3, 630 * 3, 1022 * 3),
+  chromosome = "lacZ",
+  fill = c(
+    "#FFE5E5", # rgb(255, 229, 229, max = 255)
+    "#F4FAED", # rgb(244, 250, 237, max = 255),
+    "#F0EAF5", # rgb(240, 234, 245, max = 255),
+    "#FCF0E6"
+  ), # rgb(252, 240, 230, max = 255)), #"snow3","snow2"
+  col = "#000000FF", # rgb(0,0,0, alpha=1)
+  lwd = 0.2,
+  inBackground = T
+)
+
+plotTracks(
+  list( # lacZ_vis,deTrack,
+    domains_nt,
+    domain_ht_nt_tech,
+    gtrack
+  ),
+  featureAnnotation = "id",
+  fontcolor.feature = "white",
+  background.title = "slategrey", # brown?
+  background.panel = "transparent",
+  fontsize.feature = 7,
+  stackHeight = 1
+)
+```
+
+# Amino acid by sequencing technology figure
+
+```{r}
+################################################################################
+# Beta-Gal Protein Visualization
+################################################################################
+
+lacZ_vis_aa <- ProteinSequenceTrack(laczref_aa,
+  labelPos = "below",
+  chromosome = "lacZ",
+  name = "β-Gal",
+  cex = 0.5,
+  range = IRanges(
+    start = c(49, 221, 336, 749),
+    end = c(219, 334, 630, 1022),
+    names = c(
+      "Sugar Binding",
+      "β-Galactosidase",
+      "TIM Barrel",
+      "β-Galactosidase\nSmall Chain"
+    )
+  )
+)
+paxTrack <- ProteinAxisTrack(
+  littleTicks = TRUE,
+  addNC = F
+)
+
+# Sugar Binding (49-219; PF02837)
+# β-Galactosidase (221-334; PF00703)
+# TIM Barrel (336-630; PF02836)
+# β-Galactosidase Small Chain (749-1022; PF02929)
+domains <- AnnotationTrack(
+  start = c(49, 221, 336, 749),
+  end = c(219, 334, 630, 1022),
+  chromosome = "lacZ",
+  name = "β-Gal",
+  fill = domains_feature_fill,
+  id = c(
+    "Sugar Binding",
+    "β-Galactosidase",
+    "TIM Barrel",
+    "β-Galactosidase Small Chain"
+  ),
+  genome = "lacZ"
+)
+
+# Set a y limit to be reused across all tracks
+overall_ylim_codon <- c(0, snvs_ins_del_clean %>%
+  group_by(Codon) %>%
+  tally() %>%
+  drop_na() %>% pull(n) %>% max())
+# overall_ylim = NULL
+
+dat_aa <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>%
+  group_by(Codon) %>%
+  tally() %>%
+  drop_na()
+all_codon_mutations <- DataTrack(
+  data = dat_aa$n,
+  start = dat_aa$Codon,
+  end = dat_aa$Codon,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Missense Mutations",
+  type = "h",
+  ylim = overall_ylim_codon
+)
+
+dat_aa_sanger <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>%
+  filter(Technology == "Sanger") %>%
+  group_by(Codon) %>%
+  tally() %>%
+  drop_na()
+codon_mutations_sanger <- DataTrack(
+  data = dat_aa_sanger$n,
+  start = dat_aa_sanger$Codon,
+  end = dat_aa_sanger$Codon,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Sanger",
+  type = "h",
+  ylim = overall_ylim_codon
+)
+
+dat_aa_ngs <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>%
+  filter(Technology == "NGS") %>%
+  group_by(Codon) %>%
+  tally() %>%
+  drop_na()
+codon_mutations_ngs <- DataTrack(
+  data = dat_aa_ngs$n,
+  start = dat_aa_ngs$Codon,
+  end = dat_aa_ngs$Codon,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "NGS",
+  type = "h",
+  ylim = overall_ylim_codon
+)
+
+plotTracks(list(lacZ_vis_aa, domains, all_codon_mutations), from = 1, to = 100)
+plotTracks(list(lacZ_vis_aa, domains, all_codon_mutations), from = 1, to = 500)
+
+domain_ht <- HighlightTrack(
+  trackList = list(
+    all_codon_mutations,
+    codon_mutations_ngs,
+    codon_mutations_sanger
+  ),
+  start = c(49, 221, 336, 749),
+  end = c(219, 334, 630, 1022),
+  chromosome = "lacZ",
+  fill = c(
+    "#FFE5E5", # rgb(255, 229, 229)
+    "#F4FAED", # rgb(244, 250, 237),
+    "#F0EAF5", # rgb(240, 234, 245),
+    "#FCF0E6"
+  ), # rgb(252, 240, 230)), #"snow3","snow2"
+  col = "#000000FF", # rgb(0,0,0, alpha=1)
+  lwd = 0.2,
+  inBackground = T
+)
+
+plotTracks(
+  list( # lacZ_vis_aa,
+    domains,
+    domain_ht,
+    paxTrack
+  ),
+  featureAnnotation = "id",
+  fontcolor.feature = "white",
+  background.title = "slategrey", # brown?
+  background.panel = "transparent",
+  fontsize.feature = 7,
+  stackHeight = 1
+)
+#           featureAnnotation = "id",
+#           fontcolor.feature = "darkblue",
+#           background.title = "brown",
+#           background.panel = "transparent",
+#           fontsize.feature = 7)
+```
+
+# Amino acid by mutation type figure
+
+```{r}
+dat_nonsense_aa <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "nonsense") %>%
+  group_by(Codon) %>%
+  tally() %>%
+  drop_na()
+nonsense_aa <- DataTrack(
+  data = dat_nonsense_aa$n,
+  start = dat_nonsense_aa$Codon,
+  end = dat_nonsense_aa$Codon,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Nonsense",
+  type = "h",
+  ylim = overall_ylim_codon,
+  cex.axis = axis_scale
+)
+dat_missense_aa <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>%
+  group_by(Codon) %>%
+  tally() %>%
+  drop_na()
+missense_aa <- DataTrack(
+  data = dat_missense_aa$n,
+  start = dat_missense_aa$Codon,
+  end = dat_missense_aa$Codon,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Missense",
+  type = "h",
+  ylim = overall_ylim_codon,
+  cex.axis = axis_scale
+)
+dat_frameshift_aa <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "frameshift") %>%
+  group_by(Codon) %>%
+  tally() %>%
+  drop_na()
+frameshift_aa <- DataTrack(
+  data = dat_frameshift_aa$n,
+  start = dat_frameshift_aa$Codon,
+  end = dat_frameshift_aa$Codon,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Frameshift",
+  type = "h",
+  ylim = overall_ylim_codon,
+  cex.axis = axis_scale
+)
+dat_insertions_aa <- snvs_ins_del_clean %>%
+  dplyr::filter(Type == "Insertion") %>%
+  group_by(Codon) %>%
+  tally() %>%
+  drop_na()
+insertions_aa <- DataTrack(
+  data = dat_insertions_aa$n,
+  start = dat_insertions_aa$Codon,
+  end = dat_insertions_aa$Codon,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Insertions",
+  type = "h",
+  ylim = overall_ylim_codon,
+  cex.axis = axis_scale
+)
+dat_deletions_aa <- snvs_ins_del_clean %>%
+  dplyr::filter(Type == "Deletion") %>%
+  group_by(Codon) %>%
+  tally() %>%
+  drop_na()
+deletions_aa <- DataTrack(
+  data = dat_deletions_aa$n,
+  start = dat_deletions_aa$Codon,
+  end = dat_deletions_aa$Codon,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Deletions",
+  type = "h",
+  ylim = overall_ylim_codon,
+  cex.axis = axis_scale
+)
+
+domain_ht_aa_type <- HighlightTrack(
+  trackList = list( # frameshift_aa,
+    # insertions_aa,
+    # deletions_aa,
+    all_codon_mutations,
+    missense_aa,
+    nonsense_aa
+  ),
+  start = c(49, 221, 336, 749),
+  end = c(219, 334, 630, 1022),
+  chromosome = "lacZ",
+  fill = c(
+    "#FFE5E5", # rgb(255, 229, 229)
+    "#F4FAED", # rgb(244, 250, 237),
+    "#F0EAF5", # rgb(240, 234, 245),
+    "#FCF0E6"
+  ), # rgb(252, 240, 230)), #"snow3","snow2"
+  col = "#000000FF", # rgb(0,0,0, alpha=1)
+  lwd = 0.2,
+  inBackground = T
+)
+
+plotTracks(
+  list(
+    domains,
+    domain_ht_aa_type,
+    paxTrack
+  ),
+  featureAnnotation = "id",
+  fontcolor.feature = "white",
+  background.title = "slategrey", # brown?
+  background.panel = "transparent",
+  fontsize.feature = 7,
+  stackHeight = 1
+)
+```
+# Amino acids, spontaneous mutations only
+
+```{r fig_s1}
+dat_spontaneous <- snvs_ins_del_clean %>%
+  dplyr::filter(Exposure == "Control") %>%
+  group_by(Codon) %>%
+  tally() %>%
+  drop_na()
+# 378 codons from spontaneous (controls)
+
+spontaneous_aa <- DataTrack(
+  data = dat_spontaneous$n,
+  start = dat_spontaneous$Codon,
+  end = dat_spontaneous$Codon,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Spontaneous Mutations",
+  type = "h",
+  ylim = c(0, max(dat_spontaneous$n)),
+  cex.axis = axis_scale
+)
+
+domain_ht_aa_spontaneous <- HighlightTrack(
+  trackList = list(
+    spontaneous_aa
+  ),
+  start = c(49, 221, 336, 749),
+  end = c(219, 334, 630, 1022),
+  chromosome = "lacZ",
+  fill = c(
+    "#FFE5E5", # rgb(255, 229, 229)
+    "#F4FAED", # rgb(244, 250, 237),
+    "#F0EAF5", # rgb(240, 234, 245),
+    "#FCF0E6"
+  ), # rgb(252, 240, 230)), #"snow3","snow2"
+  col = "#000000FF", # rgb(0,0,0, alpha=1)
+  lwd = 0.2,
+  inBackground = T
+)
+
+plotTracks(
+  list(
+    domains,
+    domain_ht_aa_spontaneous,
+    paxTrack
+  ),
+  featureAnnotation = "id",
+  fontcolor.feature = "white",
+  background.title = "slategrey", # brown?
+  background.panel = "transparent",
+  fontsize.feature = 7,
+  stackHeight = 1
+)
+```
+
+# Amino acids, mutagen-induced mutations only
+
+```{r fig_s2}
+dat_induced <- snvs_ins_del_clean %>%
+  dplyr::filter(!Exposure == "Control") %>%
+  group_by(Codon) %>%
+  tally() %>%
+  drop_na()
+# 378 codons from spontaneous (controls)
+
+induced_aa <- DataTrack(
+  data = dat_induced$n,
+  start = dat_induced$Codon,
+  end = dat_induced$Codon,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Induced Mutations",
+  type = "h",
+  ylim = c(0, max(dat_induced$n)),
+  cex.axis = axis_scale
+)
+
+domain_ht_aa_induced <- HighlightTrack(
+  trackList = list(
+    induced_aa
+  ),
+  start = c(49, 221, 336, 749),
+  end = c(219, 334, 630, 1022),
+  chromosome = "lacZ",
+  fill = c(
+    "#FFE5E5", # rgb(255, 229, 229)
+    "#F4FAED", # rgb(244, 250, 237),
+    "#F0EAF5", # rgb(240, 234, 245),
+    "#FCF0E6"
+  ), # rgb(252, 240, 230)), #"snow3","snow2"
+  col = "#000000FF", # rgb(0,0,0, alpha=1)
+  lwd = 0.2,
+  inBackground = T
+)
+
+plotTracks(
+  list(
+    domains,
+    domain_ht_aa_induced,
+    paxTrack
+  ),
+  featureAnnotation = "id",
+  fontcolor.feature = "white",
+  background.title = "slategrey", # brown?
+  background.panel = "transparent",
+  fontsize.feature = 7,
+  stackHeight = 1
+)
+```
+
+# Silent mutations, Fig S3
+
+```{r fig_s3}
+dat_silent <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "silent") %>%
+  group_by(PositionRef) %>%
+  tally() %>%
+  drop_na()
+# 378 codons from spontaneous (controls)
+
+silent_aa <- DataTrack(
+  data = dat_silent$n,
+  start = dat_silent$PositionRef,
+  end = dat_silent$PositionRef,
+  chromosome = "lacZ",
+  genome = "lacZ",
+  name = "Silent Mutations",
+  type = "h",
+  ylim = c(0, max(dat_silent$n)),
+  cex.axis = axis_scale
+)
+
+domain_ht_aa_silent <- HighlightTrack(
+  trackList = list(
+    silent_aa
+  ),
+  start = c(49 * 3, 221 * 3, 336 * 3, 749 * 3),
+  end = c(219 * 3, 334 * 3, 630 * 3, 1022 * 3),
+  chromosome = "lacZ",
+  fill = c(
+    "#FFE5E5", # rgb(255, 229, 229)
+    "#F4FAED", # rgb(244, 250, 237),
+    "#F0EAF5", # rgb(240, 234, 245),
+    "#FCF0E6"
+  ), # rgb(252, 240, 230)), #"snow3","snow2"
+  col = "#000000FF", # rgb(0,0,0, alpha=1)
+  lwd = 0.2,
+  inBackground = T
+)
+
+plotTracks(
+  list(
+    domains_nt,
+    domain_ht_aa_silent,
+    gtrack
+  ),
+  featureAnnotation = "id",
+  fontcolor.feature = "white",
+  background.title = "slategrey", # brown?
+  background.panel = "transparent",
+  fontsize.feature = 7,
+  stackHeight = 1
+)
+```
+
+# Exploration of the functional changes, position of mutation in codon, and whether there are any potential over- or under-represented mutation types
+
+```{r functional_changes, warning = F}
+# Consider reference base and whether there is a functional change
+occurrences <- snvs_ins_del_clean %>%
+  group_by(Type, Ref, Alt) %>%
+  mutate(FunctionalChangePercent = 100 * (sum(FunctionalChange) / length(FunctionalChange))) %>%
+  group_by(Position, Type, Ref, Alt, FunctionalChangePercent) %>%
+  tally()
+
+
+ggplot(occurrences %>% filter(Type == "SNV"), aes(x = factor(n))) +
+  geom_histogram(stat = "count") +
+  facet_wrap(~Ref) +
+  theme(axis.text.x = element_text(size = 5)) +
+  ggtitle("Number of times mutation observed, by reference base")
+
+ggplot(occurrences %>% filter(Type == "SNV"), aes(x = factor(n), fill = Ref)) +
+  geom_histogram(stat = "count") +
+  facet_grid(Alt ~ Ref) +
+  theme(axis.text.x = element_text(size = 5)) +
+  ggtitle("Number of times mutation observed, by reference and alternate base")
+
+occurrences_ratio <- snvs_ins_del_clean %>%
+  mutate(FunctionalChange = ifelse(test = `Ref A.A.` == `Alt A.A.`,
+    yes = FALSE,
+    no = TRUE
+  )) %>%
+  filter(Type == "SNV") %>%
+  group_by(Ref, Alt, codon_position) %>%
+  dplyr::count(FunctionalChange) %>%
+  mutate(ratio = scales::percent(n / sum(n)))
+
+ggplot(occurrences_ratio, aes(x = Ref, y = n, fill = FunctionalChange)) +
+  geom_bar(stat = "identity", position = "fill") +
+  geom_text(aes(y = n, label = ratio), position = position_fill(vjust = 0.5)) +
+  facet_grid(Alt ~ codon_position, scales = "free_x") +
+  ggtitle("Classification of functional change, by reference and alternate base")
+
+occurrences_ratio_target_only <- snvs_ins_del_clean %>%
+  mutate(FunctionalChange = ifelse(test = `Ref A.A.` == `Alt A.A.`,
+    yes = FALSE,
+    no = TRUE
+  )) %>%
+  filter(Type == "SNV") %>%
+  group_by(Ref, codon_position) %>%
+  dplyr::count(FunctionalChange) %>%
+  mutate(ratio = scales::percent(n / sum(n)))
+
+ggplot(occurrences_ratio_target_only, aes(x = Ref, y = n, fill = FunctionalChange)) +
+  geom_bar(stat = "identity", position = "fill") +
+  geom_text(aes(y = n, label = ratio), position = position_fill(vjust = 0.5)) +
+  facet_grid(. ~ codon_position, scales = "free_x") +
+  ggtitle("Classification of functional change, by reference base, split by position in codon")
+
+occurrences_ratio_target_only_chem <- snvs_ins_del_clean %>%
+  mutate(FunctionalChange = ifelse(test = `Ref A.A.` == `Alt A.A.`,
+    yes = FALSE,
+    no = TRUE
+  )) %>%
+  filter(Type == "SNV") %>%
+  group_by(Ref, codon_position, Exposure) %>%
+  dplyr::count(FunctionalChange) %>%
+  mutate(ratio = scales::percent(n / sum(n)))
+
+ggplot(occurrences_ratio_target_only_chem, aes(x = Ref, y = n, fill = FunctionalChange)) +
+  geom_bar(stat = "identity", position = "fill") +
+  geom_text(aes(y = n, label = ratio), position = position_fill(vjust = 0.5)) +
+  facet_grid(Exposure ~ codon_position, scales = "free_x") +
+  ggtitle("Classification of functional change, by reference base, split by position in codon")
+
+occurrences_ratio %>%
+  knitr::kable() %>%
+  kableExtra::scroll_box(height = "480px") %>%
+  kableExtra::kable_paper()
+```
+
+
+# How many CpG sites are in lacZ? What is the overall GC content? How many of the CpG sites are accounted for in our data?
+
+```{r CpGs}
+CpGs <- Biostrings::matchPattern(
+  pattern = "CG",
+  subject = lacz_mutamouse[[1]]
+)
+CpGs
+CpGs %>% length()
+# 291 CpG sites in total in reference sequence
+
+CpG_sites_ranges <- GRanges(
+  seqnames = "lacZ",
+  ranges = IRanges(
+    start = start(ranges(CpGs)),
+    end = end(ranges(CpGs))
+  )
+)
+
+CpGs_in_data <- plyranges::find_overlaps(lacZ_granges, CpG_sites_ranges)
+CpGs_in_data <- as.data.frame(CpGs_in_data) %>% dplyr::filter(Type == "SNV")
+
+calculate_gc <- function(seq) {
+  n_gc <- stringr::str_count(seq, "G")
+  n_c <- stringr::str_count(seq, "C")
+  pct_gc <- ((n_gc + n_c) / stringr::str_length(seq))
+  return(pct_gc)
+}
+
+calculate_gc(as.character(unlist(lacz_mutamouse[[1]])))
+
+# How many of the CpG sites are accounted for?
+CpGs_in_data %>%
+  dplyr::group_by(start) %>%
+  tally() %>%
+  nrow()
+# 276 of the CpG sites have mutations
+```
+# Known amino acid changes based on literature review
+
+```{r existing-changes}
+existing <- read.table("./data/raw/21_existing_amino_acid_changes.txt",
+  header = T,
+  sep = "\t"
+)
+
+# Rewrite position as relative to lacZ MutaMouse sequence
+# Get index of pre-insertion
+index <- existing["nuc_start"] < 26
+# Transform by subtracting 3
+# There is nothing in this range, but let's do it anyway (accounts for MutaMouse insertion)
+existing$ref_nuc_start[index] <- existing$nuc_start[index] - 3
+# do the same for nuc end
+index <- existing["nuc_end"] < 26
+existing$ref_nuc_end[index] <- existing$nuc_end[index] - 3
+# Get index post-insertion
+index <- existing["nuc_start"] > 40
+# Subtract 18
+existing$ref_nuc_start[index] <- existing$nuc_start[index] - 18
+# do the same for nuc end
+index <- existing["nuc_end"] > 40
+existing$ref_nuc_end[index] <- existing$nuc_end[index] - 18
+
+existing <- existing %>% tidyr::unite("ref_nuc_range", ref_nuc_start:ref_nuc_end, sep = " - ", remove = F)
+
+write.table(existing,
+  file = "data/processed/21_existing_amino_acid_changes_coordinates_lifted.txt",
+  quote = F,
+  sep = "\t",
+  row.names = F
+)
+```
+
+
+# Various numbers on composition of data used in Beal et al 2021
+
+```{r paper}
+# Number of "independent mutations"
+# This means: how many mutations (rows) were there in the dataset?
+# This can include some duplicates across studies/chemicals/samples.
+# Important to include as a basis for hotspot analysis.
+snvs_ins_del_clean %>%
+  count() # There are 6,465
+
+# Missense mutations impairing B-gal
+snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>%
+  count() # There are 2,732
+
+# Nonsense mutations
+snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "nonsense") %>%
+  count() # There are 2,206
+
+# Silent
+snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "silent") %>%
+  count() # There are 227
+
+# SNVs
+snvs_ins_del_clean %>%
+  dplyr::filter(Type == "SNV") %>%
+  count() # There are 5,147
+
+# Missense - this specifically means SNVs
+# Put another way:
+# How many times did we disrupt the coding sequence of the protein?
+Fig1 <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>% # count() There are 2,732
+  dplyr::group_by(Codon) %>%
+  tally()
+
+# Supplementary materials - how many unique SNVs?
+snvs_ins_del_clean %>%
+  dplyr::filter(Type == "SNV") %>%
+  group_by(Position, Ref, Alt) %>%
+  count()
+# There are 1,399
+
+# Of the 1,399, how many mutations does that refer to?
+snvs_ins_del_clean %>%
+  dplyr::filter(Type == "SNV") %>%
+  group_by(Position, Ref, Alt) %>%
+  count() %>%
+  pull(n) %>%
+  sum()
+# There are 5,147
+
+# How many unique SNV missense mutations?
+snvs_ins_del_clean %>%
+  dplyr::filter(Type == "SNV") %>%
+  dplyr::filter(Consequence == "missense") %>%
+  group_by(Position, Ref, Alt) %>%
+  count() # There are 895
+
+# How many residues are impacted by a functional change in all the data?
+snvs_ins_del_clean %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::filter(FunctionalChange == 1) %>%
+  tally() %>%
+  count() # There are 633
+
+# How many codons identified by Sanger?
+sanger <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>% # count() There are 2,732
+  dplyr::group_by(Codon) %>%
+  dplyr::filter(Technology == "Sanger")
+sanger %>% tally()
+
+# How many codons identified by NGS?
+ngs <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>% # count() There are 2,732
+  dplyr::group_by(Codon) %>%
+  dplyr::filter(Technology == "NGS")
+ngs %>% tally()
+
+nrow(Fig1)
+nrow(Fig1) / length(laczref_aa[[1]])
+
+ggplot(Fig1, aes(x = Codon, y = n)) +
+  geom_bar(stat = "identity") +
+  theme_bw()
+
+# How many codons in spontaneous mutants?
+controls <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>% # count() There are 2,732
+  dplyr::group_by(Codon) %>%
+  dplyr::filter(Exposure == "Control")
+nrow(controls)
+n_groups(controls) # There are 204 missense mutations found in controls
+group_size(controls)
+
+# How many codons in mutagen exposed samples?
+non_controls <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::filter(!Exposure == "Control")
+nrow(non_controls)
+n_groups(non_controls) # 439 missense mutations in non-controls
+group_size(non_controls)
+
+# Codons common to controls and experimental samples
+# There are 151 overlapping
+aa_inboth_ctrl_exp <- dplyr::intersect(
+  controls %>% dplyr::pull(Codon),
+  non_controls %>% dplyr::pull(Codon)
+)
+
+dplyr::left_join(
+  controls %>% dplyr::select(Codon),
+  non_controls %>% dplyr::select(Codon)
+) %>%
+  distinct() %>%
+  pull()
+
+dplyr::right_join(
+  controls %>% dplyr::select(Codon),
+  non_controls %>% dplyr::select(Codon)
+) %>%
+  distinct() %>%
+  pull()
+
+# How many codons in spontaneous mutants excluding those found in mutagen treated samples?
+# This calculation only includes missense!
+control_aa <- controls %>%
+  dplyr::select(Codon) %>%
+  pull()
+non_control_aa <- non_controls %>%
+  dplyr::select(Codon) %>%
+  pull()
+control_aa[!control_aa %in% non_control_aa] %>% unique()
+
+controls %>% filter(!Codon %in% (non_controls %>% pull(Codon))) # Another way to calculate it
+# There are 63 of these:
+controls_only_missense <- controls %>% filter(!Codon %in% (non_controls %>% pull(Codon)))
+```
+
+# Numbers used, hotspots, by nucleotide
+
+```{r hotspots}
+# Hotspot analysis
+snvs_only <- snvs_ins_del_clean %>%
+  dplyr::filter(Type == "SNV") # %>% dplyr::filter(Consequence == "missense")
+# If not limited to missense, then nonsense mutations, etc., are included;
+# but all consequences are important for counting where hotspots are.'
+snvs_only %>% count() # Same as above, 5,147
+
+counts_per_nucleotide <- snvs_only %>%
+  dplyr::group_by(Position) %>%
+  dplyr::tally() %>%
+  pull(n)
+mean(counts_per_nucleotide)
+sd(counts_per_nucleotide)
+mean(counts_per_nucleotide) + sd(counts_per_nucleotide)
+
+hotspot_cutoff_value <- mean(counts_per_nucleotide) + sd(counts_per_nucleotide)
+
+hotspots <- snvs_only %>%
+  dplyr::group_by(Position) %>%
+  dplyr::add_count() %>%
+  dplyr::ungroup() %>%
+  dplyr::filter(n >= hotspot_cutoff_value) # changed from 10 to 14
+# mean number of mutations per nucleotide position
+hotspots %>% count() # There are 1,256 mutations at missense hotspots (i.e., SNV and missense mutations that is)
+# There are 2,069 when including all consequences
+hotspots %>%
+  dplyr::group_by(Position) %>%
+  tally() %>%
+  arrange(-n)
+# There are 74 hotspots when including all consequences
+# There are 39 missense hotspot nucleotides with a count >13 independent mutations
+# 136 if using a cutoff of 10 as done originally without Sanger data
+
+ranked_hotspots_all <- hotspots %>%
+  dplyr::group_by(Position) %>%
+  tally() %>%
+  arrange(-n)
+
+# ranked_hotspots_ngs$Position <- factor(ranked_hotspots_ngs$Position,
+#                                    levels = ranked_hotspots_ngs$Position)
+#
+# ggplot(ranked_hotspots_ngs %>% head(n = 20), aes(x = Position, y = n, group = Position)) +
+#   geom_bar(stat = "identity") +
+#   theme(axis.text.x = element_text(angle = 90))
+
+ranked_hotspots_all$Position <- factor(ranked_hotspots_all$Position,
+  levels = ranked_hotspots_all$Position
+)
+
+ggplot(ranked_hotspots_all %>% head(n = 20), aes(x = Position, y = n, group = Position)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+# Hotspots - how many are at CpGs?
+
+```{r}
+hs <- hotspots$Position %>% unique()
+
+hotspot_ranges <- GRanges(
+  seqnames = "lacZ",
+  ranges = IRanges(
+    start = start(ranges(IRanges(
+      start = hs,
+      end = hs
+    ))),
+    end = end(ranges(IRanges(
+      start = hs,
+      end = hs
+    )))
+  )
+)
+
+CpGs_in_hotspots <- plyranges::find_overlaps(hotspot_ranges, CpG_sites_ranges)
+CpGs_in_hotspots <- as.data.frame(CpGs_in_hotspots) # %>% dplyr::filter(Type == "SNV")
+CpGs_in_hotspots
+
+hotspot_cpg_muts <- snvs_ins_del_clean %>% dplyr::filter(Position %in% CpGs_in_hotspots$start)
+hotspot_cpg_muts
+
+# There are 45 hotspots that overlap with CpG sites
+
+nrow(CpGs_in_hotspots) / length(hs)
+```
+
+
+# Numbers - NGS technology hotspots only (not included in study)
+
+```{r ngs-only-hotspots}
+# Hotspots in NGS data
+snvs_only_ngs <- snvs_ins_del_clean %>%
+  dplyr::filter(Type == "SNV") %>%
+  dplyr::filter(Technology == "NGS")
+
+hotspots_ngs <- snvs_only_ngs %>%
+  dplyr::group_by(Position) %>%
+  dplyr::add_count() %>%
+  dplyr::filter(n >= hotspot_cutoff_value)
+
+hotspots_ngs %>%
+  dplyr::group_by(Position) %>%
+  tally()
+
+hotspots_ngs %>%
+  group_by(Position, `Ref Codon`) %>%
+  tally() %>%
+  group_by(`Ref Codon`) %>%
+  tally()
+
+ranked_hotspots_ngs <- hotspots_ngs %>%
+  dplyr::group_by(Position) %>%
+  tally() %>%
+  arrange(-n)
+
+counts_per_nucleotide <- snvs_only_ngs %>%
+  dplyr::group_by(Position) %>%
+  dplyr::tally() %>%
+  pull(n)
+mean(counts_per_nucleotide)
+sd(counts_per_nucleotide)
+mean(counts_per_nucleotide) + sd(counts_per_nucleotide)
+```
+
+# Numbers used for hotspot analysis, aggregated by codon
+
+```{r more-numbers}
+# 692 codons mutated in total
+snvs_ins_del_clean %>%
+  dplyr::group_by(Codon) %>%
+  tally()
+
+# 492 codons with missense mutations
+snvs_ins_del_clean %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::filter(Consequence == "missense") %>%
+  tally()
+
+# 605 codons mutated in NGS data
+snvs_only_ngs %>%
+  dplyr::group_by(Codon) %>%
+  tally()
+
+# 384 codons with missense mutations in NGS data
+snvs_only_ngs %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::filter(Consequence == "missense") %>%
+  tally()
+
+# 266 codons identified by Sanger
+sanger %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::filter(Consequence == "missense") %>%
+  tally()
+
+# How many codons found with both technologies?
+dplyr::inner_join(
+  sanger %>% dplyr::select(Codon),
+  ngs %>% dplyr::select(Codon)
+) %>%
+  distinct() # 158
+
+# Calculate mutations per codon
+counts_per_codon <- snvs_ins_del_clean %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::filter(Consequence == "missense") %>%
+  dplyr::tally() %>%
+  pull(n)
+mean(counts_per_codon)
+sd(counts_per_codon)
+mean(counts_per_codon) + sd(counts_per_codon)
+
+hotspot_cutoff_value_codon <- mean(counts_per_codon) + sd(counts_per_codon)
+
+# Codon hotspots
+
+# NGS only - not used in study
+hotspots_ngs_codons <- snvs_only_ngs %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::filter(Consequence == "missense") %>%
+  dplyr::add_count() %>%
+  dplyr::ungroup() %>%
+  dplyr::filter(n >= hotspot_cutoff_value_codon)
+
+hotspots_ngs_codons %>%
+  dplyr::group_by(Codon) %>%
+  tally()
+
+ranked_hotspots_codons <- hotspots_ngs_codons %>%
+  dplyr::group_by(Codon) %>%
+  tally() %>%
+  arrange(-n)
+
+ranked_hotspots_codons$Codon <- factor(ranked_hotspots_codons$Codon,
+  levels = ranked_hotspots_codons$Codon
+)
+
+codons_of_interest <- ranked_hotspots_codons %>%
+  head(n = 37) %>%
+  pull(Codon)
+
+ggplot(ranked_hotspots_codons %>% head(n = 37), aes(x = Codon, y = n, group = Codon)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 90))
+
+# Codon hotspots - all
+hotspots_codons <- snvs_ins_del_clean %>%
+  # dplyr::filter(Type=="SNV") %>%
+  dplyr::filter(Consequence == "missense") %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::add_count() %>%
+  dplyr::ungroup() %>%
+  dplyr::filter(n >= hotspot_cutoff_value_codon)
+
+hotspots_codons_2_independent <- snvs_ins_del_clean %>%
+  # dplyr::filter(Type=="SNV") %>%
+  dplyr::filter(Consequence == "missense") %>%
+  dplyr::filter(FunctionalChange == 1) %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::add_count() %>%
+  dplyr::filter(n >= 2)
+
+# In all the data, how many missense mutations affect
+hotspots_codons_2_independent %>%
+  group_by(Codon) %>%
+  tally()
+codons_to_visualize <- hotspots_codons_2_independent %>%
+  pull(Codon) %>%
+  unique()
+codons_to_visualize
+codons_to_visualize %>% length()
+# There are 263... or 264 if you look at missense not limited to SNVs
+paste(codons_to_visualize, collapse = "+") # For PyMol
+
+
+hotspots_codons %>%
+  dplyr::group_by(Codon) %>%
+  tally()
+
+ranked_hotspots_codons_all <- hotspots_codons %>%
+  dplyr::group_by(Codon) %>%
+  tally() %>%
+  arrange(-n)
+
+ranked_hotspots_codons_all$Codon <- factor(ranked_hotspots_codons_all$Codon,
+  levels = ranked_hotspots_codons_all$Codon
+)
+
+# 33 codons of interest, top ranked hot spots
+codons_of_interest <- ranked_hotspots_codons_all %>%
+  head(n = 33) %>%
+  pull(Codon)
+
+codons_of_interest[codons_of_interest %in% existing$aa_pos]
+existing[existing$aa_pos %in% codons_of_interest, ]
+
+paste(codons_of_interest, collapse = "+") # For PyMol
+
+ggplot(ranked_hotspots_codons_all %>% head(n = 33), aes(x = Codon, y = n, group = Codon)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 90))
+
+hotspots_codons_summary <- hotspots_codons %>%
+  dplyr::group_by(residue_name, Domain) %>%
+  tally() %>%
+  arrange(Domain, -n)
+hotspots_codons_summary
+write.table(hotspots_codons_summary,
+  file = "data/processed/table2.txt",
+  quote = F, sep = "\t", row.names = F
+)
+
+table_S13 <- snvs_ins_del_clean %>%
+  # dplyr::filter(Type=="SNV") %>%
+  dplyr::filter(Consequence == "missense") %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::add_count() %>%
+  dplyr::ungroup() %>%
+  dplyr::group_by(residue_name, Domain) %>%
+  tally() %>%
+  arrange(Domain, -n)
+write.table(table_S13,
+  file = "data/processed/table_s13.txt",
+  quote = F, sep = "\t", row.names = F
+)
+```
+
+# Look at specific amino acid residues and their abundance in the data
+
+```{r specific-residues}
+# Glutamine 537 example
+snvs_ins_del_clean %>%
+  filter(Codon == 537) %>%
+  filter(Consequence == "missense")
+
+snvs_ins_del_clean %>%
+  filter(Codon == 537) %>%
+  filter(Consequence == "missense") %>%
+  filter(Study == "This Study")
+
+# Arg786
+snvs_ins_del_clean %>%
+  filter(Codon == 786) %>%
+  filter(Consequence == "missense") %>%
+  filter(Technology == "NGS")
+
+# There are 143 mutations at Arg786
+# 142 missense, 1 indel
+snvs_ins_del_clean %>%
+  dplyr::filter(Codon == 786) %>%
+  group_by(Ref, Alt)
+snvs_ins_del_clean %>%
+  dplyr::filter(Codon == 786) %>%
+  group_by(Ref, Alt) %>%
+  tally() %>%
+  pull(n) %>%
+  sum()
+
+# There are 113 mutations at Ser390
+snvs_ins_del_clean %>%
+  dplyr::filter(Codon == 390) %>%
+  group_by(Ref, Alt)
+snvs_ins_del_clean %>%
+  dplyr::filter(Codon == 390) %>%
+  group_by(Ref, Alt) %>%
+  tally() %>%
+  pull(n) %>%
+  sum()
+snvs_ins_del_clean %>%
+  dplyr::filter(PositionRef == 1169) %>%
+  group_by(Ref, Alt) %>%
+  dplyr::filter(Type == "SNV") %>%
+  count() # 112 SNVs at position 1,169
+```
+
+
+# Data Summary
+
+```{r summaries-of-data}
+## Summary of data
+vtree(snvs_ins_del_clean,
+  title = "Total mutations",
+  # imageFileOnly=TRUE, # to output a PNG
+  "Technology Type Consequence",
+  prunebelow = list(Type = c("Insertion", "Deletion"))
+)
+
+vtree(snvs_ins_del_clean,
+  vars = " Exposure codon_position "
+)
+
+vtree(snvs_ins_del_clean,
+  title = "Total mutations",
+  # imageFileOnly=TRUE, # to output a PNG
+  "Exposure Study"
+)
+
+vtree(snvs_ins_del_clean,
+  title = "Total mutations",
+  # imageFileOnly=TRUE, # to output a PNG
+  "Exposure"
+)
+
+vtree(snvs_ins_del_clean,
+  title = "Total mutations",
+  # imageFileOnly=TRUE, # to output a PNG
+  "Exposure Technology"
+)
+
+vtree(snvs_ins_del_clean,
+  title = "Total mutations",
+  # imageFileOnly=TRUE, # to output a PNG
+  "Exposure Tissue"
+)
+
+vtree(snvs_ins_del_clean %>% dplyr::filter(!is.na(Consequence)),
+  title = "Total mutations",
+  # imageFileOnly=TRUE, # to output a PNG
+  "Consequence"
+)
+
+vtree(snvs_ins_del_clean,
+  title = "Total mutations",
+  # imageFileOnly=TRUE, # to output a PNG
+  "Technology Consequence"
+)
+
+vtree(snvs_ins_del_clean,
+  title = "Total mutations",
+  # imageFileOnly=TRUE, # to output a PNG
+  "Consequence Technology"
+)
+
+codon_composition_tech <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>%
+  dplyr::select(Codon, Technology) %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::distinct() %>%
+  mutate(Technology = paste0(Technology, collapse = ", ")) %>%
+  dplyr::distinct()
+
+codon_composition_exp <- snvs_ins_del_clean %>%
+  dplyr::filter(Consequence == "missense") %>%
+  dplyr::select(Exposure, Codon, Technology) %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::distinct()
+
+vtree(codon_composition_tech,
+  title = "Codons",
+  # imageFileOnly = TRUE, # to output a PNG
+  "Technology"
+)
+
+vtree(codon_composition_exp,
+  title = "Codons",
+  # imageFileOnly = TRUE, # to output a PNG
+  "Exposure Technology",
+  pattern = T
+)
+
+vtree(snvs_ins_del_clean,
+  title = "Total mutations",
+  # imageFileOnly=TRUE, # to output a PNG
+  "Type Technology"
+)
+
+exp_codons <- snvs_ins_del_clean %>%
+  dplyr::group_by(Codon) %>%
+  dplyr::filter(!Exposure == "Control") %>%
+  pull(Codon)
+
+exp_codons_ungrouped <- snvs_ins_del_clean %>%
+  dplyr::filter(!Exposure == "Control") %>%
+  pull(Codon)
+
+controls_only <- snvs_ins_del_clean %>%
+  dplyr::filter(!Codon %in% exp_codons)
+
+# This calculation ONLY accounts for unique codons
+controls_only %>%
+  dplyr::group_by(Codon) %>%
+  tally() %>%
+  pull(Codon)
+
+# This calculation is for everything, like above
+control_only_aa_all <- snvs_ins_del_clean %>%
+  dplyr::filter(Exposure == "Control") %>%
+  dplyr::select(Codon) %>%
+  pull()
+non_control_aa_all <- snvs_ins_del_clean %>%
+  dplyr::filter(!Exposure == "Control") %>%
+  dplyr::select(Codon) %>%
+  pull()
+control_only_aa_all[!control_only_aa_all %in% non_control_aa_all] %>% unique()
+
+vtree(controls_only,
+  title = "Control-only mutations",
+  "Tissue"
+)
+
+controls_only_ranked <- controls_only %>%
+  dplyr::group_by(Codon) %>%
+  tally() %>%
+  arrange(-n)
+
+controls_only_ranked$Codon <- factor(controls_only_ranked$Codon,
+  levels = controls_only_ranked$Codon
+)
+
+ggplot(controls_only_ranked, aes(x = Codon, y = n, group = Codon)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 90))
+
+write.table(snvs_ins_del_clean,
+  file = "../data/processed/summary.txt",
+  quote = F, sep = "\t", row.names = F
+)
+write.table(controls_only,
+  file = "../data/processed/controls_only.txt",
+  quote = F, sep = "\t", row.names = F
+)
+
+breakdown_types <-
+  snvs_ins_del_clean %>%
+  mutate(Effect = case_when(
+    Deletion == 1 ~ "Indel",
+    Insertion == 1 ~ "Indel",
+    Ref == "INS" ~ "Indel",
+    Alt == "DEL" ~ "Indel",
+    str_detect(Alt, regex("del", ignore_case = TRUE)) ~ "Indel",
+    str_length(Ref) < str_length(Alt) ~ "Indel",
+    str_length(Ref) > str_length(Alt) ~ "Indel",
+    Consequence == "frameshift" ~ "Indel",
+    Consequence == "nonsense" ~ "Nonsense",
+    Consequence == "silent" ~ "Silent",
+    Consequence == "missense" ~ "Missense",
+    Consequence == "stop lost" ~ "Stop Lost",
+    Consequence == "complex" ~ "Other",
+    str_length(Ref) > 1 & str_length(Ref) == str_length(Alt) ~ "Other",
+    !str_detect(Alt, regex("del", ignore_case = TRUE)) ~ "SNV"
+  ))
+
+vtree(breakdown_types,
+  title = "Total mutations",
+  # imageFileOnly = T,
+  "Effect Technology"
+)
+
+breakdown_types %>%
+  dplyr::rename("Total" = Effect) %>%
+  vtree(
+    title = "Total mutations",
+    # imageFileOnly = T,
+    "Total",
+    arrowhead = "none",
+    edgeattr = "style=invis",
+    showroot = F
+  )
+
+
+vtree(breakdown_types,
+  title = "Total mutations",
+  # imageFileOnly = T,
+  "Type Consequence Technology",
+  keep = list(Consequence = c("missense", "nonsense", "silent", "stop lost")),
+  vp = F
+)
+```
+
+# Detailed interrogation of links between substitutions and structure
+
+```{r}
+# Join with table on structure predictions
+
+pdb <- read.pdb("1JZ7")
+
+lacz_dssp <- bio3d::dssp(pdb)
+
+ss_df <- data.frame(
+  name = names(lacz_dssp$sse),
+  ss_code = unlist(lacz_dssp$sse),
+  solvent_accessibility = unlist(lacz_dssp$acc)
+) %>%
+  tidyr::separate(name, c("CodonRef", "Chain", "C"), "_", convert = T) %>%
+  dplyr::select(-C) %>%
+  dplyr::filter(Chain == "A")
+
+str_code <- c(
+  "H"   = "α-helix",
+  "B"   = "β-bridge",
+  "E"   = "β-strand",
+  "G"   = "310 Helix",
+  "I"   = "π-helix",
+  "T"   = "Turn",
+  "S"   = "Bend"
+)
+
+ss_df <- ss_df %>%
+  mutate(DSSP = str_code[ss_code])
+
+structure_1 <- read.table(
+  "data/raw/V00296.1_E._coli_gene_lacZ_coding_for_beta-galactosidase__EC_3.2.1.23_.netsurfp.clean.txt",
+  header = T, sep = "\t", row.names=NULL)
+
+structure_analysis <- left_join(
+  snvs_ins_del_clean %>%
+    dplyr::filter(!is.na(residue_code) & !is.na(alt_code)),
+  structure_1,
+  by = c("CodonRef" = "Codon")
+)
+df <- structure_analysis # temp shorter name
+structure_analysis$secondary_structure <- ifelse(
+  df$"Probability.for.Alpha.Helix" >= df$"Probability.for.Beta.strand" &
+    df$"Probability.for.Alpha.Helix" >= df$"Probability.for.Coil", "Alpha Helix",
+  ifelse(df$"Probability.for.Beta.strand" >= df$"Probability.for.Alpha.Helix" &
+    df$"Probability.for.Beta.strand" >= df$"Probability.for.Coil", "Beta Strand", "Coil")
+)
+grantham_distances <- grantham_distance(x = structure_analysis$residue_code, y = structure_analysis$alt_code)
+structure_analysis$grantham_distance <- grantham_distances$d
+conservative_threshold <- 50
+structure_analysis$conservative <- structure_analysis$grantham_distance <= conservative_threshold
+
+is_within_range <- function(start, end, position) {
+  any(position >= start & position <= end)
+}
+
+structure_analysis <- structure_analysis %>%
+  rowwise() %>%
+  mutate(
+    pdb_ss = case_when(
+      is_within_range(pdb$sheet$start, pdb$sheet$end, CodonRef) ~ "Sheet",
+      is_within_range(pdb$helix$start, pdb$helix$end, CodonRef) ~ "Helix",
+      TRUE ~ "NA"
+    )
+  )
+structure_analysis$pdb_ss <- factor(structure_analysis$pdb_ss, levels = c("NA", "Helix", "Sheet"))
+
+structure_analysis <- structure_analysis %>%
+  left_join(ss_df)
+accessibility_threshold <- 50
+structure_analysis$solvent_accessible <- structure_analysis$solvent_accessibility >= accessibility_threshold
+structure_analysis <- structure_analysis %>%
+  mutate_at(c("DSSP"), ~ replace_na(., "Coil"))
+
+structure_analysis$DSSP <- factor(structure_analysis$DSSP,
+  levels = c("Coil", "α-helix", "Bend", "β-bridge", "310 Helix", "π-helix", "β-strand", "Turn")
+)
+
+structure_analysis_singletons <- structure_analysis %>%
+  dplyr::select(
+    Position, `Ref A.A.`, `Alt A.A.`, Consequence, Type,
+    Codon, aa_change, PositionRef, residue_code, alt_code,
+    CodonRef, residue_name, Domain, Buried.or.Exposed,
+    NetSurf.Amino.Acid, Probability.for.Alpha.Helix,
+    Probability.for.Beta.strand, Probability.for.Coil,
+    secondary_structure, grantham_distance, conservative,
+    pdb_ss, Chain, ss_code, solvent_accessibility, solvent_accessible,
+    DSSP
+  ) %>%
+  distinct() # Not Ref,Alt,mutation because some duplicates don't produce different amino acid changes.
+
+# structure_analysis.all_cols <- structure_analysis
+
+# Limit to the unique missense SNVs
+structure_analysis <- structure_analysis_singletons %>%
+  filter(Consequence == "missense") %>%
+  filter(Type == "SNV")
+
+# Test whether domain is related to degree of conservation
+structure_analysis$Domain[is.na(structure_analysis$Domain)] <- "None"
+structure_analysis$Domain <- factor(structure_analysis$Domain)
+contingency_table_domain <- table(structure_analysis$Domain, structure_analysis$conservative)
+chi_squared_result_domain <- chisq.test(contingency_table_domain)
+print(chi_squared_result_domain)
+
+contingency_table_domain %>%
+  as.data.frame() %>%
+  pivot_wider(names_from = Var2, values_from = Freq) %>%
+  mutate(pct_false = round(100 * `FALSE` / (sum(`FALSE`)), digits = 1)) %>%
+  mutate(pct_true = round(100 * `TRUE` / (sum(`TRUE`)), digits = 1))
+
+# Test whether type of secondary structure is related to degree of conservation
+contingency_table_ss <- table(structure_analysis$DSSP, structure_analysis$conservative)
+chi_squared_result_str <- chisq.test(contingency_table_ss)
+print(chi_squared_result_str)
+
+# Test whether type of secondary structure is related to degree of conservation
+structure_analysis$solvent_accessible <- relevel(factor(structure_analysis$solvent_accessible), ref = "TRUE")
+contingency_table <- table(structure_analysis$DSSP, structure_analysis$solvent_accessible)
+chi_squared_result_str <- chisq.test(contingency_table)
+print(chi_squared_result_str)
+
+# Fit regression model
+model_ss <- glm(grantham_distance ~ DSSP, data = structure_analysis, family = quasipoisson)
+summary(model_ss)
+
+ggplot(structure_analysis, aes(x = DSSP, y = grantham_distance)) +
+  geom_violin(alpha = 0.5) +
+  geom_jitter(position = position_jitter(seed = 1, width = 0.2), alpha = 0.5) +
+  theme_bw() +
+  xlab("Secondary structure class") +
+  ylab("Grantham distance")
+
+# Fit regression model
+model_ss_binomial <- glm(conservative ~ DSSP, data = structure_analysis, family = binomial)
+summary(model_ss_binomial)
+
+# Fit regression model
+model_sa <- glm(conservative ~ solvent_accessible, data = structure_analysis, family = binomial)
+summary(model_sa)
+
+
+# Fit regression model
+model_sa_continuous <- glm(grantham_distance ~ solvent_accessibility, data = structure_analysis %>% na.omit(), family = quasipoisson)
+summary(model_sa_continuous)
+
+ggplot(structure_analysis %>% na.omit(), aes(x = solvent_accessibility, y = log(grantham_distance))) +
+  theme_bw() +
+  geom_point(position = position_jitter(seed = 1, width = 0.2)) +
+  xlab("Solvent accessibility") +
+  ylab("Grantham distance") +
+  geom_smooth(method = "glm", method.args = list(family = "quasipoisson"))
+
+# Fit regression model
+model_ss_sa <- glm(conservative ~ DSSP * solvent_accessibility, data = structure_analysis, family = binomial)
+
+# Fit regression model. Unclear what distribution would be best applied here.
+# model_ss_sa <- glm(grantham_distance ~ DSSP * solvent_accessibility, data = structure_analysis, family = quasipoisson)
+
+summary(model_ss_sa)
+plot(model_ss_sa)
+results <- as.data.frame(summary(model_ss_sa)$coefficient)
+results$Odds_ratio <- exp(results[["Estimate"]])
+results
+confint(model_ss_sa)
+
+rownames(results) <- rownames(results) %>% str_replace("DSSP", "")
+rownames(results)[1] <- "Coil"
+results$secondary_structure <- rownames(results) %>% str_replace(":solvent_accessibleTRUE", "")
+results$secondary_structure[9] <- "Coil"
+results$solvent_accessible <- NA
+results$solvent_accessible[1:8] <- FALSE
+results$solvent_accessible[9:16] <- TRUE
+# results <- results %>% dplyr::arrange(solvent_accessible, Odds_ratio)
+kableExtra::kbl(results %>% relocate(secondary_structure, solvent_accessible), row.names = F, digits = 2)
+
+flextable(results) %>%
+  colformat_double()
+```
+
+# Specific types of amino acid changes and their prevalence in different structural features
+
+```{r}
+# Want to know whether we find different substitutions in secondary structure
+
+structure_analysis_specific <- structure_analysis %>%
+  dplyr::mutate(is_ss = ifelse(DSSP == "Coil", F, T)) %>%
+  dplyr::mutate(aa_change, ifelse(`Ref A.A.` == `Alt A.A.`, aa_change, "None"))
+structure_analysis_specific$aa_change <- factor(structure_analysis_specific$aa_change)
+
+changes_and_ss <- table(
+  structure_analysis_specific$aa_change,
+  structure_analysis_specific$is_ss
+)
+chi_squared_result_ss <- chisq.test(changes_and_ss)
+print(chi_squared_result_ss)
+
+# Fit regression model for whether certain amino acid changes are specific to secondary structure
+model <- glm(is_ss ~ aa_change, data = structure_analysis_specific, family = binomial)
+
+# Get summary of the model
+summary(model)
+plot(model)
+results_specific <- as.data.frame(summary(model)$coefficient)
+results_specific$Odds_ratio <- exp(results_specific[["Estimate"]])
+results_specific_sig <- results_specific %>%
+  dplyr::filter(`Pr(>|z|)` < 0.05) %>%
+  dplyr::arrange(Odds_ratio)
+
+# Fit regression model
+# Is the reference AA important for the type of SS?
+model <- glm(DSSP ~ aa_change + DSSP:aa_change, data = structure_analysis_specific, family = binomial)
+
+# Get summary of the model
+summary(model)
+plot(model)
+results_specific <- as.data.frame(summary(model)$coefficient)
+results_specific$Odds_ratio <- exp(results_specific[["Estimate"]])
+results_specific_sig <- results_specific %>%
+  dplyr::filter(`Pr(>|z|)` < 0.05) %>%
+  dplyr::arrange(Odds_ratio)
+# No significant interactions
+
+
+
+model_is_ss <- glm(is_ss ~ grantham_distance, data = structure_analysis_specific, family = binomial)
+summary(model_is_ss)
+
+ggplot(structure_analysis_specific, aes(x = is_ss, y = grantham_distance)) +
+  geom_violin(alpha = 0.5) +
+  geom_jitter(position = position_jitter(seed = 1, width = 0.2), alpha = 0.5) +
+  theme_bw() +
+  xlab("Secondary structure") +
+  ylab("Grantham distance")
+
+
+
+# Fit regression model
+# Is the amino acid substitution important for the type of SS?
+model_specific <- glm(DSSP ~ 0 + aa_change, data = structure_analysis_specific, family = binomial)
+
+# Get summary of the model
+summary(model_specific)
+plot(model_specific)
+results_specific <- as.data.frame(summary(model_specific)$coefficient)
+rownames(results_specific) <- rownames(results_specific) %>% str_replace("aa_change", "")
+results_specific$Odds_ratio <- exp(results_specific[["Estimate"]])
+results_specific_sig <- results_specific %>%
+  dplyr::filter(`Pr(>|z|)` < 0.05) %>%
+  dplyr::arrange(Odds_ratio)
+kableExtra::kbl(results_specific_sig, digits = 2)
+results_specific_sig
+```
+
+
+# Amino acid substitutions and specific structural relationships
+
+```{r}
+# Want to know whether we find more x to y substitutions at given features
+
+ss_and_sub <- structure_analysis_specific %>%
+  group_by(aa_change, DSSP, `Ref A.A.`, `Alt A.A.`) %>%
+  tally()
+
+
+# What is the composition of beta gal in terms of secondary structure
+beta_gal_comp <- ss_df %>%
+  mutate_at(c("DSSP"), ~ replace_na(., "Coil")) %>%
+  group_by(DSSP) %>%
+  tally(name = "n_beta_gal") %>%
+  mutate(pct_beta_gal = round(100 * n_beta_gal / (sum(n_beta_gal)), digits = 1))
+
+# What is the proportion of each secondary structure in terms of number of mutations recovered
+mut_ss_comp <- structure_analysis_specific %>%
+  dplyr::group_by(DSSP) %>%
+  tally(name = "n_muts") %>%
+  mutate(pct_in_muts = round(100 * n_muts / (sum(n_muts)), digits = 1))
+
+composition <- left_join(beta_gal_comp, mut_ss_comp, by = "DSSP")
+
+contingency_table <- matrix(c(composition$n_beta_gal, composition$n_muts), nrow = nrow(composition))
+result <- chisq.test(contingency_table)
+print(result)
+
+# Create a vector of the letters
+letters_set <- c(ss_and_sub$`Ref A.A.`, ss_and_sub$`Alt A.A.`) %>% unique()
+
+# Generate all possible combinations
+combinations <- expand.grid(`Ref A.A.` = letters_set, `Alt A.A.` = letters_set)
+
+# Make data frame
+boxes <- data.frame(
+  `Ref A.A.` = combinations[[1]],
+  `Alt A.A.` = combinations[[2]],
+  n = 0, check.names = F
+)
+
+max_n <- as.data.frame(ss_and_sub) %>%
+  dplyr::filter(n > 1) %>%
+  subset(!is.na(DSSP)) %>%
+  pull(n) %>%
+  max()
+
+data_for_plot <- as.data.frame(ss_and_sub) %>%
+  subset(!is.na(DSSP)) %>%
+  group_by(DSSP) %>%
+  mutate(label = paste0(DSSP, ", n=", sum(n)))
+
+data_for_plot$label <- factor(
+  data_for_plot$label,
+  levels(factor(data_for_plot$label))[c(3, 5, 1, 8, 7, 6, 4, 2)]
+)
+
+coil_specific <- results_specific_sig %>%
+  dplyr::filter(Odds_ratio < 1) %>%
+  rownames()
+ss_specific <- results_specific_sig %>%
+  dplyr::filter(Odds_ratio > 1) %>%
+  rownames()
+
+ggplot(
+  data_for_plot,
+  aes(x = `Ref A.A.`, y = `Alt A.A.`, fill = n)
+) +
+  geom_tile(data = boxes, colour = "lightgrey", fill = "white", size = 0.05) +
+  geom_tile(color = "grey") +
+  # geom_tile(data = data_for_plot %>% dplyr::filter(aa_change %in% coil_specific), fill = NA, color = "red", size = 0.5) +
+  # geom_tile(data = data_for_plot %>% dplyr::filter(aa_change %in% ss_specific), fill = NA, color = "green", size = 0.5) +
+  facet_wrap2(~label, axes = "all", ncol = 4) +
+  coord_fixed() +
+  theme_bw() +
+  xlab("WT Residue") +
+  ylab("Mutant Residue") +
+  scale_fill_viridis_c(
+    option = "F",
+    name = "# Observations",
+    direction = -1,
+    trans = "log",
+    breaks = c(1, 5, 20, 50, max_n),
+    labels = c(1, 5, 20, 50, max_n)
+  ) +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        strip.background = element_blank(),
+        strip.text.x = element_text(size = rel(1.3)),
+        panel.border = element_rect(colour = "black", fill = NA))
+
+ggplot(
+  data_for_plot,
+  aes(x = `Ref A.A.`, y = `Alt A.A.`, fill = n)
+) +
+  geom_tile(data = boxes, colour = "lightgrey", fill = "white", size = 0.05) +
+  geom_tile(color = "grey") +
+  geom_tile(data = data_for_plot %>% dplyr::filter(aa_change %in% coil_specific), fill = NA, color = "red", size = 0.5) +
+  geom_tile(data = data_for_plot %>% dplyr::filter(aa_change %in% ss_specific), fill = NA, color = "green", size = 0.5) +
+  coord_fixed() +
+  theme_bw() +
+  xlab("WT Residue") +
+  ylab("Mutant Residue") +
+  scale_fill_viridis_c(
+    option = "F",
+    name = "# Observations",
+    direction = -1,
+    trans = "log",
+    breaks = c(1, 5, 20, 50, max_n),
+    labels = c(1, 5, 20, 50, max_n)
+  ) +
+  theme(panel.grid.major = element_blank())
+
+
+ggplot(
+  data_for_plot %>% dplyr::filter(aa_change %in% rownames(results_specific_sig)) %>%
+    dplyr::mutate(aa_change = factor(aa_change, levels = rownames(results_specific_sig))),
+  aes(x = DSSP, y = n)
+) +
+  geom_col() +
+  facet_wrap(~aa_change, scales = "free_y") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
+  xlab("Secondary structure class") +
+  ylab("Observed substitutions")
+
+structure_analysis %>%
+  dplyr::group_by(DSSP, ) %>%
+  tally()
+
+composition
+composition$DSSP <- factor(
+  composition$DSSP,
+  levels(factor(composition$DSSP))[c(3, 5, 1, 8, 7, 6, 4, 2)]
+)
+ggplot(
+  composition %>% pivot_longer(c(-DSSP, -n_beta_gal, -n_muts)),
+  aes(x = DSSP, y = value, fill = name)
+) +
+  geom_col(position = "dodge") +
+  theme_bw() +
+  xlab("Secondary structure class") +
+  ylab("Proportion of residues or substitutions") +
+  scale_fill_discrete(name = element_blank(), labels = c("β-Gal Protein", "Mutation data")) +
+  theme(legend.position = "bottom")
+
+# How many changes to proline?
+
+structure_analysis %>% dplyr::filter(`Alt A.A.` == "P")
+structure_analysis %>% dplyr::filter(`Alt A.A.` != "P")
+
+# What are the
+
+betagal_proportions <- as.data.frame(t(alphabetFrequency(laczref_aa))) %>%
+  tibble::rownames_to_column() %>%
+  dplyr::rename(
+    "aa" = "rowname",
+    "n_betagal" = "V1"
+  )
+
+wts <- structure_analysis %>%
+  group_by(`Ref A.A.`) %>%
+  tally() %>%
+  dplyr::rename("aa" = `Ref A.A.`, n_wt = n)
+subs <- structure_analysis %>%
+  group_by(`Alt A.A.`) %>%
+  tally() %>%
+  dplyr::rename("aa" = `Alt A.A.`, n_mut = n)
+
+aa_proportions_wt_and_muts <- left_join(betagal_proportions, wts) %>%
+  left_join(subs) %>%
+  na.omit() %>%
+  mutate(pct_betagal = round(100 * n_betagal / (sum(n_betagal)), digits = 1)) %>%
+  mutate(pct_wt = round(100 * n_wt / (sum(n_wt)), digits = 1)) %>%
+  mutate(pct_mut = round(100 * n_mut / (sum(n_mut)), digits = 1)) %>%
+  pivot_longer(cols = c(5:7), names_to = "source", values_to = "Percent of residues") %>%
+  pivot_longer(cols = c(2:4), names_to = "source_count", values_to = "n")
+
+aa_proportions_wt_and_muts$source <- factor(aa_proportions_wt_and_muts$source, levels = c("pct_betagal", "pct_wt", "pct_mut"))
+
+ggplot(aa_proportions_wt_and_muts, aes(x = aa, y = `Percent of residues`, fill = source)) +
+  geom_col(position = "dodge") +
+  scale_fill_discrete(name = element_blank(), labels = c("β-Gal Protein", "Wild type residues", "Mutated residues")) +
+  theme_bw() +
+  facet_grid(~aa, scales = "free_x") +
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()) +
+  xlab("Amino acid")
+
+structure_analysis_specific %>%
+  group_by(aa_change) %>%
+  tally() %>%
+  arrange(-n)
+```
+
+# Size of side chain and hydrophobicity
+
+```{r}
+hydropathy <- idpr::KDNorm %>% dplyr::rename("hydropathy" = "V2")
+
+aa_classes <- read.table("data/raw/physicochemical_classes.txt",
+  sep = "\t",
+  header = T
+)
+
+aa_classes_cleaned <- aa_classes %>%
+  pivot_longer(-Amino.acid, names_to = "category") %>%
+  separate_rows(value, sep = "\\(") %>%
+  mutate(value = str_remove(value, "[()]")) %>%
+  mutate(value = trimws(value)) %>%
+  group_by(Amino.acid, category) %>%
+  mutate(row_num = row_number()) %>%
+  pivot_wider(names_from = category, values_from = value) %>%
+  pivot_wider(names_from = row_num, values_from = c(3:9))
+
+colnames(aa_classes_cleaned) <- colnames(aa_classes_cleaned) %>% str_remove("_1")
+colnames(aa_classes_cleaned) <- colnames(aa_classes_cleaned) %>% str_replace_all("_2", " score")
+
+
+structure_analysis_physicochemical <- structure_analysis_specific %>%
+  left_join(hydropathy, by = c("Ref A.A." = "V1"), suffix = c("", ".WT")) %>%
+  left_join(hydropathy, by = c("Alt A.A." = "V1"), suffix = c("", ".MUT")) %>%
+  left_join(aa_classes_cleaned, by = c("Ref A.A." = "Amino.acid"), suffix = c("", ".WT")) %>%
+  left_join(aa_classes_cleaned, by = c("Alt A.A." = "Amino.acid"), suffix = c("", ".MUT")) %>%
+  mutate(across(contains("score"), as.numeric)) %>%
+  mutate(
+    Hydropathy_diff = `hydropathy.MUT` - `hydropathy`,
+    Volume_diff = `Volume score.MUT` - `Volume score`,
+    Chemical_diff = `Chemical score.MUT` - `Chemical score`,
+    Physicochemical_diff = `Physicochemical score.MUT` - `Physicochemical score`,
+    Charge_diff = `Charge score.MUT` - `Charge score`,
+    Polarity_diff = `Polarity score.MUT` - `Polarity score`
+  )
+
+# Model the Volume_diff
+model_vol <- glm(grantham_distance ~ Volume_diff, data = structure_analysis_physicochemical, family = quasipoisson)
+summary(model_vol)
+
+ggplot(structure_analysis_physicochemical, aes(x = Volume_diff, y = grantham_distance)) +
+  geom_jitter()
+
+# this result is not interesting or surprising because the Grantham distance takes into account the physicochemical properties of the residue change.
+
+# Model the Hydropathy_diff
+model_hydro <- glm(grantham_distance ~ Hydropathy_diff, data = structure_analysis_physicochemical, family = quasipoisson)
+summary(model_hydro)
+
+ggplot(structure_analysis_physicochemical, aes(x = Hydropathy_diff, y = grantham_distance)) +
+  geom_jitter()
+
+# this result is not interesting or surprising because the Grantham distance takes into account the physicochemical properties of the residue change.
+
+# What about a relation between physiochemical properties and the ability to disrupt specific types of secondary structure?
+
+# Hydropathy
+model_ss_hydro <- glm(DSSP ~ Hydropathy_diff, data = structure_analysis_physicochemical, family = binomial)
+summary(model_ss_hydro)
+
+ggplot(structure_analysis_physicochemical, aes(x = DSSP, y = Hydropathy_diff)) +
+  geom_violin(alpha = 0.5) +
+  geom_jitter(position = position_jitter(w = 0.2, h = 0.25), alpha = 0.5) +
+  theme_bw() +
+  xlab("Secondary structure class") +
+  ylab("Relative hydropathy (mutation:wild type)")
+
+# Side chain volume
+model_ss_vol <- glm(DSSP ~ Volume_diff, data = structure_analysis_physicochemical, family = binomial)
+summary(model_ss_vol)
+
+ggplot(structure_analysis_physicochemical, aes(x = DSSP, y = Volume_diff)) +
+  geom_violin(alpha = 0.5) +
+  geom_jitter(position = position_jitter(w = 0.2, h = 0.25), alpha = 0.5) +
+  theme_bw() +
+  xlab("Secondary structure class") +
+  ylab("Relative side chain volume (mutation:wild type)")
+```
+
+
+# Complete alignment between MutaMouse and Genbank reference (shows 15 bp insertion in MutaMouse sequence)
+
+```{r}
+print(alignment, show = "complete")
+```

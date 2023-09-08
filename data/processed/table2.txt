@@ -1,0 +1,35 @@
+residue_name	Domain	n
+Gly207	Sugar Binding (PF02837)	56
+Trp203	Sugar Binding (PF02837)	37
+Asp201	Sugar Binding (PF02837)	36
+Ser390	TIM Barrel (PF02836)	100
+Glu537	TIM Barrel (PF02836)	89
+Glu358	TIM Barrel (PF02836)	72
+His540	TIM Barrel (PF02836)	67
+Gly605	TIM Barrel (PF02836)	59
+Trp568	TIM Barrel (PF02836)	54
+Pro393	TIM Barrel (PF02836)	39
+Arg439	TIM Barrel (PF02836)	33
+Gly547	TIM Barrel (PF02836)	30
+Gly406	TIM Barrel (PF02836)	29
+Gly564	TIM Barrel (PF02836)	27
+Tyr503	TIM Barrel (PF02836)	26
+Gly459	TIM Barrel (PF02836)	25
+Gly565	TIM Barrel (PF02836)	24
+Gly353	TIM Barrel (PF02836)	23
+His391	TIM Barrel (PF02836)	23
+Pro501	TIM Barrel (PF02836)	23
+Met502	TIM Barrel (PF02836)	20
+Ser545	TIM Barrel (PF02836)	19
+Glu304	β-Galactosidase (PF00703)	32
+Trp301	β-Galactosidase (PF00703)	21
+Arg786	β-Galactosidase Small Chain (PF02929)	142
+Arg909	β-Galactosidase Small Chain (PF02929)	91
+Gly899	β-Galactosidase Small Chain (PF02929)	67
+Arg881	β-Galactosidase Small Chain (PF02929)	53
+Asp792	β-Galactosidase Small Chain (PF02929)	49
+Thr941	β-Galactosidase Small Chain (PF02929)	23
+Asp908	β-Galactosidase Small Chain (PF02929)	22
+Asn791	β-Galactosidase Small Chain (PF02929)	20
+Gly901	β-Galactosidase Small Chain (PF02929)	19
+NA908	β-Galactosidase Small Chain (PF02929)	1
